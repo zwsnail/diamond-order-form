@@ -19,7 +19,8 @@ $g-color: #252525;
 
 h1 {
   text-align: left;
-  font: normal normal normal 35px/44px "Classica Pro Demi";
+  font-size: 35px;
+  font-family: "Classica Pro Demi";
   letter-spacing: 0px;
   color: $g-color;
 }
@@ -69,6 +70,13 @@ input {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @mixin firstForm() {

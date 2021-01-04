@@ -1,23 +1,17 @@
 @font-face {
-  font-family: "Classica Pro Demi";
-  src: url("ClassicaPro-Demi.eot");
-  src: local("Classica Pro Demi"), local("ClassicaPro-Demi"),
-    url("classica/ClassicaPro-Demi.eot?#iefix") format("embedded-opentype"),
-    url("classica/ClassicaPro-Demi.woff2") format("woff2"),
-    url("classica/ClassicaPro-Demi.woff") format("woff"),
-    url("classica/ClassicaPro-Demi.ttf") format("truetype");
-  font-weight: 500;
+  font-family: "Classica Pro";
+  src: url("classica/ClassicaPro-Regular.woff2") format("woff2"),
+    url("classica/ClassicaPro-Regular.woff") format("woff"),
+    url("classica/ClassicaPro-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Classica Pro";
-  src: url("ClassicaPro-Regular.eot");
-  src: local("Classica Pro"), local("ClassicaPro-Regular"),
-    url("classica/ClassicaPro-Regular.eot?#iefix") format("embedded-opentype"),
-    url("classica/ClassicaPro-Regular.woff2") format("woff2"),
-    url("classica/ClassicaPro-Regular.woff") format("woff"),
-    url("classica/ClassicaPro-Regular.ttf") format("truetype");
+  font-family: "Classica Pro Demi";
+  src: url("classica/ClassicaPro-Demi.woff2") format("woff2"),
+    url("classica/ClassicaPro-Demi.woff") format("woff"),
+    url("classica/ClassicaPro-Demi.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

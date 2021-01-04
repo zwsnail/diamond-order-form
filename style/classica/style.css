@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Classica Pro';
+    src: local('Classica Pro Regular'), local('Classica-Pro-Regular'),
+        url('ClassicaPro-Regular.woff2') format('woff2'),
+        url('ClassicaPro-Regular.woff') format('woff'),
+        url('ClassicaPro-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

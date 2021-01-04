@@ -1,17 +1,15 @@
 @import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
 @import url(//db.onlinewebfonts.com/c/64a2cfb57c4a5df1013e4f2e5bf3eff3?family=SF+Pro+Display);
 @font-face {
-  font-family: "Classica Pro Demi";
-  src: url("ClassicaPro-Demi.eot");
-  src: local("Classica Pro Demi"), local("ClassicaPro-Demi"), url("classica/ClassicaPro-Demi.eot?#iefix") format("embedded-opentype"), url("classica/ClassicaPro-Demi.woff2") format("woff2"), url("classica/ClassicaPro-Demi.woff") format("woff"), url("classica/ClassicaPro-Demi.ttf") format("truetype");
-  font-weight: 500;
+  font-family: "Classica Pro";
+  src: url("classica/ClassicaPro-Regular.woff2") format("woff2"), url("classica/ClassicaPro-Regular.woff") format("woff"), url("classica/ClassicaPro-Regular.ttf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Classica Pro";
-  src: url("ClassicaPro-Regular.eot");
-  src: local("Classica Pro"), local("ClassicaPro-Regular"), url("classica/ClassicaPro-Regular.eot?#iefix") format("embedded-opentype"), url("classica/ClassicaPro-Regular.woff2") format("woff2"), url("classica/ClassicaPro-Regular.woff") format("woff"), url("classica/ClassicaPro-Regular.ttf") format("truetype");
+  font-family: "Classica Pro Demi";
+  src: url("classica/ClassicaPro-Demi.woff2") format("woff2"), url("classica/ClassicaPro-Demi.woff") format("woff"), url("classica/ClassicaPro-Demi.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -34,7 +32,8 @@ body {
 
 h1 {
   text-align: left;
-  font: normal normal normal 35px/44px "Classica Pro Demi";
+  font-size: 35px;
+  font-family: "Classica Pro Demi";
   letter-spacing: 0px;
   color: #252525;
 }
@@ -72,8 +71,8 @@ input:focus {
   height: auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 65% auto;
-      grid-template-columns: 65% auto;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
   grid-auto-rows: auto;
   grid-auto-flow: dense;
 }
@@ -82,36 +81,97 @@ input:focus {
   position: fixed;
   left: 0;
   top: 0;
-  width: 64%;
+  width: 65%;
   height: 100vh;
   background: #f1f1f1 0% 0% no-repeat padding-box;
   opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  z-index: 99;
+}
+
+.head .d_images {
+  display: block;
+  width: 290px;
+  margin: 170px 0;
+}
+
+.head .d_images img {
+  margin: -5px 50px;
 }
 
 .head .h_image {
-  position: relative;
-  width: 470px;
-  height: 470px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 40%;
+  width: 626px;
+  height: 626px;
   background: url("../img/Charlize-Three-Stone-Front-Grey-630x630@2x.png");
   background-size: cover;
   background-position: center;
   opacity: 1;
 }
 
+.head .daimons_min {
+  position: relative;
+  width: 456px;
+  height: 42px;
+  margin: -40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head .daimons_min a {
+  background: #000;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 10;
+  background: #f1f1f1;
+}
+
+.head .daimons_min a span {
+  display: block;
+  color: #a5a5a5;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.head .daimons_min a:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  border: none;
+  border-top: 2px dashed #a5a5a5;
+  height: 2px;
+  width: 35%;
+  z-index: 1;
+}
+
+.head .daimons_min a:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 70%;
+  right: 10%;
+  border: none;
+  border-top: 2px dashed #a5a5a5;
+  height: 2px;
+  width: 35%;
+  z-index: 1;
+}
+
 .main {
   position: relative;
-  width: 80%;
+  padding: 0;
+  width: 83%;
   height: auto;
-  margin: 170px auto;
+  margin: 155px 0px;
 }
 
 .main .blocks {
@@ -145,7 +205,7 @@ input:focus {
   cursor: pointer;
   margin-top: 20px;
   margin-left: 7px;
-  width: 65px;
+  width: 55px;
   text-align: center;
   padding: 9px 0 9px 0;
   border: 1px solid #eeeeee;
@@ -191,10 +251,6 @@ input:focus {
   font: 400 16px "SF Pro Display";
   color: #fff;
   cursor: pointer;
-}
-
-.main .jewerly_section {
-  margin-top: 100px;
 }
 
 .main .jewerly_section .style_id {
@@ -294,5 +350,25 @@ input:focus {
 
 .headline div {
   font: 600 20px "SF Pro Display";
+}
+
+.contact_section {
+  position: relative;
+  margin-top: -200px;
+  width: 100%;
+  min-height: 80vh;
+  z-index: 9999;
+  opacity: 1;
+  background: #242222;
+}
+
+.footer_space {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background: #201f1f;
+  width: 100%;
+  height: 130px;
+  z-index: 99;
 }
 /*# sourceMappingURL=index.css.map */

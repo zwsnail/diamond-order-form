@@ -4,7 +4,7 @@
   height: auto;
 
   display: grid;
-  grid-template-columns: 65% auto;
+  grid-template-columns: 70% 30%;
   grid-auto-rows: auto;
   grid-auto-flow: dense;
 }
@@ -13,32 +13,88 @@
   position: fixed;
   left: 0;
   top: 0;
-  width: 64%;
+  width: 65%;
   height: 100vh;
   background: #f1f1f1 0% 0% no-repeat padding-box;
   opacity: 1;
+  z-index: 99;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .d_images {
+    display: block;
+    width: 290px;
+    margin: 170px 0;
+
+    img {
+      margin: -5px 50px;
+    }
+  }
 
   .h_image {
-    position: relative;
-    width: 470px;
-    height: 470px;
+    @include centered();
+    top: 40%;
+    width: 626px;
+    height: 626px;
     background: url("../img/Charlize-Three-Stone-Front-Grey-630x630@2x.png");
     background-size: cover;
     background-position: center;
     opacity: 1;
   }
+  .daimons_min {
+    position: relative;
+    width: 456px;
+    height: 42px;
+    margin: -40px auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      background: #000;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      z-index: 10;
+      background: #f1f1f1;
+      span {
+        display: block;
+        color: #a5a5a5;
+        text-align: left;
+        margin-bottom: 5px;
+      }
+
+      &:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        border: none;
+        border-top: 2px dashed #a5a5a5;
+        height: 2px;
+        width: 35%;
+        z-index: 1;
+      }
+      &:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        right: 10%;
+        border: none;
+        border-top: 2px dashed #a5a5a5;
+        height: 2px;
+        width: 35%;
+        z-index: 1;
+      }
+    }
+  }
 }
 
 .main {
   position: relative;
-  width: 80%;
+  padding: 0;
+  width: 83%;
   height: auto;
-  margin: 170px auto;
-  //   border: 1px solid rgb(209, 209, 209);
+  margin: 155px 0px;
+  // border: 1px solid rgb(209, 209, 209);
 
   .blocks {
     @include inline();
@@ -57,7 +113,7 @@
       cursor: pointer;
       margin-top: 20px;
       margin-left: 7px;
-      width: 65px;
+      width: 55px;
       text-align: center;
       padding: 9px 0 9px 0;
       border: 1px solid #eeeeee;
@@ -85,8 +141,6 @@
   }
 
   .jewerly_section {
-    margin-top: 100px;
-
     .style_id {
       margin-top: 10px;
       width: 60%;
