@@ -1,9 +1,142 @@
+@mixin con-button() {
+  width: 435px;
+  height: 55px;
+  z-index: 99;
+  border: 1px solid #cc8342;
+  cursor: pointer;
+  background: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font: 300 21px/28px "SF Pro Display";
+  color: #cc8342;
+  text-transform: uppercase;
+
+  &:focus {
+    outline: none;
+  }
+}
+
 .contact_section {
   position: relative;
-  margin-top: -200px;
+  margin-top: -215px;
   width: 100%;
-  min-height: 80vh;
-  z-index: 9999;
+  min-height: 90vh;
+  z-index: 999;
   opacity: 1;
-  background: rgb(36, 34, 34);
+  background: #fff;
+
+  padding-top: 40px;
+
+  display: grid;
+  grid-template-columns: 55% auto;
+
+  .contact_form {
+    position: relative;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+    // width: 900px;
+
+    h1 {
+      font-size: 35px;
+      font-weight: 300;
+      font-family: "SF Pro Display";
+      color: #252525;
+      margin: 0 0 46px 0;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font: 400 16px/21px "SF Pro Display";
+      color: #525252;
+      opacity: 1;
+      margin: 10px 0 10px 0;
+    }
+
+    #message {
+      width: 98%;
+      height: 100px;
+      border: 1px solid #eeeeee;
+      border-radius: 5px;
+      color: #525252;
+      font: 400 18px "SF Pro Display";
+      &:focus {
+        outline: none;
+        border-color: $c-dexin;
+      }
+    }
+
+    .contacts {
+      display: grid;
+      grid-template-columns: 6fr 6fr;
+      grid-auto-rows: auto;
+      grid-auto-flow: dense;
+
+      .f-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          text-align: left;
+          font: 500 25px/33px "SF Pro Display";
+          color: #0d0d0d;
+        }
+
+        input {
+          width: 96%;
+          border-radius: 5px;
+        }
+
+        .s-row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          div {
+            width: 49%;
+          }
+        }
+      }
+    }
+
+    .order-summary {
+      margin-top: 34px;
+      @include con-button();
+    }
+    .message-text {
+      text-align: left;
+      font: 500 25px/33px "SF Pro Display";
+      color: #0d0d0d;
+      margin: 30px 0 18px 0;
+    }
+  }
+
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 435px;
+      height: 435px;
+    }
+    .all-info {
+      margin-top: 20px;
+      width: 435px;
+      text-align: left;
+      color: #525252;
+      font-family: "SF Pro Display";
+    }
+  }
+
+  .send_req {
+    margin-top: 40px;
+    @include con-button();
+    color: #fff;
+    background: #cc8342;
+  }
 }

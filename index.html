@@ -46,10 +46,10 @@
           <h3>Select Color</h3>
           <div class="blocks">
             <div class="img-block">
-              <img src="/img/pink_diamond_web.png" />
+              <img src="/img/pink-diamond.png" />
             </div>
             <div class="img-block">
-              <img src="/img/blue_diamond_web_v2.png" />
+              <img src="/img/blue-diamond.png" />
             </div>
             <div class="img-block">
               <img src="/img/cushion-cut-colorless.png" />
@@ -163,18 +163,89 @@
       </div>
     </div>
 
-    <!-- conact section Or page -->
+    <!--------------------------------------- conact section Or page  ------------------------------ -------------->
+
     <div class="contact_section sections" id="contact_section">
-      <form>
-        FirstName:<input type="text" name="FirstName" /> Email:<input
-          type="text"
-          name="Email"
-        />
-        <input type="button" value="Send Email" onclick="sendEmail()" />
-      </form>
+      <div class="contact_form">
+        <h1>Contact</h1>
+        <div class="contacts">
+          <div class="f-row">
+            <h2>Contact Information</h2>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" />
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" />
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+            <label for="number">Phone Number</label>
+            <input type="number" id="number" name="number" />
+          </div>
+          <div class="f-row">
+            <h2>Delivery Adress</h2>
+            <label for="adress">Adress line 1</label>
+            <input type="text" id="adress-1" name="adress" />
+            <label for="lastName">Adress line 2</label>
+            <input type="text" id="adress-2" name="adress" />
+            <div class="s-row">
+              <div>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" />
+              </div>
+              <div>
+                <label for="state">State/Province</label>
+                <input type="text" id="state" name="state" />
+              </div>
+              <div>
+                <label for="zip">Zip/Postal Code</label>
+                <input type="text" id="zip" name="zip" />
+              </div>
+              <div>
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 class="message-text">Leave a message/ Order remark</h2>
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message"></textarea>
+        <button class="order-summary">
+          <img src="img/pdf.png" /> download order summary
+        </button>
+      </div>
+
+      <!-- --------------------------------------------------- RIGHT SIDE  --------------------------------------------- -->
+      <div class="contact_info">
+        <img src="img/Charlize-Three-Stone-Front-Grey-630x630.png" />
+        <div class="all-info">
+          <p>Diamond color: colorless</p>
+          <p>Carat sizes: 2.0</p>
+          <p>Cut Shapes: Pearl Cut</p>
+          <p>Certificates: GIA</p>
+          <p>Jewelry ID: 8852-7854-77</p>
+          <p>Ring size: 5.25</p>
+          <p>Metal color: Rose gold</p>
+          <p>Ring engraving: Love you</p>
+        </div>
+        <button class="send_req">Send Price Request</button>
+      </div>
     </div>
 
-    <div class="footer_space"></div>
+    <div class="footer_space">
+      <div class="columns"><h2>$ 4,025.00</h2></div>
+      <div class="columns">
+        <span>Price calculated based on <b>DIAMOND ONLY</b> </span>
+        <span>Price of Jewelry will be separately provided via email.</span>
+      </div>
+      <div class="columns">
+        <span><img src="img/security.png" />Warranty</span>
+        <span><img src="img/truck.png" />US shipping and returns</span>
+      </div>
+      <div class="columns">
+        <span><img src="img/support.png" /> Support</span>
+        <span><img src="img/diamond-i.png" />Sustainably created diamonds</span>
+      </div>
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.js"
