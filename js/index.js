@@ -11,8 +11,5 @@ link.click(function(){
 
     // return false;
 });	
-
- 
-
 });
 

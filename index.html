@@ -165,8 +165,8 @@
 
     <!--------------------------------------- conact section Or page  ------------------------------ -------------->
 
-    <div class="contact_section sections" id="contact_section">
-      <div class="contact_form">
+    <form class="contact_section sections" id="contact_section">
+      <div class="contact_form" id="contact-form">
         <h1>Contact</h1>
         <div class="contacts">
           <div class="f-row">
@@ -178,7 +178,7 @@
             <label for="email">Email</label>
             <input type="email" id="email" name="email" />
             <label for="number">Phone Number</label>
-            <input type="number" id="number" name="number" />
+            <input type="number" id="phoneNumber" name="number" />
           </div>
           <div class="f-row">
             <h2>Delivery Adress</h2>
@@ -227,10 +227,13 @@
           <p>Metal color: Rose gold</p>
           <p>Ring engraving: Love you</p>
         </div>
-        <input type="checkbox" /><span></span>
-        <button class="send_req">Send Price Request</button>
+        <input type="checkbox" /><span
+          >By placing this order, I agree to the Order Agreement, Terms of Use,
+          and Privacy Notice.</span
+        >
+        <input type="submit" class="send_req" value="Send Price Request" />
       </div>
-    </div>
+    </form>
 
     <div class="footer_space">
       <div class="columns"><h2>$ 4,025.00</h2></div>
@@ -249,11 +252,11 @@
     </div>
 
     <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.js"
-      integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
-      crossorigin="anonymous"
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
     ></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/poor.js"></script>
     <script defer src="js/index.js"></script>
   </body>
 </html>
