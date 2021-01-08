@@ -44,7 +44,7 @@
           <div class="lines"></div>
 
           <h3>Select Color</h3>
-          <div class="blocks">
+          <div class="blocks" id="diamond_box">
             <div class="img-block">
               <img src="/img/pink-diamond.png" />
             </div>
@@ -181,7 +181,7 @@
             <input type="number" id="phoneNumber" name="number" />
           </div>
           <div class="f-row">
-            <h2>Delivery Adress</h2>
+            <h2>Delivery Address</h2>
             <label for="adress">Adress line 1</label>
             <input type="text" id="adress-1" name="adress" />
             <label for="lastName">Adress line 2</label>
@@ -227,10 +227,16 @@
           <p>Metal color: Rose gold</p>
           <p>Ring engraving: Love you</p>
         </div>
-        <input type="checkbox" /><span
-          >By placing this order, I agree to the Order Agreement, Terms of Use,
-          and Privacy Notice.</span
-        >
+        <div class="checkbox-all">
+          <label class="checkbox-label">
+            <input type="checkbox" />
+            <span class="checkbox-custom"></span>
+          </label>
+          <span
+            >By placing this order, I agree to the Order Agreement, Terms of
+            Use, and Privacy Notice.</span
+          >
+        </div>
         <input type="submit" class="send_req" value="Send Price Request" />
       </div>
     </form>

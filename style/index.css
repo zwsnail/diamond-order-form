@@ -517,8 +517,88 @@ input:focus {
   font-family: "SF Pro Display";
 }
 
+.contact_section .contact_info .checkbox-all {
+  position: relative;
+  margin-top: 20px;
+  max-width: 470px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact_section .contact_info .checkbox-all .checkbox-label {
+  display: block;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  clear: both;
+}
+
+.contact_section .contact_info .checkbox-all .checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.contact_section .contact_info .checkbox-all .checkbox-label input:checked ~ .checkbox-custom {
+  background-color: #cc8342;
+  -webkit-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+.contact_section .contact_info .checkbox-all .checkbox-label input:checked ~ .checkbox-custom:after {
+  -webkit-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.contact_section .contact_info .checkbox-all .checkbox-label span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 2px solid #cc8342;
+  border-radius: 3px;
+}
+
+.contact_section .contact_info .checkbox-all .checkbox-label span:after {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 12px;
+  border-radius: 5px;
+  border-width: 0 3px 3px 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.contact_section .contact_info .checkbox-all span {
+  width: 85%;
+  display: inline;
+  text-align: left;
+  font: 500 14px/19px "SF Pro Display";
+  color: #737373;
+}
+
 .contact_section .send_req {
-  margin-top: 40px;
+  margin-top: 30px;
   width: 435px;
   height: 55px;
   z-index: 99;

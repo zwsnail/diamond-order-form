@@ -131,10 +131,82 @@
       color: #525252;
       font-family: "SF Pro Display";
     }
+    //  ------------------------ -------------------------------- CHECKBOX   ---------------------------------------------------------
+
+    .checkbox-all {
+      position: relative;
+      margin-top: 20px;
+      max-width: 470px;
+      display: flex;
+      // background: #000;
+
+      .checkbox-label {
+        display: block;
+        position: relative;
+        margin: auto;
+        cursor: pointer;
+        font-size: 22px;
+        line-height: 24px;
+        height: 24px;
+        width: 24px;
+        clear: both;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          &:checked ~ .checkbox-custom {
+            background-color: #cc8342;
+            transform: rotate(0deg) scale(1);
+            opacity: 1;
+          }
+          &:checked ~ .checkbox-custom:after {
+            transform: rotate(45deg) scale(1);
+            opacity: 1;
+            left: 4px;
+            top: 1px;
+            width: 6px;
+            height: 12px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            background-color: transparent;
+            border-radius: 0;
+          }
+        }
+        span {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 17px;
+          height: 17px;
+          background-color: transparent;
+          transition: all 0.3s ease-out;
+          border: 2px solid #cc8342;
+          border-radius: 3px;
+          &:after {
+            position: absolute;
+            content: "";
+            left: 12px;
+            top: 12px;
+            border-radius: 5px;
+            border-width: 0 3px 3px 0;
+            transition: all 0.3s ease-out;
+          }
+        }
+      }
+
+      span {
+        width: 85%;
+        display: inline;
+        text-align: left;
+        font: 500 14px/19px "SF Pro Display";
+        color: #737373;
+      }
+    }
   }
 
   .send_req {
-    margin-top: 40px;
+    margin-top: 30px;
     @include con-button();
     color: #fff;
     background: #cc8342;
