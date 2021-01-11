@@ -20,6 +20,27 @@ $(document).ready(function () {
   });
 
 
+  //  Download order summary PDF file
+
+
+  $('.order-summary').click(function () {  
+    var pdf = new jsPDF();
+    var specialElementHandlers = {
+      '#editor': function (element, renderer) {
+          return true;
+      }
+    };
+
+    pdf.fromHTML($('.all-info').html(), 15, 15, {
+      'width': 170,
+          'elementHandlers': specialElementHandlers
+  });
+  pdf.save('sample-file.pdf');
+
+  });
+
+
+
 
 });
 
