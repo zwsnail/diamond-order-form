@@ -212,17 +212,24 @@ input:focus {
   opacity: 0.7;
 }
 
-.main .blocks.shape {
+.main .blocks.cut_shape {
   margin-top: 20px;
   grid-auto-flow: dense;
   grid-gap: 35px;
 }
 
-.main .blocks.shape img {
+.main .blocks.cut_shape img {
+  width: 65px;
+  height: 65px;
   cursor: pointer;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.main .certificates img {
+  width: auto;
+  height: 33px;
 }
 
 .main .personal_text span {
@@ -351,7 +358,7 @@ input:focus {
   position: relative;
   margin-top: -215px;
   width: 100%;
-  min-height: 90vh;
+  height: auto;
   z-index: 999;
   opacity: 1;
   background: #fff;
@@ -472,6 +479,7 @@ input:focus {
   font: 300 21px/28px "SF Pro Display";
   color: #cc8342;
   text-transform: uppercase;
+  margin-bottom: 55px;
 }
 
 .contact_section .contact_form .order-summary:focus {

@@ -23,7 +23,7 @@
   position: relative;
   margin-top: -215px;
   width: 100%;
-  min-height: 90vh;
+  height: auto;
   z-index: 999;
   opacity: 1;
   background: #fff;
@@ -106,6 +106,7 @@
     .order-summary {
       margin-top: 34px;
       @include con-button();
+      margin-bottom: 55px;
     }
     .message-text {
       text-align: left;

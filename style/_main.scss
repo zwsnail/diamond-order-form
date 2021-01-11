@@ -120,16 +120,23 @@
       opacity: 0.7;
     }
 
-    &.shape {
+    &.cut_shape {
       margin-top: 20px;
       grid-auto-flow: dense;
       grid-gap: 35px;
 
       img {
+        width: 65px;
+        height: 65px;
         cursor: pointer;
         @include background();
       }
     }
+  }
+
+  .certificates img {
+    width: auto;
+    height: 33px;
   }
 
   .personal_text {

@@ -45,12 +45,11 @@
 
           <h3>Select Color</h3>
           <div class="blocks" id="diamond_box">
-              <img src="img/pink-diamond.png" alt="pink" />
-              <img src="img/blue-diamond.png" alt="blue" />
-              <img src="img/cushion-cut-colorless.png" alt="colorless" />
-              <img src="img/cushion-fancy-diamond-yellow.png" alt="yellow" />
-              <img src="img/greem_diamond_web.png" alt="green" />
-
+            <img src="img/pink-diamond.png" alt="pink" />
+            <img src="img/blue-diamond.png" alt="blue" />
+            <img src="img/cushion-cut-colorless.png" alt="colorless" />
+            <img src="img/cushion-fancy-diamond-yellow.png" alt="yellow" />
+            <img src="img/greem_diamond_web.png" alt="green" />
           </div>
 
           <div class="lines"></div>
@@ -95,7 +94,8 @@
 
           <form class="personal_text">
             <span>The personal text on the girdle of your diamond</span>
-            <input type="text" id="diamond_text_engrave" /> <button>ADD</button>
+            <input type="text" id="laser_mark" />
+            <button type="submit">ADD</button>
           </form>
 
           <div class="lines"></div>
@@ -105,48 +105,52 @@
           <h1>Jewerly</h1>
 
           <h3>jewerly style ID</h3>
-          <input type="text" class="style_id" />
 
-          <div class="lines"></div>
+          <form class="ring_engrave_form">
+            <input type="text" class="style_id" id="style_id" />
 
-          <h3>Ring Size</h3>
-          <div class="blocks ring_sizes">
-            <div class="size">4.5</div>
-            <div class="size">4.75</div>
-            <div class="size">5</div>
-            <div class="size">5.25</div>
-            <div class="size">5.5</div>
-            <div class="size">5.75</div>
-            <div class="size">6</div>
-            <div class="size">6.25</div>
-            <div class="size">6.5</div>
-            <div class="size">6.75</div>
-            <div class="size">7</div>
-            <div class="size">7.25</div>
-            <div class="size">7.5</div>
-            <div class="size">7.75</div>
-            <div class="size">8</div>
-            <div class="size">8.25</div>
-          </div>
-          <small>Show more sizes</small>
+            <div class="lines"></div>
 
-          <div class="lines"></div>
+            <h3>Ring Size</h3>
+            <div class="blocks ring_sizes">
+              <div class="size">4.5</div>
+              <div class="size">4.75</div>
+              <div class="size">5</div>
+              <div class="size">5.25</div>
+              <div class="size">5.5</div>
+              <div class="size">5.75</div>
+              <div class="size">6</div>
+              <div class="size">6.25</div>
+              <div class="size">6.5</div>
+              <div class="size">6.75</div>
+              <div class="size">7</div>
+              <div class="size">7.25</div>
+              <div class="size">7.5</div>
+              <div class="size">7.75</div>
+              <div class="size">8</div>
+              <div class="size">8.25</div>
+            </div>
+            <small>Show more sizes</small>
 
-          <h3>Select Metal Color</h3>
+            <div class="lines"></div>
 
-          <div class="metals">
-          <img src="img/Metal_YG2.png" alt="YG2" />
-          <img src="img/Metal_WG2-1.png" alt="WG-1" />
-          <img src="img/Metal_RG.png" alt="RG" />
-          <img src="img/Metal_WG2.png" alt="WG2" />
-          </div>
+            <h3>Select Metal Color</h3>
 
-          <div class="lines"></div>
+            <div class="metals">
+              <img src="img/Metal_YG2.png" alt="YG2" />
+              <img src="img/Metal_WG2-1.png" alt="WG-1" />
+              <img src="img/Metal_RG.png" alt="RG" />
+              <img src="img/Metal_WG2.png" alt="WG2" />
+            </div>
 
-          <h3>Ring engraving</h3>
-          <form class="ring_engraving">
-            <span>The personal text on the inside of your jewelry ring</span>
-            <input type="text" id="ring_text_engrave" /> <button>ADD</button>
+            <div class="lines"></div>
+
+            <h3>Ring engraving</h3>
+            <div class="ring_engraving">
+              <span>The personal text on the inside of your jewelry ring</span>
+              <input type="text" id="diamond_text_engrave" />
+              <button type="submit">ADD</button>
+            </div>
           </form>
         </div>
 
@@ -209,14 +213,14 @@
       <div class="contact_info">
         <img src="img/Charlize-Three-Stone-Front-Grey-630x630.png" />
         <div class="all-info">
-          <p>Diamond color: colorless</p>
-          <p>Carat sizes: 2.0</p>
-          <p>Cut Shapes: Pearl Cut</p>
-          <p>Certificates: GIA</p>
-          <p>Jewelry ID: 8852-7854-77</p>
-          <p>Ring size: 5.25</p>
-          <p>Metal color: Rose gold</p>
-          <p>Ring engraving: Love you</p>
+          <p>Diamond color: <span></span></p>
+          <p>Carat sizes: <span></span></p>
+          <p>Cut Shapes: <span></span></p>
+          <p>Certificates: <span></span></p>
+          <p>Jewelry ID: <span></span></p>
+          <p>Ring size: <span></span></p>
+          <p>Metal color: <span></span></p>
+          <p>Ring engraving: <span></span></p>
         </div>
         <div class="checkbox-all">
           <label class="checkbox-label">
