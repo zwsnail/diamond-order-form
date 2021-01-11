@@ -188,15 +188,12 @@ input:focus {
   margin-top: 20px;
 }
 
-.main .blocks .img-block {
+.main .blocks img {
   cursor: pointer;
   width: 85px;
   height: 85px;
   text-align: center;
   vertical-align: middle;
-}
-
-.main .blocks .img-block img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -221,11 +218,8 @@ input:focus {
   grid-gap: 35px;
 }
 
-.main .blocks.shape .shapes {
+.main .blocks.shape img {
   cursor: pointer;
-}
-
-.main .blocks.shape .shapes img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

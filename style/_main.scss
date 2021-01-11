@@ -100,13 +100,11 @@
     @include inline();
     margin-top: 20px;
 
-    .img-block {
+    img {
       cursor: pointer;
       @include box(85px, 85px);
 
-      img {
-        @include background();
-      }
+      @include background();
     }
 
     .size {
@@ -127,11 +125,9 @@
       grid-auto-flow: dense;
       grid-gap: 35px;
 
-      .shapes {
+      img {
         cursor: pointer;
-        img {
-          @include background();
-        }
+        @include background();
       }
     }
   }
