@@ -213,3 +213,38 @@
     background: #cc8342;
   }
 }
+
+@media (max-width: 1249px) {
+  .contact_section {
+    margin-top: -155px;
+  }
+}
+
+@media (max-width: 990px) {
+  .contact_info {
+    display: none !important;
+  }
+  .contact_section .contact_form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .contact_section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 764px) {
+  .contact_form .contacts {
+    grid-template-columns: 12fr !important;
+  }
+}
+@media (max-width: 500px) {
+  .contact_section {
+    .send_req {
+      width: 100%;
+    }
+    .order-summary {
+      width: 100% !important;
+    }
+  }
+}

@@ -65,6 +65,11 @@ $(document).ready(function () {
     $(".all-info p:nth-child(6) span").text(`${obj.ringSize}`);
   });
 
+  // fields required
+  let allInputs = $("#contact-form input");
+  console.log(allInputs);
+
+
 
 
 
@@ -85,13 +90,11 @@ $(document).ready(function () {
 
     const message = selector("#message");
 
+
     const contactInformation = ` ${username} ${userlname}`;
     const addresses = `${address1} , ${address2}`;
     const citys = `${city} , ${state}`;
     const countrys = `${zip} , ${country}`;
-
-    const deliveryInformation = `${address1} , ${address2}`;
-
 
     let templateParams = {
       from_name: contactInformation,
@@ -123,7 +126,7 @@ $(document).ready(function () {
       function (response) {
         console.log("SUCCESS!", response.status, response.text);
       },
-      function (error) {
+      function Error(error) {
         console.log("FAILED...", error);
       }
     );

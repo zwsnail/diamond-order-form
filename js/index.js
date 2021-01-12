@@ -19,6 +19,21 @@ $(document).ready(function () {
     return false;
   });
 
+  if (window.matchMedia('(max-width: 1249px)').matches) {
+    $(".sections").show();
+     console.log("all sections showed");
+  }
+
+
+  if (window.matchMedia('(max-width: 990px)').matches) {
+    //...
+     $('<input type="submit" class="send_req" value="Send Price Request">').insertBefore( $( ".order-summary" ) );
+    console.log("inserted");
+  } else {
+    $('').insertBefore( $( ".order-summary" ) );
+  }
+
+
 
   //  Download order summary PDF file
 
@@ -38,9 +53,7 @@ $(document).ready(function () {
   pdf.save('sample-file.pdf');
 
   });
-
-
-
-
 });
+
+
 

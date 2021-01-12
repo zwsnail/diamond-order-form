@@ -20,7 +20,8 @@
   z-index: 99;
 
   .d_images {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 290px;
     margin: 170px 0;
 
@@ -171,5 +172,92 @@
     .ring_engraving {
       @include firstForm();
     }
+  }
+}
+
+@media (max-width: 1600px) {
+  .d_images img {
+    margin: -5px 5px !important;
+    width: 130px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .d_images img {
+    display: none !important;
+  }
+  .daimons_min {
+    margin: 400px auto !important;
+  }
+
+  .group {
+    grid-template-columns: 55% 45%;
+  }
+
+  .head {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1249px) {
+  .footer_space {
+    display: none !important;
+  }
+  .d_images img {
+    display: none !important;
+  }
+  .daimons_min {
+    margin: 400px auto !important;
+  }
+
+  .group {
+    grid-template-columns: 1fr;
+  }
+
+  .head {
+    position: relative;
+    width: 100%;
+    margin-top: 310px;
+    height: auto;
+    .h_image {
+      top: 0;
+    }
+    .daimons_min {
+      display: none;
+    }
+  }
+  .main {
+    width: 85%;
+    margin: 160px auto;
+  }
+  .jewerly_section {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 655px) {
+  .head {
+    margin-top: 250px;
+    .h_image {
+      width: 500px;
+      height: 500px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .head {
+    margin-top: 180px;
+    .h_image {
+      width: 370px;
+      height: 370px;
+    }
+  }
+
+  .diamond_section {
+    margin-top: -100px;
+  }
+
+  .main {
+    width: 90%;
   }
 }

@@ -90,7 +90,13 @@ input:focus {
 }
 
 .head .d_images {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 290px;
   margin: 170px 0;
 }
@@ -316,6 +322,90 @@ input:focus {
   cursor: pointer;
 }
 
+@media (max-width: 1600px) {
+  .d_images img {
+    margin: -5px 5px !important;
+    width: 130px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .d_images img {
+    display: none !important;
+  }
+  .daimons_min {
+    margin: 400px auto !important;
+  }
+  .group {
+    -ms-grid-columns: 55% 45%;
+        grid-template-columns: 55% 45%;
+  }
+  .head {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1249px) {
+  .footer_space {
+    display: none !important;
+  }
+  .d_images img {
+    display: none !important;
+  }
+  .daimons_min {
+    margin: 400px auto !important;
+  }
+  .group {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .head {
+    position: relative;
+    width: 100%;
+    margin-top: 310px;
+    height: auto;
+  }
+  .head .h_image {
+    top: 0;
+  }
+  .head .daimons_min {
+    display: none;
+  }
+  .main {
+    width: 85%;
+    margin: 160px auto;
+  }
+  .jewerly_section {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 655px) {
+  .head {
+    margin-top: 250px;
+  }
+  .head .h_image {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .head {
+    margin-top: 180px;
+  }
+  .head .h_image {
+    width: 370px;
+    height: 370px;
+  }
+  .diamond_section {
+    margin-top: -100px;
+  }
+  .main {
+    width: 90%;
+  }
+}
+
 .headline {
   position: fixed;
   left: 0;
@@ -350,8 +440,39 @@ input:focus {
   color: #0d0d0d;
 }
 
-.headline div {
+.headline .US {
   font: 600 20px "SF Pro Display";
+}
+
+.headline ion-icon {
+  display: none;
+}
+
+@media (max-width: 1249px) {
+  .headline {
+    position: relative;
+  }
+}
+
+@media (max-width: 650px) {
+  .headline {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .headline h1 {
+    margin-left: 30px;
+  }
+  .headline a {
+    display: none;
+  }
+  .headline .US {
+    display: none;
+  }
+  .headline ion-icon {
+    display: block;
+    margin-right: 20px;
+  }
 }
 
 .contact_section {
@@ -625,6 +746,42 @@ input:focus {
 
 .contact_section .send_req:focus {
   outline: none;
+}
+
+@media (max-width: 1249px) {
+  .contact_section {
+    margin-top: -155px;
+  }
+}
+
+@media (max-width: 990px) {
+  .contact_info {
+    display: none !important;
+  }
+  .contact_section .contact_form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .contact_section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 764px) {
+  .contact_form .contacts {
+    -ms-grid-columns: 12fr !important;
+        grid-template-columns: 12fr !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact_section .send_req {
+    width: 100%;
+  }
+  .contact_section .order-summary {
+    width: 100% !important;
+  }
 }
 
 .footer_space {
