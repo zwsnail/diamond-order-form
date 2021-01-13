@@ -214,6 +214,83 @@
   }
 }
 
+// ---------------- right side checkbox
+
+.checkbox-first {
+  position: relative;
+  margin-top: 20px;
+  max-width: 470px;
+  display: none;
+
+  .checkbox-label {
+    display: block;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    clear: both;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      &:checked ~ .checkbox-custom {
+        background-color: #6a6a6a;
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+      }
+      &:checked ~ .checkbox-custom:after {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+        left: 4px;
+        top: 1px;
+        width: 6px;
+        height: 12px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        background-color: transparent;
+        border-radius: 0;
+      }
+    }
+    span {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 17px;
+      height: 17px;
+      background-color: transparent;
+      transition: all 0.3s ease-out;
+      border: 1px solid #6a6a6a;
+      border-radius: 3px;
+      &:after {
+        position: absolute;
+        content: "";
+        left: 12px;
+        top: 12px;
+        border-radius: 5px;
+        border-width: 0 3px 3px 0;
+        transition: all 0.3s ease-out;
+      }
+    }
+  }
+
+  span {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    width: 85%;
+    text-align: left;
+    font: 500 14px/19px "SF Pro Display";
+    color: #2b2b2b;
+    a {
+      color: #28a4e5;
+    }
+  }
+}
+
 @media (max-width: 1249px) {
   .contact_section {
     margin-top: -155px;
@@ -239,6 +316,9 @@
   .contact_section .contact_form .order-summary {
     margin: 0px auto;
   }
+  .checkbox-first {
+    display: flex;
+  }
 }
 
 @media (max-width: 764px) {
@@ -250,9 +330,31 @@
   .contact_section {
     .send_req {
       width: 100%;
+      font-size: 18px;
     }
     .order-summary {
       width: 100% !important;
+      margin-bottom: 100px !important;
+      font-size: 18px !important;
+      img {
+        position: absolute;
+        left: 5px;
+      }
+    }
+
+    .contact_form h1 {
+      font-size: 25px;
+      margin: 0;
+    }
+    .contact_form .contacts .f-row h2 {
+      font-size: 20px;
+      margin-top: 20px;
+    }
+    .contact_form label {
+      font-size: 14px;
+    }
+    .contact_form .message-text {
+      font-size: 20px;
     }
   }
 }

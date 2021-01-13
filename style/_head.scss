@@ -45,9 +45,11 @@
 @media (max-width: 650px) {
   .headline {
     justify-content: space-between;
+    align-items: flex-end;
 
     h1 {
       margin-left: 30px;
+      margin-bottom: 10px;
     }
     .slaves {
       position: absolute;
@@ -64,10 +66,10 @@
 
       &.active {
         height: auto;
-        top: 80px;
+        top: 90px;
         z-index: 999;
         opacity: 1;
-        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
       }
     }
     .US {
@@ -76,6 +78,7 @@
     ion-icon {
       display: block;
       margin-right: 20px;
+      margin-bottom: 10px;
     }
   }
 }

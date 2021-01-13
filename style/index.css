@@ -34,11 +34,23 @@ h1 {
   color: #252525;
 }
 
+@media (max-width: 500px) {
+  h1 {
+    font-size: 25px;
+  }
+}
+
 h3 {
   margin-top: 35px;
   color: #0d0d0d;
   font: 400 25px/30px "Classica Pro";
   text-transform: capitalize;
+}
+
+@media (max-width: 500px) {
+  h3 {
+    font-size: 20px;
+  }
 }
 
 .lines {
@@ -400,6 +412,63 @@ input:focus {
   .main {
     width: 90%;
   }
+  .main .blocks {
+    margin-top: 10px;
+  }
+  .main .blocks img {
+    width: 67px;
+    height: 67px;
+  }
+  .main .blocks .size {
+    margin-left: 7px;
+    width: 75px;
+  }
+  .main .blocks.cut_shape {
+    grid-gap: 20px 10px;
+  }
+  .main .blocks.cut_shape img {
+    width: 59px;
+    height: 60px;
+  }
+  .main .blocks.certificates img {
+    height: 32px;
+    width: auto;
+  }
+  .main .blocks.certificates img:nth-child(2) {
+    margin-left: 32px;
+  }
+  .main .blocks.ring_sizes .size {
+    margin-left: 3px;
+    width: 62px;
+  }
+  .main .personal_text input {
+    width: 80%;
+  }
+  .main .personal_text button {
+    padding: 8px 10px;
+    border-radius: 2px;
+  }
+  .main .jewerly_section .style_id {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .main .jewerly_section .ring_engraving input {
+    width: 80%;
+  }
+  .main .jewerly_section .ring_engraving button {
+    padding: 8px 10px;
+    border-radius: 2px;
+  }
+  .main .jewerly_section .metals {
+    gap: 18px;
+  }
+  .main .jewerly_section .metals img {
+    width: 70px;
+    height: 46px;
+  }
+  .main .jewerly_section .ring_engraving span {
+    font-size: 14px;
+  }
 }
 
 .headline {
@@ -455,9 +524,13 @@ input:focus {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .headline h1 {
     margin-left: 30px;
+    margin-bottom: 10px;
   }
   .headline .slaves {
     position: absolute;
@@ -479,11 +552,11 @@ input:focus {
   }
   .headline .slaves.active {
     height: auto;
-    top: 80px;
+    top: 90px;
     z-index: 999;
     opacity: 1;
-    -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   .headline .US {
     display: none;
@@ -491,6 +564,7 @@ input:focus {
   .headline ion-icon {
     display: block;
     margin-right: 20px;
+    margin-bottom: 10px;
   }
 }
 
@@ -767,6 +841,90 @@ input:focus {
   outline: none;
 }
 
+.checkbox-first {
+  position: relative;
+  margin-top: 20px;
+  max-width: 470px;
+  display: none;
+}
+
+.checkbox-first .checkbox-label {
+  display: block;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+  font-size: 22px;
+  line-height: 24px;
+  height: 24px;
+  width: 24px;
+  clear: both;
+}
+
+.checkbox-first .checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-first .checkbox-label input:checked ~ .checkbox-custom {
+  background-color: #6a6a6a;
+  -webkit-transform: rotate(0deg) scale(1);
+          transform: rotate(0deg) scale(1);
+  opacity: 1;
+}
+
+.checkbox-first .checkbox-label input:checked ~ .checkbox-custom:after {
+  -webkit-transform: rotate(45deg) scale(1);
+          transform: rotate(45deg) scale(1);
+  opacity: 1;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.checkbox-first .checkbox-label span {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  border: 1px solid #6a6a6a;
+  border-radius: 3px;
+}
+
+.checkbox-first .checkbox-label span:after {
+  position: absolute;
+  content: "";
+  left: 12px;
+  top: 12px;
+  border-radius: 5px;
+  border-width: 0 3px 3px 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.checkbox-first span {
+  position: absolute;
+  left: 25px;
+  top: 10px;
+  width: 85%;
+  text-align: left;
+  font: 500 14px/19px "SF Pro Display";
+  color: #2b2b2b;
+}
+
+.checkbox-first span a {
+  color: #28a4e5;
+}
+
 @media (max-width: 1249px) {
   .contact_section {
     margin-top: -155px;
@@ -792,6 +950,11 @@ input:focus {
   .contact_section .contact_form .order-summary {
     margin: 0px auto;
   }
+  .checkbox-first {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 @media (max-width: 764px) {
@@ -804,9 +967,30 @@ input:focus {
 @media (max-width: 500px) {
   .contact_section .send_req {
     width: 100%;
+    font-size: 18px;
   }
   .contact_section .order-summary {
     width: 100% !important;
+    margin-bottom: 100px !important;
+    font-size: 18px !important;
+  }
+  .contact_section .order-summary img {
+    position: absolute;
+    left: 5px;
+  }
+  .contact_section .contact_form h1 {
+    font-size: 25px;
+    margin: 0;
+  }
+  .contact_section .contact_form .contacts .f-row h2 {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .contact_section .contact_form label {
+    font-size: 14px;
+  }
+  .contact_section .contact_form .message-text {
+    font-size: 20px;
   }
 }
 

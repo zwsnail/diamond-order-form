@@ -259,5 +259,69 @@
 
   .main {
     width: 90%;
+
+    .blocks {
+      margin-top: 10px;
+      img {
+        width: 67px;
+        height: 67px;
+      }
+      .size {
+        margin-left: 7px;
+        width: 75px;
+      }
+      &.cut_shape {
+        grid-gap: 20px 10px;
+        img {
+          width: 59px;
+          height: 60px;
+        }
+      }
+      &.certificates img {
+        height: 32px;
+        width: auto;
+        &:nth-child(2) {
+          margin-left: 32px;
+        }
+      }
+
+      &.ring_sizes .size {
+        margin-left: 3px;
+        width: 62px;
+      }
+    }
+
+    .personal_text {
+      input {
+        width: 80%;
+      }
+      button {
+        padding: 8px 10px;
+        border-radius: 2px;
+      }
+    }
+    .jewerly_section .style_id {
+      margin-top: 10px;
+      width: 100%;
+    }
+    .jewerly_section .ring_engraving {
+      input {
+        width: 80%;
+      }
+      button {
+        padding: 8px 10px;
+        border-radius: 2px;
+      }
+    }
+    .jewerly_section .metals {
+      gap: 18px;
+      img {
+        width: 70px;
+        height: 46px;
+      }
+    }
+    .jewerly_section .ring_engraving span {
+      font-size: 14px;
+    }
   }
 }

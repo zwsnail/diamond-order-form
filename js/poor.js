@@ -1,8 +1,9 @@
-$(document).ready(function () {
-  (function () {
-    emailjs.init("user_IUFyW3twYDD5jnfPHSSlw");
-  })();
+(function () {
+  emailjs.init("user_IUFyW3twYDD5jnfPHSSlw");
+})();
 
+
+$(document).ready(function () {
   function selector(target) {
     return document.querySelector(target).value;
   }
@@ -62,10 +63,6 @@ $(document).ready(function () {
     obj.ringSize = $(this).text();
     $(".all-info p:nth-child(6) span").text(`${obj.ringSize}`);
   });
-
-  // fields required
-  let allInputs = $("#contact-form input");
-  console.log(allInputs);
 
   $("#contact_section").on("submit", function (e) {
     e.preventDefault();
