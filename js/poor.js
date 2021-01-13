@@ -7,7 +7,7 @@ $(document).ready(function () {
     return document.querySelector(target).value;
   }
 
-  $(".ring_engrave_form").on("submit", function(e){
+  $(".ring_engrave_form").on("submit", function (e) {
     e.preventDefault();
     obj.jevelryId = selector("#style_id");
     obj.ringEngrave = selector("#diamond_text_engrave");
@@ -16,50 +16,48 @@ $(document).ready(function () {
     $(".all-info p:nth-child(8) span").text(`${obj.ringEngrave}`);
   });
 
-  $(".personal_text").on("submit", function(e){
+  $(".personal_text").on("submit", function (e) {
     e.preventDefault();
     obj.laserMark = selector("#laser_mark");
   });
 
-
   const obj = {
-    laserMark:"",
+    laserMark: "",
     diamondColor: "",
     caratSize: "",
     cutShape: "",
     certificates: "",
-    jevelryId:"",
+    jevelryId: "",
     ringSize: "",
     metalColor: "",
     ringEngrave: "",
   };
-  
-  
+
   $("#diamond_box img").on("click", function () {
     obj.diamondColor = $(this).attr("alt");
     $(".all-info p:nth-child(1) span").text(`${obj.diamondColor}`);
   });
-  
+
   $(".cut_shape img").on("click", function () {
     obj.cutShape = $(this).attr("alt");
     $(".all-info p:nth-child(3) span").text(`${obj.cutShape}`);
   });
-  
+
   $(".certificates img").on("click", function () {
     obj.certificates = $(this).attr("alt");
     $(".all-info p:nth-child(4) span").text(`${obj.certificates}`);
   });
-  
+
   $(".metals img").on("click", function () {
     obj.metalColor = $(this).attr("alt");
     $(".all-info p:nth-child(7) span").text(`${obj.metalColor}`);
   });
-  
+
   $(".caratSize div").on("click", function () {
     obj.caratSize = $(this).text();
     $(".all-info p:nth-child(2) span").text(`${obj.caratSize}`);
   });
-  
+
   $(".ring_sizes div").on("click", function () {
     obj.ringSize = $(this).text();
     $(".all-info p:nth-child(6) span").text(`${obj.ringSize}`);
@@ -68,10 +66,6 @@ $(document).ready(function () {
   // fields required
   let allInputs = $("#contact-form input");
   console.log(allInputs);
-
-
-
-
 
   $("#contact_section").on("submit", function (e) {
     e.preventDefault();
@@ -89,7 +83,6 @@ $(document).ready(function () {
     const country = selector("#country");
 
     const message = selector("#message");
-
 
     const contactInformation = ` ${username} ${userlname}`;
     const addresses = `${address1} , ${address2}`;

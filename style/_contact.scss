@@ -231,6 +231,14 @@
   .contact_section {
     grid-template-columns: 1fr;
   }
+
+  .contact_section .send_req {
+    margin: 20px auto;
+    border-radius: 1px;
+  }
+  .contact_section .contact_form .order-summary {
+    margin: 0px auto;
+  }
 }
 
 @media (max-width: 764px) {
