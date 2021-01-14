@@ -1,18 +1,14 @@
-// @font-face {
-//   font-family: "Classica Pro";
-//   src: url("classica/ClassicaPro-Regular.woff2") format("woff2"),
-//     url("classica/ClassicaPro-Regular.woff") format("woff"),
-//     url("classica/ClassicaPro-Regular.ttf") format("truetype");
-// }
-
 @font-face {
   font-family: "Classica Pro";
-  src: url("classica/ClassicaPro-Regular.ttf");
+  src: url("classica/ClassicaPro-Regular.woff2") format("woff2"),
+    url("classica/ClassicaPro-Regular.woff") format("woff"),
+    url("classica/ClassicaPro-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Classica Pro Demi";
-  src: url("classica/ClassicaPro-Demi.ttf");
+  src: url("classica/ClassicaPro-Demi.ttf"),
+    url("classica/ClassicaPro-Demi.woff"), url("classica/ClassicaPro-Demi.ttf");
 }
 
 // SF PRO

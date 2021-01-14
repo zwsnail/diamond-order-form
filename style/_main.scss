@@ -50,6 +50,10 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-height: 950px) {
+      margin: -110px auto;
+    }
+
     a {
       background: #000;
       text-align: center;
@@ -232,7 +236,9 @@
     margin: 160px auto;
   }
   .jewerly_section {
-    margin-top: 40px;
+    margin-top: 30px;
+    border-top: 1px solid #d1cdcd;
+    padding-top: 40px;
   }
 }
 

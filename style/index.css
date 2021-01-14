@@ -2,12 +2,12 @@
 @import url(//db.onlinewebfonts.com/c/64a2cfb57c4a5df1013e4f2e5bf3eff3?family=SF+Pro+Display);
 @font-face {
   font-family: "Classica Pro";
-  src: url("classica/ClassicaPro-Regular.ttf");
+  src: url("classica/ClassicaPro-Regular.woff2") format("woff2"), url("classica/ClassicaPro-Regular.woff") format("woff"), url("classica/ClassicaPro-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Classica Pro Demi";
-  src: url("classica/ClassicaPro-Demi.ttf");
+  src: url("classica/ClassicaPro-Demi.ttf"), url("classica/ClassicaPro-Demi.woff"), url("classica/ClassicaPro-Demi.ttf");
 }
 
 html {
@@ -146,6 +146,12 @@ input:focus {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-height: 950px) {
+  .head .daimons_min {
+    margin: -110px auto;
+  }
 }
 
 .head .daimons_min a {
@@ -391,7 +397,9 @@ input:focus {
     margin: 160px auto;
   }
   .jewerly_section {
-    margin-top: 40px;
+    margin-top: 30px;
+    border-top: 1px solid #d1cdcd;
+    padding-top: 40px;
   }
 }
 
@@ -604,8 +612,8 @@ input:focus {
 
 .contact_section .contact_form h1 {
   font-size: 35px;
-  font-weight: 300;
-  font-family: "SF Pro Display";
+  font-weight: 600;
+  font-family: "Classica Pro Demi";
   color: #252525;
   margin: 0 0 46px 0;
 }
@@ -655,7 +663,7 @@ input:focus {
 
 .contact_section .contact_form .contacts .f-row h2 {
   text-align: left;
-  font: 500 25px/33px "SF Pro Display";
+  font: 500 25px/33px "Classica Pro";
   color: #0d0d0d;
 }
 
