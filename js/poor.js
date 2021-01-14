@@ -2,7 +2,6 @@
   emailjs.init("user_IUFyW3twYDD5jnfPHSSlw");
 })();
 
-
 $(document).ready(function () {
   function selector(target) {
     return document.querySelector(target).value;
@@ -34,32 +33,45 @@ $(document).ready(function () {
     ringEngrave: "",
   };
 
+  function bordered(box, select) {
+    box.removeClass("borderBox");
+    select.addClass("borderBox");
+  }
+
   $("#diamond_box img").on("click", function () {
+    bordered($("#diamond_box img"), $(this));
     obj.diamondColor = $(this).attr("alt");
     $(".all-info p:nth-child(1) span").text(`${obj.diamondColor}`);
   });
 
   $(".cut_shape img").on("click", function () {
+    bordered($(".cut_shape img"), $(this));
     obj.cutShape = $(this).attr("alt");
     $(".all-info p:nth-child(3) span").text(`${obj.cutShape}`);
   });
 
   $(".certificates img").on("click", function () {
+    bordered($(".certificates img"), $(this));
     obj.certificates = $(this).attr("alt");
     $(".all-info p:nth-child(4) span").text(`${obj.certificates}`);
   });
 
   $(".metals img").on("click", function () {
+    bordered($(".metals img"), $(this));
     obj.metalColor = $(this).attr("alt");
     $(".all-info p:nth-child(7) span").text(`${obj.metalColor}`);
   });
 
   $(".caratSize div").on("click", function () {
+    $(".caratSize div").css({ border: "1px solid #eee" });
+    $(this).css({ border: "1px solid #cc8342" });
     obj.caratSize = $(this).text();
     $(".all-info p:nth-child(2) span").text(`${obj.caratSize}`);
   });
 
   $(".ring_sizes div").on("click", function () {
+    $(".ring_sizes div").css({ border: "1px solid #eee" });
+    $(this).css({ border: "1px solid #cc8342" });
     obj.ringSize = $(this).text();
     $(".all-info p:nth-child(6) span").text(`${obj.ringSize}`);
   });

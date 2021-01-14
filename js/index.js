@@ -1,23 +1,25 @@
 $(document).ready(function () {
   let link = $("a");
 
-  $(".sections").hide();
-  $(".diamond_section").show();
-
-  link.click(function () {
-    let currentTab = $(this).attr("href");
+  if (window.matchMedia("(min-width: 1249px)").matches) {
     $(".sections").hide();
-    $(currentTab).show();
+    $(".diamond_section").show();
 
-    if (currentTab === "#contact_section") {
-      $(".footer_space").hide();
-      $(".head").hide();
-    } else {
-      $(".footer_space").show();
-      $(".head").show();
-    }
-    return false;
-  });
+    link.click(function () {
+      let currentTab = $(this).attr("href");
+      $(".sections").hide();
+      $(currentTab).show();
+
+      if (currentTab === "#contact_section") {
+        $(".footer_space").hide();
+        $(".head").hide();
+      } else {
+        $(".footer_space").show();
+        $(".head").show();
+      }
+      return false;
+    });
+  }
 
   if (window.matchMedia("(max-width: 1249px)").matches) {
     $(".sections").show();

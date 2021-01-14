@@ -17,6 +17,11 @@ $c-dexin: #cc8342;
 $c-line: #d1cdcd;
 $g-color: #252525;
 
+.borderBox {
+  transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+  border: 1px solid $c-dexin;
+}
+
 h1 {
   text-align: left;
   font-size: 35px;

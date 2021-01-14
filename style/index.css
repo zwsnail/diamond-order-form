@@ -26,6 +26,12 @@ body {
   padding: 0;
 }
 
+.borderBox {
+  -webkit-transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+  border: 1px solid #cc8342;
+}
+
 h1 {
   text-align: left;
   font-size: 35px;
@@ -110,6 +116,7 @@ input:focus {
 }
 
 .head .d_images img {
+  width: 160px;
   margin: -5px 50px;
 }
 
