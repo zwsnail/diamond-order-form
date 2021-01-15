@@ -735,17 +735,26 @@ input:focus {
           align-items: flex-start;
 }
 
+.contact_section .contact_info .jeverly-id-text {
+  color: #525252;
+  font: 500 20px/26px "Classica Pro";
+}
+
 .contact_section .contact_info img {
-  width: 435px;
-  height: 435px;
+  width: 395px;
+  height: 395px;
 }
 
 .contact_section .contact_info .all-info {
-  margin-top: 20px;
   width: 435px;
   text-align: left;
   color: #525252;
   font-family: "SF Pro Display";
+}
+
+.contact_section .contact_info .all-info h3 {
+  margin-top: 0;
+  font-size: 20px;
 }
 
 .contact_section .contact_info .all-info p {
@@ -766,6 +775,10 @@ input:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-items: self-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .contact_section .contact_info .checkbox-all .checkbox-label {
@@ -776,7 +789,7 @@ input:focus {
   font-size: 22px;
   line-height: 24px;
   height: 24px;
-  width: 24px;
+  width: 38px;
   clear: both;
 }
 
@@ -832,11 +845,11 @@ input:focus {
 }
 
 .contact_section .contact_info .checkbox-all span {
-  width: 85%;
   display: inline;
   text-align: left;
   font: 500 14px/19px "SF Pro Display";
   color: #737373;
+  margin-left: 0;
 }
 
 .contact_section .send_req {

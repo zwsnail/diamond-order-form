@@ -14,7 +14,7 @@ $(document).ready(function () {
 
     console.log(obj);
 
-    $(".jeverly-id-text").text(`${obj.jevelryId}`);
+    $(".jeverly-id-text").append(`${obj.jevelryId}`);
     $(".all-info #drop_5").text(`${obj.jevelryId}`);
     $(".all-info #drop_8").text(`${obj.ringEngrave}`);
   });
