@@ -1,0 +1,49 @@
+Hello {{to_name}},
+
+You got a new message from  DIamonds website {{from_name}}:
+
+Contact Information 
+
+Name  - {{from_name}}
+
+Email - {{mail}}
+
+Phone Number - {{phone}}
+
+Delivery Adress 
+
+ Address - {{address}}
+
+City/State - {{city}}
+
+Zip/Country - {{zip}}
+
+Order Summary
+
+Laser Mark : {{laserMark}}
+
+Diamond Color: {{diamondColor}}
+
+Carat sizes: {{caratSizes}}
+
+Cut Shapes: {{cutShapes}}
+
+Certificates: {{certificates}}
+
+Jewelry ID: {{jewelryID}}
+
+Ring Size: {{ringSize}}
+
+Metal Color: {{metalColor}}
+
+Ring Engraving: {{ringEngraving}}
+
+
+
+Message
+
+{{message}}
+
+Best wishes,
+
+{{from_name}}

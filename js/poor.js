@@ -12,8 +12,11 @@ $(document).ready(function () {
     obj.jevelryId = selector("#style_id");
     obj.ringEngrave = selector("#diamond_text_engrave");
 
-    $(".all-info p:nth-child(5) span").text(`${obj.jevelryId}`);
-    $(".all-info p:nth-child(8) span").text(`${obj.ringEngrave}`);
+    console.log(obj);
+
+    $(".jeverly-id-text").text(`${obj.jevelryId}`);
+    $(".all-info #drop_5").text(`${obj.jevelryId}`);
+    $(".all-info #drop_8").text(`${obj.ringEngrave}`);
   });
 
   $(".personal_text").on("submit", function (e) {
@@ -41,39 +44,39 @@ $(document).ready(function () {
   $("#diamond_box img").on("click", function () {
     bordered($("#diamond_box img"), $(this));
     obj.diamondColor = $(this).attr("alt");
-    $(".all-info p:nth-child(1) span").text(`${obj.diamondColor}`);
+    $(".all-info #drop_1").text(`${obj.diamondColor}`);
   });
 
   $(".cut_shape img").on("click", function () {
     bordered($(".cut_shape img"), $(this));
     obj.cutShape = $(this).attr("alt");
-    $(".all-info p:nth-child(3) span").text(`${obj.cutShape}`);
+    $(".all-info #drop_3").text(`${obj.cutShape}`);
   });
 
   $(".certificates img").on("click", function () {
     bordered($(".certificates img"), $(this));
     obj.certificates = $(this).attr("alt");
-    $(".all-info p:nth-child(4) span").text(`${obj.certificates}`);
+    $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
   $(".metals img").on("click", function () {
     bordered($(".metals img"), $(this));
     obj.metalColor = $(this).attr("alt");
-    $(".all-info p:nth-child(7) span").text(`${obj.metalColor}`);
+    $(".all-info #drop_7").text(`${obj.metalColor}`);
   });
 
   $(".caratSize div").on("click", function () {
     $(".caratSize div").css({ border: "1px solid #eee" });
     $(this).css({ border: "1px solid #cc8342" });
     obj.caratSize = $(this).text();
-    $(".all-info p:nth-child(2) span").text(`${obj.caratSize}`);
+    $(".all-info #drop_2").text(`${obj.caratSize}`);
   });
 
   $(".ring_sizes div").on("click", function () {
     $(".ring_sizes div").css({ border: "1px solid #eee" });
     $(this).css({ border: "1px solid #cc8342" });
     obj.ringSize = $(this).text();
-    $(".all-info p:nth-child(6) span").text(`${obj.ringSize}`);
+    $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
 
   $("#contact_section").on("submit", function (e) {

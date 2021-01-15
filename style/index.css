@@ -730,9 +730,9 @@ input:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .contact_section .contact_info img {
@@ -748,9 +748,20 @@ input:focus {
   font-family: "SF Pro Display";
 }
 
+.contact_section .contact_info .all-info p {
+  padding: 3px 0;
+}
+
+.contact_section .contact_info .all-info .under-price {
+  width: 60%;
+  border: 1px solid #cc8342;
+  font-size: 9px;
+  margin-top: 2px;
+}
+
 .contact_section .contact_info .checkbox-all {
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   max-width: 470px;
   display: -webkit-box;
   display: -ms-flexbox;
