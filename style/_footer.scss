@@ -3,18 +3,27 @@
   left: 0;
   right: 0;
   position: fixed;
-  background: #201f1f;
+  background: #0d0d0dad;
   max-width: 100%;
   min-height: 130px;
   z-index: 99;
   padding: 0 180px;
 
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
   color: #ffffff;
+
+  #column-warranty {
+    display: none;
+  }
+
+  #column-support {
+    display: none;
+  }
 
   .columns {
     h2 {
@@ -56,6 +65,36 @@
 
       span {
         font: 300 14px/18px "SF Pro Display";
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footer_space {
+    #column-warranty {
+      display: none;
+    }
+
+    #column-support {
+      display: none;
+    }
+
+    #column-rull {
+      margin-bottom: 10px;
+    }
+
+    background: #0d0d0dad;
+
+    padding: 0 30px;
+    .columns {
+      h2 {
+        font: 300 24px/36px "SF Pro Display";
+      }
+
+      span {
+        font: 100 14px/18px "SF Pro Display";
+        margin-top: 0px;
       }
     }
   }

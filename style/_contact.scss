@@ -21,21 +21,23 @@
 
 .contact_section {
   position: relative;
-  margin-top: -215px;
-  width: 100%;
+  // margin-top: 100px;
+  width: 70%;
   height: auto;
-  z-index: 999;
+  z-index: 99;
   opacity: 1;
   background: #fff;
 
   padding-top: 40px;
 
-  display: grid;
-  grid-template-columns: 55% auto;
+  // display: grid;
+  // grid-template-columns: 55% auto;
 
   .contact_form {
     position: relative;
-    margin-left: 60px;
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
     // width: 900px;
@@ -103,56 +105,9 @@
       }
     }
 
-    .order-summary {
-      margin-top: 34px;
-      @include con-button();
-      margin-bottom: 55px;
-    }
-    .message-text {
-      text-align: left;
-      font: 500 25px/33px "SF Pro Display";
-      color: #0d0d0d;
-      margin: 30px 0 18px 0;
-    }
-  }
-
-  .contact_info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-
-    .jeverly-id-text {
-      color: #525252;
-      font: 500 20px/26px "Classica Pro";
-    }
-    img {
-      width: 395px;
-      height: 395px;
-    }
-    .all-info {
-      width: 435px;
-      text-align: left;
-      color: #525252;
-      font-family: "SF Pro Display";
-      h3 {
-        margin-top: 0;
-        font-size: 20px;
-      }
-      p {
-        padding: 3px 0;
-      }
-      .under-price {
-        width: 60%;
-        border: 1px solid $c-dexin;
-        font-size: 9px;
-        margin-top: 2px;
-      }
-    }
-    //  ------------------------ -------------------------------- CHECKBOX   ---------------------------------------------------------
-
     .checkbox-all {
       position: relative;
-      margin-top: 10px;
+      margin-top: 30px;
       max-width: 470px;
       display: flex;
       justify-items: self-start;
@@ -186,7 +141,7 @@
             top: 1px;
             width: 6px;
             height: 12px;
-            border: solid #fff;
+            border: 3px solid #fff;
             border-width: 0 2px 2px 0;
             background-color: transparent;
             border-radius: 0;
@@ -213,6 +168,10 @@
           }
         }
       }
+      span.checkbox-terms {
+        font-size: 12px;
+        font-style: italic;
+      }
 
       span {
         display: inline;
@@ -222,6 +181,54 @@
         margin-left: 0;
       }
     }
+
+    .order-summary {
+      margin-top: 34px;
+      @include con-button();
+      margin-bottom: 0px;
+    }
+    .message-text {
+      text-align: left;
+      font: 500 25px/33px "SF Pro Display";
+      color: #0d0d0d;
+      margin: 30px 0 18px 0;
+    }
+  }
+
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .jeverly-id-text {
+      color: #525252;
+      font: 500 20px/26px "Classica Pro";
+    }
+    img {
+      width: 240x;
+      height: 240px;
+      margin-left: 110px;
+    }
+    .all-info {
+      width: 435px;
+      text-align: left;
+      color: #525252;
+      font-family: "SF Pro Display";
+      h3 {
+        margin-top: 0;
+        font-size: 20px;
+      }
+      p {
+        padding: 3px 0;
+      }
+      .under-price {
+        width: 60%;
+        border: 1px solid $c-dexin;
+        font-size: 9px;
+        margin-top: 2px;
+      }
+    }
+    //  ------------------------ -------------------------------- CHECKBOX   ---------------------------------------------------------
   }
 
   .send_req {
@@ -346,18 +353,26 @@
 }
 @media (max-width: 500px) {
   .contact_section {
+    width: 100%;
+    padding-bottom: 100px;
+
     .send_req {
       width: 100%;
       font-size: 18px;
     }
     .order-summary {
       width: 100% !important;
-      margin-bottom: 100px !important;
+      // margin-bottom: 100px !important;
       font-size: 18px !important;
       img {
         position: absolute;
         left: 5px;
       }
+    }
+
+    .contact_form {
+      padding-bottom: 10px;
+      margin-top: 0px;
     }
 
     .contact_form h1 {
@@ -374,5 +389,15 @@
     .contact_form .message-text {
       font-size: 20px;
     }
+    .contact_form .checkbox-all {
+      margin-bottom: 50px;
+    }
+  }
+  #contact_section {
+    padding-bottom: 0px;
+  }
+
+  #summary_section {
+    margin-top: -155px;
   }
 }

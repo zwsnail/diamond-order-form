@@ -1,5 +1,5 @@
 (function () {
-  emailjs.init("user_IUFyW3twYDD5jnfPHSSlw");
+  emailjs.init("user_F1infr4XnoJN5o3sHvo0J");
 })();
 
 $(document).ready(function () {
@@ -21,8 +21,22 @@ $(document).ready(function () {
 
   $(".personal_text").on("submit", function (e) {
     e.preventDefault();
+  
     obj.laserMark = selector("#laser_mark");
+ 
+    let cMark = Math.floor($("#laser_mark").attr("data-index-number"));
+    showMarkPrice(cMark);
+    $("#showAddedMarkMessage").text("Mark added!")
   });
+
+  $("#laser_mark").blur(function(){
+    if (selector("#laser_mark") == "") {
+      cMark = 0;
+      priceObject.cMark = cMark;
+      showMarkPrice(cMark);
+      $("#showAddedMarkMessage").text("Mark removed!")
+    }
+});
 
   const obj = {
     laserMark: "",
@@ -41,35 +55,155 @@ $(document).ready(function () {
     select.addClass("borderBox");
   }
 
-  $("#diamond_box img").on("click", function () {
+  function isBordered(box){
+    if(box.hasClass("borderBox")) 
+      return true;
+    return false;
+  }
+
+  function showCertificatePrice(cCertificate){
+    priceObject.cCertificate = cCertificate;
+    console.log(priceObject);
+    console.log("count-", priceObject.count());
+
+    $(".counted__jeverly").text("$ " + priceObject.count());
+    // $(".all-info #drop_10").text(`${obj.laserMark}`);
+    $(".all-info #drop_9").text("$ " + priceObject.count());
+  }
+
+  function showMarkPrice(cMark){
+    priceObject.cMark = cMark;
+    console.log(priceObject);
+    console.log("count-", priceObject.count());
+    $(".counted__jeverly").text("$ " + priceObject.count());
+    $(".all-info #drop_9").text("$ " + priceObject.count());
+    $(".all-info #drop_10").text(`${obj.laserMark}`);
+  }
+
+  // Price calculation
+
+  const priceObject = {
+    dPrice: 0,
+    cSize: 0,
+    cShape: 0,
+    cCertificate: 0,
+    cMark: 0,
+
+    count: function () {
+      let sep = this.dPrice + this.cSize + this.cShape + this.cCertificate + this.cMark;
+      return sep;
+    },
+  };
+
+
+  $("#diamond_box img").on("click", function diamonds() {
+    let dPrice = Math.floor($(this).attr("data-index-number"));
+    priceObject.dPrice = dPrice;
+    console.log(priceObject);
+    console.log("count-", priceObject.count());
+
+    $(".counted__jeverly").text("$ " + priceObject.count());
+    $(".all-info #drop_9").text("$ " + priceObject.count());
+
     bordered($("#diamond_box img"), $(this));
     obj.diamondColor = $(this).attr("alt");
     $(".all-info #drop_1").text(`${obj.diamondColor}`);
   });
 
+  $(".caratSize div").on("click", function () {
+    let cSize = Math.floor($(this).attr("data-index-number"));
+    priceObject.cSize = cSize;
+    console.log(priceObject);
+    console.log("count-", priceObject.count());
+
+    $(".counted__jeverly").text("$ " + priceObject.count());
+    $(".all-info #drop_9").text("$ " + priceObject.count());
+
+    $(".caratSize div").css({ border: "1px solid #eee" });
+    $(this).css({ border: "1px solid #cc8342" });
+    obj.caratSize = $(this).text();
+    $(".all-info #drop_2").text(`${obj.caratSize}`);
+  });
+
   $(".cut_shape img").on("click", function () {
+    let cShape = Math.floor($(this).attr("data-index-number"));
+    priceObject.cShape = cShape;
+    console.log(priceObject);
+    console.log("count-", priceObject.count());
+
+    $(".counted__jeverly").text("$ " + priceObject.count());
+    $(".all-info #drop_9").text("$ " + priceObject.count());
+
     bordered($(".cut_shape img"), $(this));
     obj.cutShape = $(this).attr("alt");
     $(".all-info #drop_3").text(`${obj.cutShape}`);
   });
 
-  $(".certificates img").on("click", function () {
-    bordered($(".certificates img"), $(this));
-    obj.certificates = $(this).attr("alt");
-    $(".all-info #drop_4").text(`${obj.certificates}`);
+  // $(".certificates img").on("click", function () {
+  //   bordered($(".certificates img"), $(this));
+  //   obj.certificates = $(this).attr("alt");
+  //   $(".all-info #drop_4").text(`${obj.certificates}`);
+  // });
+
+  $("#gia").on("click", function () {
+    let cCertificate = Math.floor($(this).attr("data-index-number"));
+    if (isBordered($("#gia"))) {
+      console.log($("#gia").attr("alt"));
+      $("#gia").removeClass("borderBox");
+      $(".all-info #drop_4").text(``);
+      cCertificate = 0;
+      showCertificatePrice(cCertificate);
+      return;
+    }
+      bordered($(".certificates img"), $(this));
+      obj.certificates = $(this).attr("alt");
+
+      showCertificatePrice(($(this).attr("data-index-number"))*1);
+      $(".all-info #drop_4").text(`${obj.certificates}`);
+    });
+
+
+  // double click to remove the tag;
+  // *1 is used to parse the string to a number
+  $("#igi").on("click", function () {
+    if (isBordered($("#igi"))) {
+      console.log($("#igi").attr("alt"));
+      $("#igi").removeClass("borderBox");
+      $(".all-info #drop_4").text(``);
+
+      cCertificate = 0;
+      showCertificatePrice(cCertificate);
+      return;
+    }
+      bordered($(".certificates img"), $(this));
+      obj.certificates = $(this).attr("alt");
+
+      showCertificatePrice(($(this).attr("data-index-number"))*1);
+      $(".all-info #drop_4").text(`${obj.certificates}`);
   });
+
+  $("#laser-mark").on("click", function () {
+    if ($("#laser-mark").attr()) {
+      console.log($("#igi").attr("alt"));
+      $("#igi").removeClass("borderBox");
+      $(".all-info #drop_4").text(``);
+
+      cCertificate = 0;
+      showCertificatePrice(cCertificate);
+      return;
+    }
+      bordered($(".certificates img"), $(this));
+      obj.certificates = $(this).attr("alt");
+
+      showCertificatePrice(($(this).attr("data-index-number"))*1);
+      $(".all-info #drop_4").text(`${obj.certificates}`);
+  });
+
 
   $(".metals img").on("click", function () {
     bordered($(".metals img"), $(this));
     obj.metalColor = $(this).attr("alt");
     $(".all-info #drop_7").text(`${obj.metalColor}`);
-  });
-
-  $(".caratSize div").on("click", function () {
-    $(".caratSize div").css({ border: "1px solid #eee" });
-    $(this).css({ border: "1px solid #cc8342" });
-    obj.caratSize = $(this).text();
-    $(".all-info #drop_2").text(`${obj.caratSize}`);
   });
 
   $(".ring_sizes div").on("click", function () {
@@ -105,7 +239,7 @@ $(document).ready(function () {
       from_name: contactInformation,
       mail: userMail,
       phone: phoneNumber,
-      to_name: "Jane",
+      to_name: "SunnyEden",
 
       address: addresses,
       city: citys,
@@ -122,14 +256,15 @@ $(document).ready(function () {
       ringSize: obj.ringSize,
       metalColor: obj.metalColor,
       ringEngraving: obj.ringEngrave,
+      priceOfDiamond: priceObject.count(),
 
       message: message,
     };
 
     //  SEND EMAIL
-    emailjs.send("service_jt9l9dt", "template_yevxgca", templateParams).then(
+    emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
       function (response) {
-        console.log("SUCCESS!", response.status, response.text);
+        console.log("SUCCESS!Email had been sent to you!", response.status, response.text);
       },
       function Error(error) {
         console.log("FAILED...", error);
@@ -137,3 +272,6 @@ $(document).ready(function () {
     );
   });
 });
+
+
+// console.clear();

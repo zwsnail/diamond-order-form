@@ -1,12 +1,20 @@
+.sections {
+  // margin-left: 100px;
+  background: antiquewhite;
+}
+
 .group {
   position: relative;
-  width: 100%;
-  height: auto;
+  // width: 100%;
+  // height: auto;
+  width: 85%;
+  // margin: 160px auto;
+  margin: 0px auto;
 
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
+  // display: grid;
+  // grid-template-columns: 70% 30%;
+  // grid-auto-rows: auto;
+  // grid-auto-flow: dense;
 }
 
 .head {
@@ -36,7 +44,7 @@
     top: 40%;
     width: 626px;
     height: 626px;
-    background: url("../img/Charlize-Three-Stone-Front-Grey-630x630@2x.png");
+    background: url("../s/Charlize-Three-Stone-Front-Grey-630x630@2x.png");
     background-size: cover;
     background-position: center;
     opacity: 1;
@@ -99,8 +107,44 @@
   padding: 0;
   width: 83%;
   height: auto;
-  margin: 155px 0px;
-  // border: 1px solid rgb(209, 209, 209);
+  margin: 155px 40px;
+  border: 1px solid rgb(209, 209, 209);
+
+  // #diamond_box {
+  //   .item {
+  //     overflow: hidden;
+  //   }
+  //   .item img {
+  //     opacity: 1;
+  //   }
+  //   .item:hover img {
+  //     -webkit-transform: scale(1.1);
+  //     transform: scale(1.1);
+  //     -webkit-transition: all 0.8s;
+  //     transition: all 0.8s;
+  //     opacity: 0.5;
+  //   }
+
+  //   .item .caption {
+  //     position: absolute;
+  //     bottom: -50px;
+  //     margin-left: 10px;
+  //     opacity: 0;
+  //     -webkit-transition: all 0.4s;
+  //     transition: all 0.4s;
+  //   }
+  //   .item .caption p {
+  //     margin: 0;
+  //     color: rgb(245, 35, 35);
+  //     font-size: 1em;
+  //     font-family: "Lato", sans-serif;
+  //     letter-spacing: 1px;
+  //   }
+  //   .item:hover .caption {
+  //     opacity: 1;
+  //     bottom: 10px;
+  //   }
+  // }
 
   .blocks {
     @include inline();
@@ -109,10 +153,8 @@
     img {
       cursor: pointer;
       @include box(85px, 85px);
-
       @include background();
     }
-
     .size {
       cursor: pointer;
       margin-top: 10px;
@@ -120,7 +162,7 @@
       width: 55px;
       text-align: center;
       padding: 9px 0 9px 0;
-      border: 1px solid #eeeeee;
+      border: 3px solid #eeeeee;
       font: 400 16px "SF Pro Display";
       color: #525252;
       opacity: 0.7;
@@ -129,9 +171,10 @@
     &.cut_shape {
       margin-top: 20px;
       grid-auto-flow: dense;
-      grid-gap: 35px;
+      grid-gap: 5px;
 
       img {
+        box-sizing: border-box;
         width: 65px;
         height: 65px;
         cursor: pointer;
@@ -149,10 +192,23 @@
     @include firstForm();
   }
 
+  .diamond_section {
+    margin-left: 100px;
+  }
   .jewerly_section {
+    // margin: auto, 50px;
+    margin-left: 100px;
+
     .style_id {
-      margin-top: 10px;
-      width: 60%;
+      margin-top: 15px;
+      width: 25%;
+      border-radius: 5px;
+      border: 3px solid #eeeeee;
+      color: #525252;
+      height: 35px;
+      font-size: 18px;
+      font-weight: 400px;
+      font-style: normal;
     }
 
     .ring_sizes {
@@ -171,6 +227,15 @@
       & div {
         @include box(95px, 63px);
         cursor: pointer;
+      }
+    }
+    .metal-color {
+      @include inline();
+      margin-top: 5px;
+      gap: 30px;
+      & div {
+        @include box(95px, 63px);
+        // cursor: pointer;
       }
     }
 
@@ -195,9 +260,9 @@
     margin: 400px auto !important;
   }
 
-  .group {
-    grid-template-columns: 55% 45%;
-  }
+  // .group {
+  //   grid-template-columns: 55% 45%;
+  // }
 
   .head {
     width: 50%;
@@ -206,7 +271,7 @@
 
 @media (max-width: 1249px) {
   .footer_space {
-    display: none !important;
+    // display: none !important;
   }
   .d_images img {
     display: none !important;
@@ -255,28 +320,41 @@
   .head {
     margin-top: 180px;
     .h_image {
-      width: 370px;
+      width: 470px;
       height: 370px;
     }
   }
 
-  .diamond_section {
-    margin-top: -100px;
+  .group {
+    width: 100%;
   }
-
   .main {
     width: 90%;
 
+    .diamond_section {
+      margin-top: -100px;
+      padding-top: 20px;
+      margin-left: 0px;
+    }
+
+    .jewerly_section {
+      padding-top: 20px;
+      margin-left: 0px;
+      padding-top: 50px;
+    }
     .blocks {
       margin-top: 10px;
       img {
+        box-sizing: border-box;
         width: 67px;
         height: 67px;
       }
       .size {
+        box-sizing: border-box;
         margin-left: 7px;
-        width: 75px;
+        width: 70px;
       }
+
       &.cut_shape {
         grid-gap: 20px 10px;
         img {
@@ -285,6 +363,7 @@
         }
       }
       &.certificates img {
+        box-sizing: border-box;
         height: 32px;
         width: auto;
         &:nth-child(2) {
@@ -292,7 +371,12 @@
         }
       }
 
+      &.ring_sizes {
+        margin-left: 30px;
+        width: 290px;
+      }
       &.ring_sizes .size {
+        box-sizing: border-box;
         margin-left: 3px;
         width: 62px;
       }
@@ -301,6 +385,7 @@
     .personal_text {
       input {
         width: 80%;
+        border: 3px solid #eeeeee;
       }
       button {
         padding: 8px 10px;
@@ -308,6 +393,7 @@
       }
     }
     .jewerly_section .style_id {
+      border: 3px solid #eeeeee;
       margin-top: 10px;
       width: 100%;
     }
@@ -321,10 +407,30 @@
       }
     }
     .jewerly_section .metals {
-      gap: 18px;
+      gap: 15px;
       img {
+        box-sizing: border-box;
         width: 70px;
         height: 46px;
+      }
+    }
+    .jewerly_section .metal-color {
+      // gap: 15px;
+      // img {
+      //   box-sizing: border-box;
+      //   width: 70px;
+      //   height: 46px;
+      // }
+    }
+    .jewerly_section .metal-color div {
+      display: block;
+      font-size: 10px;
+      // background-color: red;
+      height: 30px;
+      width: 60px;
+      white-space: nowrap;
+      &.platinum {
+        text-align: left;
       }
     }
     .jewerly_section .ring_engraving span {

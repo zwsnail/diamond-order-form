@@ -3,278 +3,332 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Daimonds</title>
+
     <link rel="stylesheet" href="style/index.css" />
-  </head>
-  <body>
+
     <div class="headline">
-      <h1>Brand Logo</h1>
-      <!-- <div class="slaves"> -->
-      <a href="#diamond_section">Diamond</a>
-      <a href="#jewerly_section">Jewerly</a>
-      <a href="#contact_section">Contact</a>
-      <!-- </div> -->
-      <div class="US">US</div>
-      <ion-icon name="menu-sharp" size="large"></ion-icon>
-    </div>
-    <div class="head">
-      <div class="d_images">
-        <img src="img/Charlize-11.png" />
-        <img src="img/Charlize-22.png" />
-        <img src="img/Charlize-33.png" />
-      </div>
-      <div class="h_image"></div>
-
-      <div class="daimons_min">
-        <a href="#diamond_section"
-          ><span>Diamond</span> <img src="img/diamond.png"
-        /></a>
-        <a href="#jewerly_section"
-          ><span>Jewerly</span> <img src="img/diamond-1.png"
-        /></a>
-        <a href="#contact_section"
-          ><span>Contact</span> <img src="img/diamond-2.png"
-        /></a>
-      </div>
-    </div>
-
-    <div class="group">
-      <div class="space"></div>
-      <!-- ----------------------- main -- ---------------------->
-      <div class="main">
-        <div class="diamond_section sections" id="diamond_section">
-          <h1>Diamond</h1>
-          <div class="lines"></div>
-
-          <h3>Select Color</h3>
-          <div class="blocks" id="diamond_box">
-            <img src="img/pink-diamond.png" alt="pink" />
-            <img src="img/blue-diamond.png" alt="blue" />
-            <img src="img/cushion-cut-colorless.png" alt="colorless" />
-            <img src="img/cushion-fancy-diamond-yellow.png" alt="yellow" />
-            <img src="img/greem_diamond_web.png" alt="green" />
-          </div>
-
-          <div class="lines"></div>
-
-          <h3>Carat Sizes</h3>
-
-          <div class="blocks caratSize">
-            <div class="size">0.5</div>
-            <div class="size">1.0</div>
-            <div class="size">1.5</div>
-            <div class="size">2.0</div>
-          </div>
-
-          <div class="lines"></div>
-
-          <h3>Select Cut Shapes</h3>
-          <div class="blocks cut_shape">
-            <img src="img/Asscher Cut.png" alt="Asscher Cut" />
-            <img src="img/Brilliant Cut.png" alt="Brilliant Cut" />
-            <img src="img/Cushion Cut.png" alt="Cushion Cut" />
-            <img src="img/Emerald Cut.png" alt="Emerald Cut" />
-            <img src="img/Heart Cut.png" alt="Heart Cut" />
-            <img src="img/Marquise Cut.png" alt="Marquise Cut" />
-            <img src="img/Oval Cut.png" alt="Oval Cut" />
-            <img src="img/Pear Cut.png" alt="Pear Cut." />
-            <img src="img/Princess Cut.png" alt="Princess Cut" />
-            <img src="img/Radiant Cut.png" alt="img/Radiant Cut.png" />
-          </div>
-
-          <div class="lines"></div>
-
-          <h3>Certificates</h3>
-
-          <div class="blocks certificates">
-            <img src="img/GIA_Logo.png" alt="GIA" />
-            <img src="img/logo_IGI.png" style="margin-left: 30px" alt="IGI" />
-          </div>
-
-          <div class="lines"></div>
-
-          <h3>Laser Mark</h3>
-
-          <form class="personal_text">
-            <span>The personal text on the girdle of your diamond</span>
-            <input type="text" id="laser_mark" required />
-            <button type="submit">ADD</button>
-          </form>
+            <!-- <h1>Brand Logo</h1> -->
+            <a href="#top" class="d-sec a-di borderBox">① Diamond →</a>
+            <a href="#top" class="a-je">② Jewerly →</a>
+            <a href="#contact_section" class="a-co">③ Contact →</a>
+            <!-- <div class="US">US</div> -->
+            <!-- <a href="#summary_section" class="a-su">Summary</a> -->
+            <a class="a-su">④ Summary</a>
+            <ion-icon name="menu-sharp" size="large"></ion-icon>
         </div>
 
-        <div class="jewerly_section sections" id="jewerly_section">
-          <h1>Jewerly</h1>
-
-          <h3>jewerly style ID</h3>
-
-          <form class="ring_engrave_form">
-            <input type="text" class="style_id" id="style_id" required />
-
-            <div class="lines"></div>
-
-            <h3>Ring Size</h3>
-            <div class="blocks ring_sizes">
-              <div class="size">4.5</div>
-              <div class="size">4.75</div>
-              <div class="size">5</div>
-              <div class="size">5.25</div>
-              <div class="size">5.5</div>
-              <div class="size">5.75</div>
-              <div class="size">6</div>
-              <div class="size">6.25</div>
-              <div class="size">6.5</div>
-              <div class="size">6.75</div>
-              <div class="size">7</div>
-              <div class="size">7.25</div>
-              <div class="size">7.5</div>
-              <div class="size">7.75</div>
-              <div class="size">8</div>
-              <div class="size">8.25</div>
-            </div>
-            <small>Show more sizes</small>
-
-            <div class="lines"></div>
-
-            <h3>Select Metal Color</h3>
-
-            <div class="metals">
-              <img src="img/Metal_YG2.png" alt="YG2" />
-              <img src="img/Metal_WG2-1.png" alt="WG-1" />
-              <img src="img/Metal_RG.png" alt="RG" />
-              <img src="img/Metal_WG2.png" alt="WG2" />
-            </div>
-
-            <div class="lines"></div>
-
-            <h3>Ring engraving</h3>
-            <div class="ring_engraving">
-              <span>The personal text on the inside of your jewelry ring</span>
-              <input type="text" id="diamond_text_engrave" required />
-              <button type="submit">ADD</button>
-            </div>
-          </form>
-        </div>
-        <div class="lines"></div>
-        <!-- Main end -->
-      </div>
-    </div>
-
-    <!--------------------------------------- conact section Or page  ------------------------------ -------------->
-
-    <form class="contact_section sections" id="contact_section">
-      <div class="contact_form" id="contact-form">
-        <h1>Contact</h1>
-        <div class="contacts">
-          <div class="f-row">
-            <h2>Contact Information</h2>
-            <label for="firstName">First Name</label>
-            <input required type="text" id="firstName" name="firstName" />
-            <label for="lastName">Last Name</label>
-            <input required type="text" id="lastName" name="lastName" />
-            <label for="email">Email</label>
-            <input required type="email" id="email" name="email" />
-            <label for="number">Phone Number</label>
-            <input required type="number" id="phoneNumber" name="number" />
-          </div>
-          <div class="f-row">
-            <h2>Delivery Address</h2>
-            <label for="adress">Adress line 1</label>
-            <input required type="text" id="adress-1" name="adress" />
-            <label for="lastName">Adress line 2</label>
-            <input required type="text" id="adress-2" name="adress" />
-            <div class="s-row">
-              <div>
-                <label for="city">City</label>
-                <input required type="text" id="city" name="city" />
+        <div class="group">
+            <!-- <div class="head">
+                <div class="d_images">
+                    <img src="s/Charlize-11.png" />
+                    <img src="s/Charlize-22.png" />
+                    <img src="s/Charlize-33.png" />
+                </div>
+                <div class="h_image">
+                <img src="s/Charlize-large.png" />
               </div>
-              <div>
-                <label for="state">State/Province</label>
-                <input required type="text" id="state" name="state" />
-              </div>
-              <div>
-                <label for="zip">Zip/Postal Code</label>
-                <input required type="text" id="zip" name="zip" />
-              </div>
-              <div>
-                <label for="country">Country</label>
-                <input required type="text" id="country" name="country" />
-              </div>
+    
+                <div class="daimons_min">
+                    <a href="#diamond_section"><span>Diamond</span> <img src="s/diamond.png" /></a>
+                    <a href="#jewerly_section"><span>Jewelry</span> <img src="s/diamond-1.png" /></a>
+                    <a href="#contact_section"><span>Contact</span> <img src="s/diamond-2.png" /></a>
+                </div>
+            </div> -->
+            <!-- <div class="space"></div> -->
+            <div class="main">
+                <div class="diamond_section sections" id="diamond_section">
+                    <h1>Diamond</h1>
+                    <div class="lines"></div>
+    
+                    <h3>Select Color</h3>
+    
+                    <!--  Here you can find and change the price of diamonds, just put your numbers in data-index-number="price"  -->
+                    <!-- SELECT COLOR -->
+                    <div class="blocks" id="diamond_box">
+                        <div class="item">
+                            <img data-index-number="100" src="s/pink-diamond.png" alt="pink" />
+                            <div class="caption">
+                                <p>Pink</p>
+                            </div>
+                        </div>
+                        <img data-index-number="110" src="s/blue-diamond.png" alt="blue" />
+                        <img data-index-number="120" src="s/cushion-cut-colorless.png" alt="colorless" />
+                        <img data-index-number="130" src="s/cushion-fancy-diamond-yellow.png" alt="yellow" />
+                        <img data-index-number="140" src="s/greem_diamond_web.png" alt="green" />
+                    </div>
+                    <!-- <div class="blocks" id="diamond_box">
+                        <img data-index-number="100" src="s/pink-diamond.png" alt="pink" />
+                        <img data-index-number="110" src="s/blue-diamond.png" alt="blue" />
+                        <img data-index-number="120" src="s/cushion-cut-colorless.png" alt="colorless" />
+                        <img data-index-number="130" src="s/cushion-fancy-diamond-yellow.png" alt="yellow" />
+                        <img data-index-number="140" src="s/greem_diamond_web.png" alt="green" />
+                    </div> -->
+    
+                    <div class="lines"></div>
+    
+                    <h3>Carat Sizes</h3>
+    
+                    <!-- CARAT SIZE -->
+                    <div class="blocks caratSize">
+                        <div data-index-number="210" class="size">0.5</div>
+                        <div data-index-number="220" class="size">1.0</div>
+                        <div data-index-number="230" class="size">1.5</div>
+                        <div data-index-number="240" class="size">2.0</div>
+                    </div>
+    
+                    <div class="lines"></div>
+    
+                    <!-- CUT SHAPES -->
+                    <h3>Select Cut Shapes</h3>
+                    <div class="blocks cut_shape">
+                        <img data-index-number="450" src="s/Asscher_Cut.png" alt="Asscher Cut" title="Asscher Cut"/>
+                        <img data-index-number="460" src="s/Brilliant_Cut.png" alt="Brilliant Cut" title="Brilliant Cut"/>
+                        <img data-index-number="470" src="s/Cushion_Cut.png" alt="Cushion Cut" title="Cushion Cut"/>
+                        <img data-index-number="480" src="s/Emerald_Cut.png" alt="Emerald Cut" title="Emerald Cut"/>
+                        <img data-index-number="490" src="s/Heart_Cut.png" alt="Heart Cut" title="Heart Cut"/>
+                        <img data-index-number="550" src="s/Marquise_Cut.png" alt="Marquise Cut" title="Marquise Cut"/>
+                        <img data-index-number="560" src="s/Oval_Cut.png" alt="Oval Cut" title="Oval Cut"/>
+                        <img data-index-number="570" src="s/Pear_Cut.png" alt="Pear Cut" title="Pear Cut"/>
+                        <img data-index-number="580" src="s/Princess_Cut.png" alt="Princess Cut" title="Princess Cut"/>
+                        <img data-index-number="590" src="s/Radiant_Cut.png" alt="Radiant Cut" title="Radiant Cut"/>
+                    </div>
+    
+                    <div class="lines"></div>
+    
+                    <h3>Certificates</h3>
+    
+                    <div class="blocks certificates">
+                        <img data-index-number="100" id="gia" src="s/GIA_Logo.png" alt="GIA" />
+                        <img data-index-number="150" id="igi" src="s/logo_IGI.png" style="margin-left: 30px" alt="IGI" />
+                    </div>
+    
+                    <div class="lines"></div>
+                    <div style="display:flex; align-items: baseline;">
+                        <h3>Laser Mark</h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        <p id="showAddedMarkMessage"></p>
+                    </div>
+                    <form class="personal_text">
+                        <span>The personal text on the girdle of your diamond</span>
+                        <input data-index-number="100" type="text" id="laser_mark" value="" required />
+                        <button type="submit">ADD</button>
+                    </form>
+                    <!-- <span id="showAddedMarkMessage"></span> -->
+                </div>
+    
+                <div class="jewerly_section sections" id="jewerly_section">
+                    <h1>Jewelry</h1>
+                    <div class="lines"></div>
+                    <h3>Jewelry style ID</h3>
+    
+                    <form class="ring_engrave_form">
+                        <!-- <input type="text" class="style_id" id="style_id" required /> -->
+                        <select class="style_id" name="jewelry_id" id="jewelry_id">
+                            <option value="">--Choose Your Jewelry:--</option>
+                            <optgroup label="Ring">
+                                <option value="dog">Ring 1</option>
+                                <option value="cat">Ring 2<</option>
+                                <option value="hamster">Ring 3<</option>
+                                <option value="parrot">Ring 4<</option>
+                                <option value="spider">Ring 5<</option>
+                                <option value="goldfish">Ring 6<</option>
+                            </optgroup>
+                            <optgroup label="Pendant">
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                                <option value="hamster">Hamster</option>
+                                <option value="parrot">Parrot</option>
+                                <option value="spider">Spider</option>
+                                <option value="goldfish">Goldfish</option>
+                            </optgroup>
+                        </select>
+    
+                        <div class="lines"></div>
+    
+                        <h3>Ring Size</h3>
+                        <div class="blocks ring_sizes">
+                            <div class="size">4.5</div>
+                            <div class="size">4.75</div>
+                            <div class="size">5</div>
+                            <div class="size">5.25</div>
+                            <div class="size">5.5</div>
+                            <div class="size">5.75</div>
+                            <div class="size">6</div>
+                            <div class="size">6.25</div>
+                            <div class="size">6.5</div>
+                            <div class="size">6.75</div>
+                            <div class="size">7</div>
+                            <div class="size">7.25</div>
+                            <div class="size">7.5</div>
+                            <div class="size">7.75</div>
+                            <div class="size">8</div>
+                            <div class="size">8.25</div>
+                        </div>
+                        <small>Show more sizes</small>
+    
+                        <div class="lines"></div>
+    
+                        <h3>Select Metal Color</h3>
+    
+                        <div class="metals">
+                            <img src="s/Metal_YG2.png" alt="YG2" />
+                            <img src="s/Metal_WG2-1.png" alt="WG-1" />
+                            <img src="s/Metal_RG.png" alt="RG" />
+                            <img src="s/Metal_WG2.png" alt="WG2" />
+                        </div>
+                        <div class="metal-color">
+                            <div class="">Yellow Gold</div>
+                            <div class="">White Gold</div>
+                            <div class="">Rose Gold</div>
+                            <div class="platinum">Platinum</div>
+                        </div>
+    
+                        <div class="lines"></div>
+    
+                        <h3>Ring engraving</h3>
+                        <div class="ring_engraving">
+                            <span>The personal text on the inside of your jewelry ring</span>
+                            <input type="text" id="diamond_text_engrave" required />
+                            <button type="submit">ADD</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="lines"></div>
+            </div><!-- end of main class  -->
+        </div> <!-- end of group class  -->
+    
+        <div class="contact_section" id="contact_section">
+            <div class="contact_form sections" id="contact-form">
+                <h1>Contact</h1>
+                <span>Required*</span>
+                <div class="lines"></div>
+                <div class="contacts">
+                    <div class="f-row">
+                        <h2>Contact Information</h2>
+                        <label for="firstName">First Name*</label>
+                        <input required type="text" id="firstName" name="firstName" required/>
+                        <label for="lastName">Last Name</label>
+                        <input required type="text" id="lastName" name="lastName" />
+                        <label for="email">Email*</label>
+                        <input required type="email" id="email" name="email" required/>
+                        <label for="number">Phone Number</label>
+                        <input required type="number" id="phoneNumber" name="number" />
+                    </div>
+                    <div class="f-row">
+                        <h2>Delivery Address</h2>
+                        <label for="adress">Address line 1*</label>
+                        <input required type="text" id="adress-1" name="adress" required/>
+                        <label for="lastName">Address line 2</label>
+                        <input required type="text" id="adress-2" name="adress" />
+                        <div class="s-row">
+                            <div>
+                                <label for="city">City*</label>
+                                <input required type="text" id="city" name="city" required/>
+                            </div>
+                            <div>
+                                <label for="state">State/Province*</label>
+                                <input required type="text" id="state" name="state" required/>
+                            </div>
+                            <div>
+                                <label for="zip">Zip/Postal Code*</label>
+                                <input required type="text" id="zip" name="zip" required/>
+                            </div>
+                            <div>
+                                <label for="country">Country*</label>
+                                <input required type="text" id="country" name="country" required/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="message-text">Leave a message/ Order remark</h2>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Anything to add..."></textarea>
+                <!-- <div class="checkbox-first">
+                    <label class="checkbox-label">
+                        <input type="checkbox" />
+                        <span class="checkbox-custom"></span>
+                    </label>
+                    <span>I agree with <a href="#">Terms & Conditions.</a></span>
+                </div> -->
+                <!-- <button class="order-summary">
+                    <img src="s/pdf.png" /> download order summary
+                </button> -->
             </div>
-          </div>
-        </div>
-        <h2 class="message-text">Leave a message/ Order remark</h2>
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message"></textarea>
-        <!-- ------------------------- second order summary ----------------------- -->
-        <div class="checkbox-first">
-          <label class="checkbox-label">
-            <input type="checkbox" />
-            <span class="checkbox-custom"></span>
-          </label>
-          <span>I agree with <a href="#">Terms & Conditions.</a></span>
-        </div>
-        <button class="order-summary">
-          <img src="img/pdf.png" /> download order summary
-        </button>
-      </div>
+        </div><!-- end of contact class  -->
 
-      <!-- --------------------------------------------------- RIGHT SIDE  --------------------------------------------- -->
-      <div class="contact_info">
-        <img src="img/Charlize-Three-Stone-Front-Grey-630x630.png" />
-        <h4 class="jeverly-id-text">ID:</h4>
-        <div class="all-info">
-          <h3>Summary</h3>
-          <hr />
-          <p>Diamond color: <span id="drop_1"></span></p>
-          <p>Carat sizes: <span id="drop_2"></span></p>
-          <p>Cut Shapes: <span id="drop_3"></span></p>
-          <p>Certificates: <span id="drop_4"></span></p>
-          <p>Jewelry ID: <span id="drop_5"></span></p>
-          <p>Ring size: <span id="drop_6"></span></p>
-          <p>Metal color: <span id="drop_7"></span></p>
-          <p>Ring engraving: <span id="drop_8"></span></p>
-          <p>Price of Diamond:</p>
-          <div class="under-price">Price calculated based on DIAMOND ONLY</div>
-          <div class="under-price">
-            Price of Jewelry will be separately provided via email.
-          </div>
+    <div class="contact_section sections" id="summary_section">
+        <div class="">
+            <div class="contact_form" >
+                <!-- <img src="s/Charlize-large.png" /> -->
+                <!-- <h4 class="jeverly-id-text">ID:</h4> -->
+                <div class="all-info">
+                    <h1 style="text-align:center;">Your Order Summary</h1>
+                    <hr />
+                    <p>Diamond color: <span id="drop_1"></span></p>
+                    <p>Carat sizes: <span id="drop_2"></span></p>
+                    <p>Cut Shapes: <span id="drop_3"></span></p>
+                    <p>Certificates: <span id="drop_4"></span></p>
+                    <p>Laser Mark: <span id="drop_10"></span></p>
+                    <hr />
+                    <p>Jewelry ID: <span id="drop_5"></span></p>
+                    <p>Ring size: <span id="drop_6"></span></p>
+                    <p>Metal color: <span id="drop_7"></span></p>
+                    <p>Ring engraving: <span id="drop_8"></span></p>
+                    <p>Price of Diamond: <span id="drop_9"></span></p>
+                    <div class="under-price">Price calculated based on DIAMOND ONLY</div>
+                    <div class="under-price">
+                        Price of Jewelry will be separately provided via email.
+                    </div>
+                </div>
+                <div class="checkbox-all">
+                    <!-- <label class="checkbox-label">
+                        <input type="checkbox" />
+                        <span class="checkbox-custom"></span>
+                    </label> -->
+                    <span style="font-style: italic; color:red; font-size: 13px;">By placing this order, I agree to the Order Agreement, Terms of
+                        Use, and Privacy Notice.</span>
+                </div>
+                <button class="order-summary">
+                    <img src="s/pdf.png" /> download order summary
+                </button>
+                <input type="submit" class="send_req" value="Send Price Request" />
+            </div>
         </div>
-        <div class="checkbox-all">
-          <label class="checkbox-label">
-            <input type="checkbox" />
-            <span class="checkbox-custom"></span>
-          </label>
-          <span
-            >By placing this order, I agree to the Order Agreement, Terms of
-            Use, and Privacy Notice.</span
-          >
-        </div>
-        <input type="submit" class="send_req" value="Send Price Request" />
-      </div>
-    </form>
-
-    <div class="footer_space">
-      <div class="columns"><h2>$ 4,025.00</h2></div>
-      <div class="columns">
-        <span>Price calculated based on <b>DIAMOND ONLY</b> </span>
-        <span>Price of Jewelry will be separately provided via email.</span>
-      </div>
-      <div class="columns">
-        <span><img src="img/security.png" />Warranty</span>
-        <span><img src="img/truck.png" />US shipping and returns</span>
-      </div>
-      <div class="columns">
-        <span><img src="img/support.png" /> Support</span>
-        <span><img src="img/diamond-i.png" />Sustainably created diamonds</span>
-      </div>
     </div>
+
+
+
+
+    
+        <div class="footer_space">
+            <div class="columns">
+                <h2 class="counted__jeverly">$ 0.00</h2>
+            </div>
+            <div class="columns" id="column-rull">
+                <span>Price calculated based on <b>DIAMOND ONLY</b> </span>
+                <span>Price of Jewelry will be separately provided via email.</span>
+            </div>
+            <div class="columns" id="column-warranty">
+                <span><img src="s/security.png" />Warranty</span>
+                <span><img src="s/truck.png" />US shipping and returns</span>
+            </div>
+            <div class="columns" id="column-support">
+                <span><img src="s/support.png" /> Support</span>
+                <span><img src="s/diamond-i.png" />Sustainably created diamonds</span>
+            </div>
+        </div>
+    
+
 
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
     ></script>
-    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+    <script defer src="js/jquery.min.js"></script>
     <script defer src="js/poor.js"></script>
     <script defer src="js/index.js"></script>
   </body>

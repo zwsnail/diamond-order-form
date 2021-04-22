@@ -2,95 +2,72 @@
 @import url(//db.onlinewebfonts.com/c/64a2cfb57c4a5df1013e4f2e5bf3eff3?family=SF+Pro+Display);
 @font-face {
   font-family: "Classica Pro";
-  src: url("classica/ClassicaPro-Regular.woff2") format("woff2"), url("classica/ClassicaPro-Regular.woff") format("woff"), url("classica/ClassicaPro-Regular.ttf") format("truetype");
-}
-
+  src: url("classica/ClassicaPro-Regular.woff2") format("woff2"), url("classica/ClassicaPro-Regular.woff") format("woff"), url("classica/ClassicaPro-Regular.ttf") format("truetype"); }
 @font-face {
   font-family: "Classica Pro Demi";
-  src: url("classica/ClassicaPro-Demi.ttf"), url("classica/ClassicaPro-Demi.woff"), url("classica/ClassicaPro-Demi.ttf");
-}
-
+  src: url("classica/ClassicaPro-Demi.ttf"), url("classica/ClassicaPro-Demi.woff"), url("classica/ClassicaPro-Demi.ttf"); }
 html {
   scroll-behavior: smooth;
-}
+  overflow: scroll; }
 
 body {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box;
+  overflow: scroll; }
 
 * {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 .borderBox {
-  -webkit-transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
   transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
-  border: 1px solid #cc8342;
-}
+  border: 2px solid #cc8342; }
 
 h1 {
-  text-align: left;
+  text-align: center;
   font-size: 35px;
   font-family: "Classica Pro Demi";
   letter-spacing: 0px;
-  color: #252525;
-}
-
-@media (max-width: 500px) {
-  h1 {
-    font-size: 25px;
-  }
-}
+  color: #252525; }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 25px; } }
 
 h3 {
   margin-top: 35px;
   color: #0d0d0d;
   font: 400 25px/30px "Classica Pro";
-  text-transform: capitalize;
-}
-
-@media (max-width: 500px) {
-  h3 {
-    font-size: 20px;
-  }
-}
+  text-transform: capitalize; }
+  @media (max-width: 500px) {
+    h3 {
+      font-size: 20px; } }
 
 .lines {
   margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
   height: 1px;
   background: #d1cdcd 0% 0% no-repeat padding-box;
-  opacity: 1;
-}
+  opacity: 1; }
 
 input {
   height: 35px;
-  border: 1px solid #eeeeee;
+  border: 3px solid #eeeeee;
   border-radius: 5px;
   color: #525252;
-  font: 400 18px "SF Pro Display";
-}
+  font: 400 18px "SF Pro Display"; }
+  input:focus {
+    outline: none;
+    border-color: #cc8342; }
 
-input:focus {
-  outline: none;
-  border-color: #cc8342;
-}
+.sections {
+  background: antiquewhite; }
 
 .group {
   position: relative;
-  width: 100%;
-  height: auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
-}
+  width: 85%;
+  margin: 0px auto; }
 
 .head {
   position: fixed;
@@ -100,392 +77,322 @@ input:focus {
   height: 100vh;
   background: #f1f1f1 0% 0% no-repeat padding-box;
   opacity: 1;
-  z-index: 99;
-}
-
-.head .d_images {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 290px;
-  margin: 170px 0;
-}
-
-.head .d_images img {
-  width: 160px;
-  margin: -5px 50px;
-}
-
-.head .h_image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 40%;
-  width: 626px;
-  height: 626px;
-  background: url("../img/Charlize-Three-Stone-Front-Grey-630x630@2x.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 1;
-}
-
-.head .daimons_min {
-  position: relative;
-  width: 456px;
-  height: 42px;
-  margin: -40px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (max-height: 950px) {
+  z-index: 99; }
+  .head .d_images {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    margin: 170px 0; }
+    .head .d_images img {
+      width: 160px;
+      margin: -5px 50px; }
+  .head .h_image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    width: 626px;
+    height: 626px;
+    background: url("../s/Charlize-Three-Stone-Front-Grey-630x630@2x.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 1; }
   .head .daimons_min {
-    margin: -110px auto;
-  }
-}
-
-.head .daimons_min a {
-  background: #000;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  z-index: 10;
-  background: #f1f1f1;
-}
-
-.head .daimons_min a span {
-  display: block;
-  color: #a5a5a5;
-  text-align: left;
-  margin-bottom: 5px;
-}
-
-.head .daimons_min a:nth-child(2)::before {
-  content: "";
-  position: absolute;
-  top: 70%;
-  left: 10%;
-  border: none;
-  border-top: 2px dashed #a5a5a5;
-  height: 2px;
-  width: 35%;
-  z-index: 1;
-}
-
-.head .daimons_min a:nth-child(2)::after {
-  content: "";
-  position: absolute;
-  top: 70%;
-  right: 10%;
-  border: none;
-  border-top: 2px dashed #a5a5a5;
-  height: 2px;
-  width: 35%;
-  z-index: 1;
-}
+    position: relative;
+    width: 456px;
+    height: 42px;
+    margin: -40px auto;
+    display: flex;
+    justify-content: space-between; }
+    @media (max-height: 950px) {
+      .head .daimons_min {
+        margin: -110px auto; } }
+    .head .daimons_min a {
+      background: #000;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      z-index: 10;
+      background: #f1f1f1; }
+      .head .daimons_min a span {
+        display: block;
+        color: #a5a5a5;
+        text-align: left;
+        margin-bottom: 5px; }
+      .head .daimons_min a:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        top: 70%;
+        left: 10%;
+        border: none;
+        border-top: 2px dashed #a5a5a5;
+        height: 2px;
+        width: 35%;
+        z-index: 1; }
+      .head .daimons_min a:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        top: 70%;
+        right: 10%;
+        border: none;
+        border-top: 2px dashed #a5a5a5;
+        height: 2px;
+        width: 35%;
+        z-index: 1; }
 
 .main {
   position: relative;
   padding: 0;
   width: 83%;
   height: auto;
-  margin: 155px 0px;
-}
-
-.main .blocks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
+  margin: 155px 40px;
+  border: 1px solid #d1d1d1; }
+  .main .blocks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px; }
+    .main .blocks img {
+      cursor: pointer;
+      width: 85px;
+      height: 85px;
+      text-align: center;
+      vertical-align: middle;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat; }
+    .main .blocks .size {
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 5px;
+      width: 55px;
+      text-align: center;
+      padding: 9px 0 9px 0;
+      border: 3px solid #eeeeee;
+      font: 400 16px "SF Pro Display";
+      color: #525252;
+      opacity: 0.7; }
+    .main .blocks.cut_shape {
+      margin-top: 20px;
+      grid-auto-flow: dense;
+      grid-gap: 5px; }
+      .main .blocks.cut_shape img {
+        box-sizing: border-box;
+        width: 65px;
+        height: 65px;
+        cursor: pointer;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+  .main .certificates img {
+    width: auto;
+    height: 33px; }
+  .main .personal_text span {
+    margin: 10px 0 20px 0;
+    display: block;
+    width: 100%;
+    font: 400 16px "SF Pro Display";
+    letter-spacing: 0px;
+    color: #525252; }
+  .main .personal_text input {
+    width: 60%; }
+  .main .personal_text button {
+    background: #cc8342;
+    padding: 8px 34px;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    font: 400 16px "SF Pro Display";
+    color: #fff;
+    cursor: pointer; }
+  .main .diamond_section {
+    margin-left: 100px; }
+  .main .jewerly_section {
+    margin-left: 100px; }
+    .main .jewerly_section .style_id {
+      margin-top: 15px;
+      width: 25%;
+      border-radius: 5px;
+      border: 3px solid #eeeeee;
+      color: #525252;
+      height: 35px;
+      font-size: 18px;
+      font-weight: 400px;
+      font-style: normal; }
+    .main .jewerly_section .ring_sizes {
+      margin-bottom: 20px; }
+    .main .jewerly_section small {
+      text-align: left;
+      text-decoration: underline;
+      font: 400 14px/16px "SF Pro Display";
+      color: #525252; }
+    .main .jewerly_section .metals {
+      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.main .blocks img {
-  cursor: pointer;
-  width: 85px;
-  height: 85px;
-  text-align: center;
-  vertical-align: middle;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.main .blocks .size {
-  cursor: pointer;
-  margin-top: 10px;
-  margin-left: 5px;
-  width: 55px;
-  text-align: center;
-  padding: 9px 0 9px 0;
-  border: 1px solid #eeeeee;
-  font: 400 16px "SF Pro Display";
-  color: #525252;
-  opacity: 0.7;
-}
-
-.main .blocks.cut_shape {
-  margin-top: 20px;
-  grid-auto-flow: dense;
-  grid-gap: 35px;
-}
-
-.main .blocks.cut_shape img {
-  width: 65px;
-  height: 65px;
-  cursor: pointer;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.main .certificates img {
-  width: auto;
-  height: 33px;
-}
-
-.main .personal_text span {
-  margin: 10px 0 20px 0;
-  display: block;
-  width: 100%;
-  font: 400 16px "SF Pro Display";
-  letter-spacing: 0px;
-  color: #525252;
-}
-
-.main .personal_text input {
-  width: 60%;
-}
-
-.main .personal_text button {
-  background: #cc8342;
-  padding: 8px 34px;
-  border: 1px solid #eeeeee;
-  border-radius: 5px;
-  font: 400 16px "SF Pro Display";
-  color: #fff;
-  cursor: pointer;
-}
-
-.main .jewerly_section .style_id {
-  margin-top: 10px;
-  width: 60%;
-}
-
-.main .jewerly_section .ring_sizes {
-  margin-bottom: 20px;
-}
-
-.main .jewerly_section small {
-  text-align: left;
-  text-decoration: underline;
-  font: 400 14px/16px "SF Pro Display";
-  color: #525252;
-}
-
-.main .jewerly_section .metals {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 30px; }
+      .main .jewerly_section .metals div {
+        width: 95px;
+        height: 63px;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer; }
+    .main .jewerly_section .metal-color {
+      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
-  margin-top: 20px;
-  gap: 30px;
-}
-
-.main .jewerly_section .metals div {
-  width: 95px;
-  height: 63px;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-}
-
-.main .jewerly_section .ring_engraving span {
-  margin: 10px 0 20px 0;
-  display: block;
-  width: 100%;
-  font: 400 16px "SF Pro Display";
-  letter-spacing: 0px;
-  color: #525252;
-}
-
-.main .jewerly_section .ring_engraving input {
-  width: 60%;
-}
-
-.main .jewerly_section .ring_engraving button {
-  background: #cc8342;
-  padding: 8px 34px;
-  border: 1px solid #eeeeee;
-  border-radius: 5px;
-  font: 400 16px "SF Pro Display";
-  color: #fff;
-  cursor: pointer;
-}
+      margin-top: 5px;
+      gap: 30px; }
+      .main .jewerly_section .metal-color div {
+        width: 95px;
+        height: 63px;
+        text-align: center;
+        vertical-align: middle; }
+    .main .jewerly_section .ring_engraving span {
+      margin: 10px 0 20px 0;
+      display: block;
+      width: 100%;
+      font: 400 16px "SF Pro Display";
+      letter-spacing: 0px;
+      color: #525252; }
+    .main .jewerly_section .ring_engraving input {
+      width: 60%; }
+    .main .jewerly_section .ring_engraving button {
+      background: #cc8342;
+      padding: 8px 34px;
+      border: 1px solid #eeeeee;
+      border-radius: 5px;
+      font: 400 16px "SF Pro Display";
+      color: #fff;
+      cursor: pointer; }
 
 @media (max-width: 1600px) {
   .d_images img {
     margin: -5px 5px !important;
-    width: 130px;
-  }
-}
-
+    width: 130px; } }
 @media (max-width: 1366px) {
   .d_images img {
-    display: none !important;
-  }
-  .daimons_min {
-    margin: 400px auto !important;
-  }
-  .group {
-    -ms-grid-columns: 55% 45%;
-        grid-template-columns: 55% 45%;
-  }
-  .head {
-    width: 50%;
-  }
-}
+    display: none !important; }
 
-@media (max-width: 1249px) {
-  .footer_space {
-    display: none !important;
-  }
-  .d_images img {
-    display: none !important;
-  }
   .daimons_min {
-    margin: 400px auto !important;
-  }
+    margin: 400px auto !important; }
+
+  .head {
+    width: 50%; } }
+@media (max-width: 1249px) {
+  .d_images img {
+    display: none !important; }
+
+  .daimons_min {
+    margin: 400px auto !important; }
+
   .group {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
+    grid-template-columns: 1fr; }
+
   .head {
     position: relative;
     width: 100%;
     margin-top: 310px;
-    height: auto;
-  }
-  .head .h_image {
-    top: 0;
-  }
-  .head .daimons_min {
-    display: none;
-  }
+    height: auto; }
+    .head .h_image {
+      top: 0; }
+    .head .daimons_min {
+      display: none; }
+
   .main {
     width: 85%;
-    margin: 160px auto;
-  }
+    margin: 160px auto; }
+
   .jewerly_section {
     margin-top: 30px;
     border-top: 1px solid #d1cdcd;
-    padding-top: 40px;
-  }
-}
-
+    padding-top: 40px; } }
 @media (max-width: 655px) {
   .head {
-    margin-top: 250px;
-  }
-  .head .h_image {
-    width: 500px;
-    height: 500px;
-  }
-}
-
+    margin-top: 250px; }
+    .head .h_image {
+      width: 500px;
+      height: 500px; } }
 @media (max-width: 500px) {
   .head {
-    margin-top: 180px;
-  }
-  .head .h_image {
-    width: 370px;
-    height: 370px;
-  }
-  .diamond_section {
-    margin-top: -100px;
-  }
-  .main {
-    width: 90%;
-  }
-  .main .blocks {
-    margin-top: 10px;
-  }
-  .main .blocks img {
-    width: 67px;
-    height: 67px;
-  }
-  .main .blocks .size {
-    margin-left: 7px;
-    width: 75px;
-  }
-  .main .blocks.cut_shape {
-    grid-gap: 20px 10px;
-  }
-  .main .blocks.cut_shape img {
-    width: 59px;
-    height: 60px;
-  }
-  .main .blocks.certificates img {
-    height: 32px;
-    width: auto;
-  }
-  .main .blocks.certificates img:nth-child(2) {
-    margin-left: 32px;
-  }
-  .main .blocks.ring_sizes .size {
-    margin-left: 3px;
-    width: 62px;
-  }
-  .main .personal_text input {
-    width: 80%;
-  }
-  .main .personal_text button {
-    padding: 8px 10px;
-    border-radius: 2px;
-  }
-  .main .jewerly_section .style_id {
-    margin-top: 10px;
-    width: 100%;
-  }
-  .main .jewerly_section .ring_engraving input {
-    width: 80%;
-  }
-  .main .jewerly_section .ring_engraving button {
-    padding: 8px 10px;
-    border-radius: 2px;
-  }
-  .main .jewerly_section .metals {
-    gap: 18px;
-  }
-  .main .jewerly_section .metals img {
-    width: 70px;
-    height: 46px;
-  }
-  .main .jewerly_section .ring_engraving span {
-    font-size: 14px;
-  }
-}
+    margin-top: 180px; }
+    .head .h_image {
+      width: 470px;
+      height: 370px; }
 
+  .group {
+    width: 100%; }
+
+  .main {
+    width: 90%; }
+    .main .diamond_section {
+      margin-top: -100px;
+      padding-top: 20px;
+      margin-left: 0px; }
+    .main .jewerly_section {
+      padding-top: 20px;
+      margin-left: 0px;
+      padding-top: 50px; }
+    .main .blocks {
+      margin-top: 10px; }
+      .main .blocks img {
+        box-sizing: border-box;
+        width: 67px;
+        height: 67px; }
+      .main .blocks .size {
+        box-sizing: border-box;
+        margin-left: 7px;
+        width: 70px; }
+      .main .blocks.cut_shape {
+        grid-gap: 20px 10px; }
+        .main .blocks.cut_shape img {
+          width: 59px;
+          height: 60px; }
+      .main .blocks.certificates img {
+        box-sizing: border-box;
+        height: 32px;
+        width: auto; }
+        .main .blocks.certificates img:nth-child(2) {
+          margin-left: 32px; }
+      .main .blocks.ring_sizes {
+        margin-left: 30px;
+        width: 290px; }
+      .main .blocks.ring_sizes .size {
+        box-sizing: border-box;
+        margin-left: 3px;
+        width: 62px; }
+    .main .personal_text input {
+      width: 80%;
+      border: 3px solid #eeeeee; }
+    .main .personal_text button {
+      padding: 8px 10px;
+      border-radius: 2px; }
+    .main .jewerly_section .style_id {
+      border: 3px solid #eeeeee;
+      margin-top: 10px;
+      width: 100%; }
+    .main .jewerly_section .ring_engraving input {
+      width: 80%; }
+    .main .jewerly_section .ring_engraving button {
+      padding: 8px 10px;
+      border-radius: 2px; }
+    .main .jewerly_section .metals {
+      gap: 15px; }
+      .main .jewerly_section .metals img {
+        box-sizing: border-box;
+        width: 70px;
+        height: 46px; }
+    .main .jewerly_section .metal-color div {
+      display: block;
+      font-size: 10px;
+      height: 30px;
+      width: 60px;
+      white-space: nowrap; }
+      .main .jewerly_section .metal-color div.platinum {
+        text-align: left; }
+    .main .jewerly_section .ring_engraving span {
+      font-size: 14px; } }
 .headline {
   position: fixed;
   left: 0;
@@ -496,609 +403,430 @@ input:focus {
   background: #fff;
   color: #252525;
   z-index: 999;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-bottom: 1px solid #d1cdcd;
-}
-
-.headline a {
-  text-decoration: none;
-  color: #252525;
-  cursor: pointer;
-  font: 400 20px "SF Pro Display";
-}
-
-.headline h1 {
-  font-family: "Classica Pro";
-  font-size: 30px;
-  color: #0d0d0d;
-}
-
-.headline .US {
-  font: 600 20px "SF Pro Display";
-}
-
-.headline ion-icon {
-  display: none;
-}
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #d1cdcd; }
+  .headline a {
+    text-decoration: none;
+    color: #252525;
+    cursor: pointer;
+    font: 400 20px "SF Pro Display"; }
+  .headline h1 {
+    font-family: "Classica Pro";
+    font-size: 30px;
+    color: #0d0d0d; }
+  .headline .US {
+    font: 600 20px "SF Pro Display"; }
+  .headline ion-icon {
+    display: none; }
 
 @media (max-width: 1249px) {
   .headline {
-    position: relative;
-  }
-}
-
+    position: relative; } }
 @media (max-width: 650px) {
   .headline {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-  }
-  .headline h1 {
-    margin-left: 30px;
-    margin-bottom: 10px;
-  }
-  .headline .slaves {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    background: #fff;
-    width: 100%;
-    opacity: 0;
-  }
-  .headline .slaves a {
-    padding: 25px 30px;
-  }
-  .headline .slaves.active {
-    height: auto;
-    top: 90px;
-    z-index: 999;
-    opacity: 1;
-    -webkit-transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  .headline .US {
-    display: none;
-  }
-  .headline ion-icon {
-    display: block;
-    margin-right: 20px;
-    margin-bottom: 10px;
-  }
-}
-
+    justify-content: space-between;
+    align-items: flex-end; }
+    .headline h1 {
+      margin-left: 30px;
+      margin-bottom: 10px; }
+    .headline .slaves {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      width: 100%;
+      opacity: 0; }
+      .headline .slaves a {
+        padding: 25px 30px; }
+      .headline .slaves.active {
+        height: auto;
+        top: 90px;
+        z-index: 999;
+        opacity: 1;
+        transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .headline .US {
+      display: none; }
+    .headline ion-icon {
+      display: block;
+      margin-right: 20px;
+      margin-bottom: 10px; } }
 .contact_section {
   position: relative;
-  margin-top: -215px;
-  width: 100%;
+  width: 70%;
   height: auto;
-  z-index: 999;
+  z-index: 99;
   opacity: 1;
   background: #fff;
-  padding-top: 40px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 55% auto;
-      grid-template-columns: 55% auto;
-}
-
-.contact_section .contact_form {
-  position: relative;
-  margin-left: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contact_section .contact_form h1 {
-  font-size: 35px;
-  font-weight: 600;
-  font-family: "Classica Pro Demi";
-  color: #252525;
-  margin: 0 0 46px 0;
-}
-
-.contact_section .contact_form label {
-  display: block;
-  text-align: left;
-  font: 400 16px/21px "SF Pro Display";
-  color: #525252;
-  opacity: 1;
-  margin: 10px 0 10px 0;
-}
-
-.contact_section .contact_form #message {
-  width: 98%;
-  height: 100px;
-  border: 1px solid #eeeeee;
-  border-radius: 5px;
-  color: #525252;
-  font: 400 18px "SF Pro Display";
-}
-
-.contact_section .contact_form #message:focus {
-  outline: none;
-  border-color: #cc8342;
-}
-
-.contact_section .contact_form .contacts {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 6fr 6fr;
+  padding-top: 40px; }
+  .contact_section .contact_form {
+    position: relative;
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column; }
+    .contact_section .contact_form h1 {
+      font-size: 35px;
+      font-weight: 600;
+      font-family: "Classica Pro Demi";
+      color: #252525;
+      margin: 0 0 46px 0; }
+    .contact_section .contact_form label {
+      display: block;
+      text-align: left;
+      font: 400 16px/21px "SF Pro Display";
+      color: #525252;
+      opacity: 1;
+      margin: 10px 0 10px 0; }
+    .contact_section .contact_form #message {
+      width: 98%;
+      height: 100px;
+      border: 1px solid #eeeeee;
+      border-radius: 5px;
+      color: #525252;
+      font: 400 18px "SF Pro Display"; }
+      .contact_section .contact_form #message:focus {
+        outline: none;
+        border-color: #cc8342; }
+    .contact_section .contact_form .contacts {
+      display: grid;
       grid-template-columns: 6fr 6fr;
-  grid-auto-rows: auto;
-  grid-auto-flow: dense;
-}
-
-.contact_section .contact_form .contacts .f-row {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contact_section .contact_form .contacts .f-row h2 {
-  text-align: left;
-  font: 500 25px/33px "Classica Pro";
-  color: #0d0d0d;
-}
-
-.contact_section .contact_form .contacts .f-row input {
-  width: 96%;
-  border-radius: 5px;
-}
-
-.contact_section .contact_form .contacts .f-row .s-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
+      grid-auto-rows: auto;
+      grid-auto-flow: dense; }
+      .contact_section .contact_form .contacts .f-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column; }
+        .contact_section .contact_form .contacts .f-row h2 {
+          text-align: left;
+          font: 500 25px/33px "Classica Pro";
+          color: #0d0d0d; }
+        .contact_section .contact_form .contacts .f-row input {
+          width: 96%;
+          border-radius: 5px; }
+        .contact_section .contact_form .contacts .f-row .s-row {
+          display: flex;
           flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.contact_section .contact_form .contacts .f-row .s-row div {
-  width: 49%;
-}
-
-.contact_section .contact_form .order-summary {
-  margin-top: 34px;
-  width: 435px;
-  height: 55px;
-  z-index: 99;
-  border: 1px solid #cc8342;
-  cursor: pointer;
-  background: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font: 300 21px/28px "SF Pro Display";
-  color: #cc8342;
-  text-transform: uppercase;
-  margin-bottom: 55px;
-}
-
-.contact_section .contact_form .order-summary:focus {
-  outline: none;
-}
-
-.contact_section .contact_form .message-text {
-  text-align: left;
-  font: 500 25px/33px "SF Pro Display";
-  color: #0d0d0d;
-  margin: 30px 0 18px 0;
-}
-
-.contact_section .contact_info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.contact_section .contact_info .jeverly-id-text {
-  color: #525252;
-  font: 500 20px/26px "Classica Pro";
-}
-
-.contact_section .contact_info img {
-  width: 395px;
-  height: 395px;
-}
-
-.contact_section .contact_info .all-info {
-  width: 435px;
-  text-align: left;
-  color: #525252;
-  font-family: "SF Pro Display";
-}
-
-.contact_section .contact_info .all-info h3 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.contact_section .contact_info .all-info p {
-  padding: 3px 0;
-}
-
-.contact_section .contact_info .all-info .under-price {
-  width: 60%;
-  border: 1px solid #cc8342;
-  font-size: 9px;
-  margin-top: 2px;
-}
-
-.contact_section .contact_info .checkbox-all {
-  position: relative;
-  margin-top: 10px;
-  max-width: 470px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: self-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.contact_section .contact_info .checkbox-all .checkbox-label {
-  display: block;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 24px;
-  height: 24px;
-  width: 38px;
-  clear: both;
-}
-
-.contact_section .contact_info .checkbox-all .checkbox-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.contact_section .contact_info .checkbox-all .checkbox-label input:checked ~ .checkbox-custom {
-  background-color: #cc8342;
-  -webkit-transform: rotate(0deg) scale(1);
-          transform: rotate(0deg) scale(1);
-  opacity: 1;
-}
-
-.contact_section .contact_info .checkbox-all .checkbox-label input:checked ~ .checkbox-custom:after {
-  -webkit-transform: rotate(45deg) scale(1);
-          transform: rotate(45deg) scale(1);
-  opacity: 1;
-  left: 4px;
-  top: 1px;
-  width: 6px;
-  height: 12px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  background-color: transparent;
-  border-radius: 0;
-}
-
-.contact_section .contact_info .checkbox-all .checkbox-label span {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 17px;
-  height: 17px;
-  background-color: transparent;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  border: 2px solid #cc8342;
-  border-radius: 3px;
-}
-
-.contact_section .contact_info .checkbox-all .checkbox-label span:after {
-  position: absolute;
-  content: "";
-  left: 12px;
-  top: 12px;
-  border-radius: 5px;
-  border-width: 0 3px 3px 0;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.contact_section .contact_info .checkbox-all span {
-  display: inline;
-  text-align: left;
-  font: 500 14px/19px "SF Pro Display";
-  color: #737373;
-  margin-left: 0;
-}
-
-.contact_section .send_req {
-  margin-top: 30px;
-  width: 435px;
-  height: 55px;
-  z-index: 99;
-  border: 1px solid #cc8342;
-  cursor: pointer;
-  background: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font: 300 21px/28px "SF Pro Display";
-  color: #cc8342;
-  text-transform: uppercase;
-  color: #fff;
-  background: #cc8342;
-}
-
-.contact_section .send_req:focus {
-  outline: none;
-}
+          flex-wrap: wrap; }
+          .contact_section .contact_form .contacts .f-row .s-row div {
+            width: 49%; }
+    .contact_section .contact_form .checkbox-all {
+      position: relative;
+      margin-top: 30px;
+      max-width: 470px;
+      display: flex;
+      justify-items: self-start;
+      align-items: flex-start; }
+      .contact_section .contact_form .checkbox-all .checkbox-label {
+        display: block;
+        position: relative;
+        margin: auto;
+        cursor: pointer;
+        font-size: 22px;
+        line-height: 24px;
+        height: 24px;
+        width: 38px;
+        clear: both; }
+        .contact_section .contact_form .checkbox-all .checkbox-label input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer; }
+          .contact_section .contact_form .checkbox-all .checkbox-label input:checked ~ .checkbox-custom {
+            background-color: #cc8342;
+            transform: rotate(0deg) scale(1);
+            opacity: 1; }
+          .contact_section .contact_form .checkbox-all .checkbox-label input:checked ~ .checkbox-custom:after {
+            transform: rotate(45deg) scale(1);
+            opacity: 1;
+            left: 4px;
+            top: 1px;
+            width: 6px;
+            height: 12px;
+            border: 3px solid #fff;
+            border-width: 0 2px 2px 0;
+            background-color: transparent;
+            border-radius: 0; }
+        .contact_section .contact_form .checkbox-all .checkbox-label span {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 17px;
+          height: 17px;
+          background-color: transparent;
+          transition: all 0.3s ease-out;
+          border: 2px solid #cc8342;
+          border-radius: 3px; }
+          .contact_section .contact_form .checkbox-all .checkbox-label span:after {
+            position: absolute;
+            content: "";
+            left: 12px;
+            top: 12px;
+            border-radius: 5px;
+            border-width: 0 3px 3px 0;
+            transition: all 0.3s ease-out; }
+      .contact_section .contact_form .checkbox-all span.checkbox-terms {
+        font-size: 12px;
+        font-style: italic; }
+      .contact_section .contact_form .checkbox-all span {
+        display: inline;
+        text-align: left;
+        font: 500 14px/19px "SF Pro Display";
+        color: #737373;
+        margin-left: 0; }
+    .contact_section .contact_form .order-summary {
+      margin-top: 34px;
+      width: 435px;
+      height: 55px;
+      z-index: 99;
+      border: 1px solid #cc8342;
+      cursor: pointer;
+      background: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font: 300 21px/28px "SF Pro Display";
+      color: #cc8342;
+      text-transform: uppercase;
+      margin-bottom: 0px; }
+      .contact_section .contact_form .order-summary:focus {
+        outline: none; }
+    .contact_section .contact_form .message-text {
+      text-align: left;
+      font: 500 25px/33px "SF Pro Display";
+      color: #0d0d0d;
+      margin: 30px 0 18px 0; }
+  .contact_section .contact_info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    .contact_section .contact_info .jeverly-id-text {
+      color: #525252;
+      font: 500 20px/26px "Classica Pro"; }
+    .contact_section .contact_info img {
+      width: 240x;
+      height: 240px;
+      margin-left: 110px; }
+    .contact_section .contact_info .all-info {
+      width: 435px;
+      text-align: left;
+      color: #525252;
+      font-family: "SF Pro Display"; }
+      .contact_section .contact_info .all-info h3 {
+        margin-top: 0;
+        font-size: 20px; }
+      .contact_section .contact_info .all-info p {
+        padding: 3px 0; }
+      .contact_section .contact_info .all-info .under-price {
+        width: 60%;
+        border: 1px solid #cc8342;
+        font-size: 9px;
+        margin-top: 2px; }
+  .contact_section .send_req {
+    margin-top: 30px;
+    width: 435px;
+    height: 55px;
+    z-index: 99;
+    border: 1px solid #cc8342;
+    cursor: pointer;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 300 21px/28px "SF Pro Display";
+    color: #cc8342;
+    text-transform: uppercase;
+    color: #fff;
+    background: #cc8342; }
+    .contact_section .send_req:focus {
+      outline: none; }
 
 .checkbox-first {
   position: relative;
   margin-top: 20px;
   max-width: 470px;
-  display: none;
-}
-
-.checkbox-first .checkbox-label {
-  display: block;
-  position: relative;
-  margin: auto;
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 24px;
-  height: 24px;
-  width: 24px;
-  clear: both;
-}
-
-.checkbox-first .checkbox-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.checkbox-first .checkbox-label input:checked ~ .checkbox-custom {
-  background-color: #6a6a6a;
-  -webkit-transform: rotate(0deg) scale(1);
-          transform: rotate(0deg) scale(1);
-  opacity: 1;
-}
-
-.checkbox-first .checkbox-label input:checked ~ .checkbox-custom:after {
-  -webkit-transform: rotate(45deg) scale(1);
-          transform: rotate(45deg) scale(1);
-  opacity: 1;
-  left: 4px;
-  top: 1px;
-  width: 6px;
-  height: 12px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  background-color: transparent;
-  border-radius: 0;
-}
-
-.checkbox-first .checkbox-label span {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 17px;
-  height: 17px;
-  background-color: transparent;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  border: 1px solid #6a6a6a;
-  border-radius: 3px;
-}
-
-.checkbox-first .checkbox-label span:after {
-  position: absolute;
-  content: "";
-  left: 12px;
-  top: 12px;
-  border-radius: 5px;
-  border-width: 0 3px 3px 0;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-
-.checkbox-first span {
-  position: absolute;
-  left: 25px;
-  top: 10px;
-  width: 85%;
-  text-align: left;
-  font: 500 14px/19px "SF Pro Display";
-  color: #2b2b2b;
-}
-
-.checkbox-first span a {
-  color: #28a4e5;
-}
+  display: none; }
+  .checkbox-first .checkbox-label {
+    display: block;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    clear: both; }
+    .checkbox-first .checkbox-label input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer; }
+      .checkbox-first .checkbox-label input:checked ~ .checkbox-custom {
+        background-color: #6a6a6a;
+        transform: rotate(0deg) scale(1);
+        opacity: 1; }
+      .checkbox-first .checkbox-label input:checked ~ .checkbox-custom:after {
+        transform: rotate(45deg) scale(1);
+        opacity: 1;
+        left: 4px;
+        top: 1px;
+        width: 6px;
+        height: 12px;
+        border: solid #fff;
+        border-width: 0 2px 2px 0;
+        background-color: transparent;
+        border-radius: 0; }
+    .checkbox-first .checkbox-label span {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 17px;
+      height: 17px;
+      background-color: transparent;
+      transition: all 0.3s ease-out;
+      border: 1px solid #6a6a6a;
+      border-radius: 3px; }
+      .checkbox-first .checkbox-label span:after {
+        position: absolute;
+        content: "";
+        left: 12px;
+        top: 12px;
+        border-radius: 5px;
+        border-width: 0 3px 3px 0;
+        transition: all 0.3s ease-out; }
+  .checkbox-first span {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+    width: 85%;
+    text-align: left;
+    font: 500 14px/19px "SF Pro Display";
+    color: #2b2b2b; }
+    .checkbox-first span a {
+      color: #28a4e5; }
 
 @media (max-width: 1249px) {
   .contact_section {
-    margin-top: -155px;
-  }
-}
-
+    margin-top: -155px; } }
 @media (max-width: 990px) {
   .contact_info {
-    display: none !important;
-  }
+    display: none !important; }
+
   .contact_section .contact_form {
     margin-left: 20px;
-    margin-right: 20px;
-  }
+    margin-right: 20px; }
+
   .contact_section {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
+    grid-template-columns: 1fr; }
+
   .contact_section .send_req {
     margin: 20px auto;
-    border-radius: 1px;
-  }
-  .contact_section .contact_form .order-summary {
-    margin: 0px auto;
-  }
-  .checkbox-first {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
+    border-radius: 1px; }
 
+  .contact_section .contact_form .order-summary {
+    margin: 0px auto; }
+
+  .checkbox-first {
+    display: flex; } }
 @media (max-width: 764px) {
   .contact_form .contacts {
-    -ms-grid-columns: 12fr !important;
-        grid-template-columns: 12fr !important;
-  }
-}
-
+    grid-template-columns: 12fr !important; } }
 @media (max-width: 500px) {
-  .contact_section .send_req {
+  .contact_section {
     width: 100%;
-    font-size: 18px;
-  }
-  .contact_section .order-summary {
-    width: 100% !important;
-    margin-bottom: 100px !important;
-    font-size: 18px !important;
-  }
-  .contact_section .order-summary img {
-    position: absolute;
-    left: 5px;
-  }
-  .contact_section .contact_form h1 {
-    font-size: 25px;
-    margin: 0;
-  }
-  .contact_section .contact_form .contacts .f-row h2 {
-    font-size: 20px;
-    margin-top: 20px;
-  }
-  .contact_section .contact_form label {
-    font-size: 14px;
-  }
-  .contact_section .contact_form .message-text {
-    font-size: 20px;
-  }
-}
+    padding-bottom: 100px; }
+    .contact_section .send_req {
+      width: 100%;
+      font-size: 18px; }
+    .contact_section .order-summary {
+      width: 100% !important;
+      font-size: 18px !important; }
+      .contact_section .order-summary img {
+        position: absolute;
+        left: 5px; }
+    .contact_section .contact_form {
+      padding-bottom: 10px;
+      margin-top: 0px; }
+    .contact_section .contact_form h1 {
+      font-size: 25px;
+      margin: 0; }
+    .contact_section .contact_form .contacts .f-row h2 {
+      font-size: 20px;
+      margin-top: 20px; }
+    .contact_section .contact_form label {
+      font-size: 14px; }
+    .contact_section .contact_form .message-text {
+      font-size: 20px; }
+    .contact_section .contact_form .checkbox-all {
+      margin-bottom: 50px; }
 
+  #contact_section {
+    padding-bottom: 0px; }
+
+  #summary_section {
+    margin-top: -155px; } }
 .footer_space {
   bottom: 0;
   left: 0;
   right: 0;
   position: fixed;
-  background: #201f1f;
+  background: #0d0d0dad;
   max-width: 100%;
   min-height: 130px;
   z-index: 99;
   padding: 0 180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  color: #ffffff;
-}
-
-.footer_space .columns h2 {
-  text-align: left;
-  font: 500 30px/40px "SF Pro Display";
-  opacity: 1;
-}
-
-.footer_space .columns span {
-  color: #c5c5c5;
-  display: block;
-  margin-top: 15px;
-  font-style: normal;
-  font: 300 17px/22px "SF Pro Display";
-}
-
-.footer_space .columns span b {
-  color: #fe9b44;
-}
-
-.footer_space .columns span img {
-  position: absolute;
-  margin-left: -40px;
-}
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: #ffffff; }
+  .footer_space #column-warranty {
+    display: none; }
+  .footer_space #column-support {
+    display: none; }
+  .footer_space .columns h2 {
+    text-align: left;
+    font: 500 30px/40px "SF Pro Display";
+    opacity: 1; }
+  .footer_space .columns span {
+    color: #c5c5c5;
+    display: block;
+    margin-top: 15px;
+    font-style: normal;
+    font: 300 17px/22px "SF Pro Display"; }
+    .footer_space .columns span b {
+      color: #fe9b44; }
+    .footer_space .columns span img {
+      position: absolute;
+      margin-left: -40px; }
 
 @media (max-width: 1500px) {
   .footer_space {
-    padding: 0 60px;
-  }
-}
-
+    padding: 0 60px; } }
 @media (max-width: 1245px) {
   .footer_space {
-    padding: 0 30px;
-  }
-  .footer_space .columns h2 {
-    font: 500 24px/36px "SF Pro Display";
-  }
-  .footer_space .columns span {
-    font: 300 14px/18px "SF Pro Display";
-  }
-}
+    padding: 0 30px; }
+    .footer_space .columns h2 {
+      font: 500 24px/36px "SF Pro Display"; }
+    .footer_space .columns span {
+      font: 300 14px/18px "SF Pro Display"; } }
+@media (max-width: 500px) {
+  .footer_space {
+    background: #0d0d0dad;
+    padding: 0 30px; }
+    .footer_space #column-warranty {
+      display: none; }
+    .footer_space #column-support {
+      display: none; }
+    .footer_space #column-rull {
+      margin-bottom: 10px; }
+    .footer_space .columns h2 {
+      font: 300 24px/36px "SF Pro Display"; }
+    .footer_space .columns span {
+      font: 100 14px/18px "SF Pro Display";
+      margin-top: 0px; } }
+
 /*# sourceMappingURL=index.css.map */
