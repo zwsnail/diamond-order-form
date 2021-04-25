@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
 
-  font: 300 21px/28px "SF Pro Display";
+  font: 300 21px/28px "Fahkwang";
   color: #cc8342;
   text-transform: uppercase;
 
@@ -34,18 +34,18 @@
   // grid-template-columns: 55% auto;
 
   .contact_form {
+    width: 1060px;
     position: relative;
-    margin-left: 200px;
-    margin-top: 100px;
+    margin-left: 250px;
+    margin-top: 120px;
     margin-bottom: 200px;
     display: flex;
     flex-direction: column;
-    // width: 900px;
 
     h1 {
       font-size: 35px;
       font-weight: 600;
-      font-family: "Classica Pro Demi";
+      font-family: "Larken";
       color: #252525;
       margin: 0 0 46px 0;
     }
@@ -53,7 +53,7 @@
     label {
       display: block;
       text-align: left;
-      font: 400 16px/21px "SF Pro Display";
+      font: 400 16px/21px "Fahkwang";
       color: #525252;
       opacity: 1;
       margin: 10px 0 10px 0;
@@ -65,7 +65,7 @@
       border: 1px solid #eeeeee;
       border-radius: 5px;
       color: #525252;
-      font: 400 18px "SF Pro Display";
+      font: 400 18px "Fahkwang";
       &:focus {
         outline: none;
         border-color: $c-dexin;
@@ -85,7 +85,7 @@
 
         h2 {
           text-align: left;
-          font: 500 25px/33px "Classica Pro";
+          font: 500 25px/33px "Larken";
           color: #0d0d0d;
         }
 
@@ -176,7 +176,7 @@
       span {
         display: inline;
         text-align: left;
-        font: 500 14px/19px "SF Pro Display";
+        font: 500 14px/19px "Fahkwang";
         color: #737373;
         margin-left: 0;
       }
@@ -189,7 +189,7 @@
     }
     .message-text {
       text-align: left;
-      font: 500 25px/33px "SF Pro Display";
+      font: 500 25px/33px "Fahkwang";
       color: #0d0d0d;
       margin: 30px 0 18px 0;
     }
@@ -202,7 +202,7 @@
 
     .jeverly-id-text {
       color: #525252;
-      font: 500 20px/26px "Classica Pro";
+      font: 500 20px/26px "Larken";
     }
     img {
       width: 240x;
@@ -213,7 +213,7 @@
       width: 435px;
       text-align: left;
       color: #525252;
-      font-family: "SF Pro Display";
+      font-family: "Fahkwang";
       h3 {
         margin-top: 0;
         font-size: 20px;
@@ -237,6 +237,12 @@
     color: #fff;
     background: #cc8342;
   }
+}
+
+#contact-form {
+  margin-left: 237px;
+  margin-top: 114px;
+  width: 1060px;
 }
 
 // ---------------- right side checkbox
@@ -308,7 +314,7 @@
     top: 10px;
     width: 85%;
     text-align: left;
-    font: 500 14px/19px "SF Pro Display";
+    font: 500 14px/19px "Fahkwang";
     color: #2b2b2b;
     a {
       color: #28a4e5;
@@ -395,6 +401,10 @@
   }
   #contact_section {
     padding-bottom: 0px;
+  }
+
+  #contact-form {
+    width: auto;
   }
 
   #summary_section {
