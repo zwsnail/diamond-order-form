@@ -21,8 +21,8 @@ body {
   padding: 0; }
 
 .borderBox {
-  transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
-  border: 2px solid #013238; }
+  transition: 0.2s;
+  border: 2px solid #cc8342; }
 
 h1 {
   text-align: center;
@@ -59,7 +59,7 @@ input {
   font: 400 18px "Larken"; }
   input:focus {
     outline: none;
-    border-color: #013238; }
+    border-color: #073801; }
 
 .group {
   position: relative;
@@ -183,7 +183,8 @@ input {
         background-repeat: no-repeat; }
   .main .certificates img {
     width: auto;
-    height: 33px; }
+    height: 33px;
+    padding: 10px; }
   .main .personal_text span {
     margin: 10px 0 20px 0;
     display: block;
@@ -194,7 +195,7 @@ input {
   .main .personal_text input {
     width: 60%; }
   .main .personal_text button {
-    background: #013238;
+    background: #073801;
     padding: 8px 34px;
     border: 1px solid #013238;
     font: 400 16px "Larken";
@@ -214,6 +215,8 @@ input {
       font-size: 18px;
       font-weight: 400px;
       font-style: normal; }
+    .main .jewerly_section select:hover {
+      background-color: #fff9e7; }
     .main .jewerly_section .ring_sizes {
       margin-bottom: 20px; }
     .main .jewerly_section small {
@@ -254,7 +257,7 @@ input {
     .main .jewerly_section .ring_engraving input {
       width: 60%; }
     .main .jewerly_section .ring_engraving button {
-      background: #013238;
+      background: #073801;
       padding: 8px 34px;
       border: 1px solid #013238;
       font: 400 16px "Larken";
@@ -288,11 +291,12 @@ input {
   opacity: 1;
   bottom: 10px; }
 
-#showAddedMarkMessage {
+.showMessage {
+  display: none;
   background-color: #bbbbbb;
   padding: 5px;
   color: #fff980;
-  border-radius: 6px; }
+  border-radius: 1px; }
 
 @media (max-width: 1600px) {
   .d_images img {
@@ -421,29 +425,28 @@ input {
     .main .jewerly_section .ring_engraving span {
       font-size: 14px; } }
 .headline {
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   top: 100px;
-  height: 93px;
-  width: 100%;
+  height: 120px;
   background: #e5e3df;
   color: #252525;
   z-index: 999;
   opacity: 0.7;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid #d1cdcd; }
   .headline a {
     text-decoration: none;
-    color: #252525;
+    color: #013238;
     cursor: pointer;
     font: 400 20px "Fahkwang";
-    padding: 5px; }
+    padding: 10px; }
     .headline a:hover {
-      font-size: border;
-      background-color: #fff9e7; }
+      font-size: larger;
+      background-color: #fff980; }
   .headline h1 {
     font-family: "Fahkwang";
     font-size: 30px;
@@ -524,7 +527,7 @@ input {
       font: 400 18px "Fahkwang"; }
       .contact_section .contact_form #message:focus {
         outline: none;
-        border-color: #013238; }
+        border-color: #073801; }
     .contact_section .contact_form .contacts {
       display: grid;
       grid-template-columns: 6fr 6fr;
@@ -655,7 +658,7 @@ input {
         padding: 3px 0; }
       .contact_section .contact_info .all-info .under-price {
         width: 60%;
-        border: 1px solid #013238;
+        border: 1px solid #073801;
         font-size: 9px;
         margin-top: 2px; }
   .contact_section .send_req {

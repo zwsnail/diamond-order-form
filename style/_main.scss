@@ -150,6 +150,7 @@
   .certificates img {
     width: auto;
     height: 33px;
+    padding: 10px;
   }
 
   .personal_text {
@@ -174,6 +175,19 @@
       font-weight: 400px;
       font-style: normal;
     }
+
+    select:hover {
+      background-color: #fff9e7;
+    }
+
+    // select > option:hover {
+    //   box-shadow: 0 0 10px 100px #fed20f inset;
+    //   transition: all 0.2s ease-in-out;
+    // }
+
+    // select.decorated option:hover {
+    //   box-shadow: 0 0 10px 100px #1882a8 inset;
+    // }
 
     .ring_sizes {
       margin-bottom: 20px;
@@ -245,11 +259,12 @@
   }
 }
 
-#showAddedMarkMessage {
+.showMessage {
+  display: none;
   background-color: #bbbbbb;
   padding: 5px;
   color: #fff980;
-  border-radius: 6px;
+  border-radius: 1px;
 }
 
 @media (max-width: 1600px) {

@@ -95,8 +95,11 @@
     
                     <div class="lines"></div>
     
-                    <h3>Certificates</h3>
-    
+                    <div style="display:flex; align-items: baseline;">
+                        <h3>Certificates</h3>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                        <p id="showAddedCertMessage"  class="showMessage"></p>
+                    </div>
                     <div class="blocks certificates">
                         <img data-index-number="100" id="gia" src="s/GIA_Logo.png" alt="GIA" />
                         <img data-index-number="150" id="igi" src="s/logo_IGI.png" style="margin-left: 30px" alt="IGI" />
@@ -106,10 +109,10 @@
                     <div style="display:flex; align-items: baseline;">
                         <h3>Laser Mark</h3>
                         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                        <p id="showAddedMarkMessage"></p>
+                        <p id="showAddedMarkMessage" class="showMessage"></p>
                     </div>
                     <form class="personal_text">
-                        <span>The personal text on the girdle of your diamond</span>
+                        <span>The personal text on the girdle of your diamond ($100)</span>
                         <input data-index-number="100" type="text" id="laser_mark" value="" required />
                         <button type="submit">ADD</button>
                     </form>
@@ -124,7 +127,7 @@
                     <form class="ring_engrave_form">
                         <!-- <input type="text" class="style_id" id="style_id" required /> -->
                         <select class="style_id" name="jewelry_id" id="jewelry_id">
-                            <option value="">--Choose Your Jewelry:--</option>
+                            <option value=""> Choose Your Jewelry: </option>
                             <optgroup label="Ring">
                                 <option value="dog">Ring 1</option>
                                 <option value="cat">Ring 2<</option>

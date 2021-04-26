@@ -15,13 +15,15 @@ body {
   padding: 0;
 }
 
-$c-dexin: #013238;
+$c-dexin: #073801;
 $c-line: #d1cdcd;
 $g-color: #252525;
 
 .borderBox {
-  transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
-  border: 2px solid $c-dexin;
+  // transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: 0.2s;
+  // border: 2px solid $c-dexin;
+  border: 2px solid rgb(204, 131, 66);
   // background-color: #fff980;
 }
 

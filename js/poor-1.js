@@ -36,7 +36,10 @@ $(document).ready(function () {
       showMarkPrice(cMark);
       $("#showAddedMarkMessage").text("Mark removed!").fadeIn(1000).fadeOut(2000)
     }
-});
+  });
+
+
+  
 
   const obj = {
     laserMark: "",
@@ -119,8 +122,11 @@ $(document).ready(function () {
     $(".counted__jeverly").text("$ " + priceObject.count());
     $(".all-info #drop_9").text("$ " + priceObject.count());
 
-    $(".caratSize div").css({ border: "1px solid #eee" });
-    $(this).css({ border: "1px solid #cc8342" });
+ 
+    $(".caratSize div").css({ border: "2px solid #d1cdcd" });
+    $(this).css({ "border": "2px solid #cc8342", "transition": "0.3s" });
+ 
+
     obj.caratSize = $(this).text();
     $(".all-info #drop_2").text(`${obj.caratSize}`);
   });
@@ -153,12 +159,14 @@ $(document).ready(function () {
       $(".all-info #drop_4").text(``);
       cCertificate = 0;
       showCertificatePrice(cCertificate);
+      $("#showAddedCertMessage").text("GIA Removed!").fadeIn(1000).fadeOut(1000);
       return;
     }
       bordered($(".certificates img"), $(this));
       obj.certificates = $(this).attr("alt");
 
       showCertificatePrice(($(this).attr("data-index-number"))*1);
+      $("#showAddedCertMessage").text("GIA $100").fadeIn(1000).fadeOut(1000);
       $(".all-info #drop_4").text(`${obj.certificates}`);
     });
 
@@ -173,12 +181,14 @@ $(document).ready(function () {
 
       cCertificate = 0;
       showCertificatePrice(cCertificate);
+      $("#showAddedCertMessage").text("IGI Removed!").fadeIn(1000).fadeOut(1000);
       return;
     }
       bordered($(".certificates img"), $(this));
       obj.certificates = $(this).attr("alt");
 
       showCertificatePrice(($(this).attr("data-index-number"))*1);
+      $("#showAddedCertMessage").text("IGI $150").fadeIn(1000).fadeOut(1000);
       $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
@@ -207,8 +217,9 @@ $(document).ready(function () {
   });
 
   $(".ring_sizes div").on("click", function () {
-    $(".ring_sizes div").css({ border: "1px solid #eee" });
-    $(this).css({ border: "1px solid #cc8342" });
+    $(".ring_sizes div").css({ border: "2px solid #d1cdcd" });
+    $(this).css({ "border": "2px solid #cc8342", "transition": "0.3s" });
+    
     obj.ringSize = $(this).text();
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
