@@ -26,7 +26,7 @@ $(document).ready(function () {
  
     let cMark = Math.floor($("#laser_mark").attr("data-index-number"));
     showMarkPrice(cMark);
-    $("#showAddedMarkMessage").text("Mark added!")
+    $("#showAddedMarkMessage").text("Mark added!").fadeIn(1000).fadeOut(2000)
   });
 
   $("#laser_mark").blur(function(){
@@ -34,7 +34,7 @@ $(document).ready(function () {
       cMark = 0;
       priceObject.cMark = cMark;
       showMarkPrice(cMark);
-      $("#showAddedMarkMessage").text("Mark removed!")
+      $("#showAddedMarkMessage").text("Mark removed!").fadeIn(1000).fadeOut(2000)
     }
 });
 

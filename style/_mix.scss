@@ -15,19 +15,20 @@ body {
   padding: 0;
 }
 
-$c-dexin: #cc8342;
+$c-dexin: #013238;
 $c-line: #d1cdcd;
 $g-color: #252525;
 
 .borderBox {
   transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
   border: 2px solid $c-dexin;
+  // background-color: #fff980;
 }
 
 h1 {
   text-align: center;
   font-size: 35px;
-  font-family: "Classica Pro Demi";
+  font-family: "Larken";
   letter-spacing: 0px;
   color: $g-color;
   @media (max-width: 500px) {
@@ -38,7 +39,7 @@ h1 {
 h3 {
   margin-top: 35px;
   color: #0d0d0d;
-  font: 400 25px/30px "Classica Pro";
+  font: 400 25px/30px "Larken";
   text-transform: capitalize;
   @media (max-width: 500px) {
     font-size: 20px;
@@ -56,7 +57,7 @@ h3 {
 
 input {
   height: 35px;
-  border: 3px solid #eeeeee;
+  border: 3px solid #bbbbbb;
   border-radius: 5px;
   color: #525252;
   font: 400 18px "Larken";
@@ -109,8 +110,8 @@ input {
   button {
     background: $c-dexin;
     padding: 8px 34px;
-    border: 1px solid #eeeeee;
-    border-radius: 5px;
+    border: 1px solid #013238;
+    // border-radius: 5px;
     font: 400 16px "Larken";
     color: #fff;
     cursor: pointer;

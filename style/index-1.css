@@ -22,12 +22,12 @@ body {
 
 .borderBox {
   transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
-  border: 2px solid #cc8342; }
+  border: 2px solid #013238; }
 
 h1 {
   text-align: center;
   font-size: 35px;
-  font-family: "Classica Pro Demi";
+  font-family: "Larken";
   letter-spacing: 0px;
   color: #252525; }
   @media (max-width: 500px) {
@@ -37,7 +37,7 @@ h1 {
 h3 {
   margin-top: 35px;
   color: #0d0d0d;
-  font: 400 25px/30px "Classica Pro";
+  font: 400 25px/30px "Larken";
   text-transform: capitalize; }
   @media (max-width: 500px) {
     h3 {
@@ -53,16 +53,13 @@ h3 {
 
 input {
   height: 35px;
-  border: 3px solid #eeeeee;
+  border: 3px solid #bbbbbb;
   border-radius: 5px;
   color: #525252;
   font: 400 18px "Larken"; }
   input:focus {
     outline: none;
-    border-color: #cc8342; }
-
-.sections {
-  background: antiquewhite; }
+    border-color: #013238; }
 
 .group {
   position: relative;
@@ -146,8 +143,7 @@ input {
   padding: 0;
   width: 83%;
   height: auto;
-  margin: 155px 40px;
-  border: 1px solid #d1d1d1; }
+  margin: 155px 40px; }
   .main .blocks {
     display: flex;
     flex-direction: row;
@@ -169,7 +165,7 @@ input {
       width: 55px;
       text-align: center;
       padding: 9px 0 9px 0;
-      border: 3px solid #eeeeee;
+      border: 2px solid #d1cdcd;
       font: 400 16px "Fahkwang";
       color: #525252;
       opacity: 0.7; }
@@ -198,10 +194,9 @@ input {
   .main .personal_text input {
     width: 60%; }
   .main .personal_text button {
-    background: #cc8342;
+    background: #013238;
     padding: 8px 34px;
-    border: 1px solid #eeeeee;
-    border-radius: 5px;
+    border: 1px solid #013238;
     font: 400 16px "Larken";
     color: #fff;
     cursor: pointer; }
@@ -213,7 +208,7 @@ input {
       margin-top: 15px;
       width: 25%;
       border-radius: 5px;
-      border: 3px solid #eeeeee;
+      border: 3px solid #bbbbbb;
       color: #525252;
       height: 35px;
       font-size: 18px;
@@ -259,10 +254,9 @@ input {
     .main .jewerly_section .ring_engraving input {
       width: 60%; }
     .main .jewerly_section .ring_engraving button {
-      background: #cc8342;
+      background: #013238;
       padding: 8px 34px;
-      border: 1px solid #eeeeee;
-      border-radius: 5px;
+      border: 1px solid #013238;
       font: 400 16px "Larken";
       color: #fff;
       cursor: pointer; }
@@ -293,6 +287,12 @@ input {
 #diamond_box .item:hover .caption {
   opacity: 1;
   bottom: 10px; }
+
+#showAddedMarkMessage {
+  background-color: #bbbbbb;
+  padding: 5px;
+  color: #fff980;
+  border-radius: 6px; }
 
 @media (max-width: 1600px) {
   .d_images img {
@@ -424,12 +424,13 @@ input {
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  top: 100px;
   height: 93px;
   width: 100%;
-  background: #fff;
+  background: #e5e3df;
   color: #252525;
   z-index: 999;
+  opacity: 0.7;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -438,9 +439,13 @@ input {
     text-decoration: none;
     color: #252525;
     cursor: pointer;
-    font: 400 20px "SF Pro Display"; }
+    font: 400 20px "Fahkwang";
+    padding: 5px; }
+    .headline a:hover {
+      font-size: border;
+      background-color: #fff9e7; }
   .headline h1 {
-    font-family: "Classica Pro";
+    font-family: "Fahkwang";
     font-size: 30px;
     color: #0d0d0d; }
   .headline .US {
@@ -513,13 +518,13 @@ input {
     .contact_section .contact_form #message {
       width: 98%;
       height: 100px;
-      border: 1px solid #eeeeee;
+      border: 3px solid #bbbbbb;
       border-radius: 5px;
       color: #525252;
       font: 400 18px "Fahkwang"; }
       .contact_section .contact_form #message:focus {
         outline: none;
-        border-color: #cc8342; }
+        border-color: #013238; }
     .contact_section .contact_form .contacts {
       display: grid;
       grid-template-columns: 6fr 6fr;
@@ -650,7 +655,7 @@ input {
         padding: 3px 0; }
       .contact_section .contact_info .all-info .under-price {
         width: 60%;
-        border: 1px solid #cc8342;
+        border: 1px solid #013238;
         font-size: 9px;
         margin-top: 2px; }
   .contact_section .send_req {
@@ -826,13 +831,14 @@ input {
   .footer_space .columns h2 {
     text-align: left;
     font: 500 30px/40px "Larken";
+    color: #fff980;
     opacity: 1; }
   .footer_space .columns span {
-    color: #c5c5c5;
+    color: #ffffff;
     display: block;
     margin-top: 15px;
     font-style: normal;
-    font: 300 17px/22px "Larken"; }
+    font: 17px/22px "Larken"; }
     .footer_space .columns span b {
       color: #fe9b44; }
     .footer_space .columns span img {

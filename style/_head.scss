@@ -2,13 +2,13 @@
   position: fixed;
   left: 0;
   right: 0;
-  top: 0;
+  top: 100px;
   height: 93px;
   width: 100%;
-  background: #fff;
+  background: #e5e3df;
   color: $g-color;
   z-index: 999;
-
+  opacity: 0.7;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -19,11 +19,16 @@
     text-decoration: none;
     color: #252525;
     cursor: pointer;
-    font: 400 20px "SF Pro Display";
+    font: 400 20px "Fahkwang";
+    padding: 5px;
+    &:hover {
+      font-size: border;
+      background-color: #fff9e7;
+    }
   }
 
   h1 {
-    font-family: "Classica Pro";
+    font-family: "Fahkwang";
     font-size: 30px;
     color: #0d0d0d;
   }
