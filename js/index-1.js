@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
 });
   
-if (window.matchMedia("(min-width: 1249px)").matches) {
+if (window.matchMedia("(min-width: 1249px)").matches) { 
   $(".jewerly_section").hide();
   $(".contact_section").hide();
   $(".diamond_section").show();
@@ -140,4 +140,8 @@ $(".order-summary").click(function () {
   pdf.save("my-order-summery.pdf");
 });
   
+
+
+
 });
+

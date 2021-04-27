@@ -298,6 +298,90 @@ input {
   color: #fff980;
   border-radius: 1px; }
 
+.popup {
+  position: fixed;
+  top: calc(50% - 360px);
+  /* Using calc for proper centering, 50 = height / 2 */
+  left: calc(50% - 360px);
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  z-index: 1000;
+  /* Should be greater than the topmost element to ensure front position */
+  padding: 10px;
+  color: white;
+  visibility: hidden;
+  /* Not visible first */
+  opacity: 0;
+  /* We can't animate visiblity so we set opacity to 0 */
+  transition: all 0.6s; }
+  .popup img {
+    width: 800px; }
+
+/* When we want to show the overlay we add the visible class */
+.visible {
+  visibility: visible;
+  opacity: 1; }
+
+/* Using a pseudo-selector to create an overlay */
+.popup:before {
+  content: "";
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: #4a5d477a;
+  z-index: -2;
+  /* Needs to be less than :after */ }
+
+.popup:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #e5e3df;
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 10px;
+  z-index: -1;
+  /* to be below the parent element but in front of before */ }
+
+.close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 500;
+  border: 3px solid #6f6f82;
+  border-radius: 5px;
+  background: #6f6f82; }
+
+.close::after,
+.close::before {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  background: #013238; }
+
+.close:hover,
+close:active {
+  background-color: #013238;
+  border: 3px solid #013238; }
+
+.close::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: yellow; }
+
+.close:before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background: yellow; }
+
 @media (max-width: 1600px) {
   .d_images img {
     margin: -5px 5px !important;
@@ -370,7 +454,7 @@ input {
       .main .blocks img {
         box-sizing: border-box;
         width: 67px;
-        height: 67px; }
+        height: 62px; }
       .main .blocks .size {
         box-sizing: border-box;
         margin-left: 7px;
@@ -382,7 +466,6 @@ input {
           height: 60px; }
       .main .blocks.certificates img {
         box-sizing: border-box;
-        height: 32px;
         width: auto; }
         .main .blocks.certificates img:nth-child(2) {
           margin-left: 32px; }
@@ -423,7 +506,88 @@ input {
       .main .jewerly_section .metal-color div.platinum {
         text-align: left; }
     .main .jewerly_section .ring_engraving span {
-      font-size: 14px; } }
+      font-size: 14px; }
+
+  .popup {
+    position: fixed;
+    top: calc( 50% - 200px );
+    /* Using calc for proper centering, 50 = height / 2 */
+    left: calc(50% - 177px);
+    width: 328px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 1000;
+    /* Should be greater than the topmost element to ensure front position */
+    padding: 10px;
+    color: white;
+    visibility: hidden;
+    /* Not visible first */
+    opacity: 0;
+    /* We can't animate visiblity so we set opacity to 0 */
+    transition: all 0.6s; }
+    .popup img {
+      width: 330px; }
+
+  /* When we want to show the overlay we add the visible class */
+  .visible {
+    visibility: visible;
+    opacity: 1; }
+
+  /* Using a pseudo-selector to create an overlay */
+  .popup:before {
+    content: "";
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #19180a94;
+    z-index: -2;
+    /* Needs to be less than :after */ }
+
+  .popup:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #e5e3df;
+    top: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 10px;
+    z-index: -1;
+    /* to be below the parent element but in front of before */ }
+
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 500;
+    border: 1px solid #fff980;
+    border-radius: 5px;
+    background-color: #cccccc; }
+
+  .close::after,
+  .close::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    background: #fff980; }
+
+  .close:hover,
+  close:active {
+    background-color: #013238; }
+
+  .close::after {
+    transform: translate(-50%, -50%) rotate(45deg); }
+
+  .close:before {
+    transform: translate(-50%, -50%) rotate(-45deg); } }
 .headline {
   position: relative;
   left: 0;
@@ -505,6 +669,8 @@ input {
     margin-bottom: 200px;
     display: flex;
     flex-direction: column; }
+    .contact_section .contact_form .all-info span {
+      color: #28a4e5; }
     .contact_section .contact_form h1 {
       font-size: 35px;
       font-weight: 600;
@@ -646,21 +812,6 @@ input {
       width: 240x;
       height: 240px;
       margin-left: 110px; }
-    .contact_section .contact_info .all-info {
-      width: 435px;
-      text-align: left;
-      color: #525252;
-      font-family: "Fahkwang"; }
-      .contact_section .contact_info .all-info h3 {
-        margin-top: 0;
-        font-size: 20px; }
-      .contact_section .contact_info .all-info p {
-        padding: 3px 0; }
-      .contact_section .contact_info .all-info .under-price {
-        width: 60%;
-        border: 1px solid #073801;
-        font-size: 9px;
-        margin-top: 2px; }
   .contact_section .send_req {
     margin-top: 30px;
     width: 435px;
@@ -776,8 +927,7 @@ input {
     grid-template-columns: 12fr !important; } }
 @media (max-width: 500px) {
   .contact_section {
-    width: 100%;
-    padding-bottom: 100px; }
+    width: 100%; }
     .contact_section .send_req {
       width: 100%;
       font-size: 18px; }
@@ -789,7 +939,8 @@ input {
         left: 5px; }
     .contact_section .contact_form {
       padding-bottom: 10px;
-      margin-top: 0px; }
+      margin-top: 0px;
+      width: 340px; }
     .contact_section .contact_form h1 {
       font-size: 25px;
       margin: 0; }
@@ -807,7 +958,9 @@ input {
     padding-bottom: 0px; }
 
   #contact-form {
-    width: auto; }
+    width: 345px;
+    margin-top: 25px;
+    margin-left: 22px; }
 
   #summary_section {
     margin-top: -155px; } }

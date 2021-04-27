@@ -2,20 +2,32 @@
   emailjs.init("user_F1infr4XnoJN5o3sHvo0J");
 })();
 
+
 $(document).ready(function () {
   function selector(target) {
     return document.querySelector(target).value;
   }
 
+
+
+  // obj.jevelryId = `$("#jewelry_id option:selected" ).text()`;
+  // $("#jewelry_id option:selected" ).text();
+  $('#jewelry_id').on('change', function() {
+    // obj.jevelryId = `$("#jewelry_id option:selected" ).text()`
+    // obj.jevelryId = selector("#jewelry_id");
+    obj.jevelryId = this.value;
+     $(".all-info #drop_5").text(`${obj.jevelryId}`);
+  });
+
   $(".ring_engrave_form").on("submit", function (e) {
     e.preventDefault();
-    obj.jevelryId = selector("#style_id");
+    // obj.jevelryId = selector("#style_id");
     obj.ringEngrave = selector("#diamond_text_engrave");
 
     console.log(obj);
 
-    $(".jeverly-id-text").append(`${obj.jevelryId}`);
-    $(".all-info #drop_5").text(`${obj.jevelryId}`);
+    // $(".jeverly-id-text").append(`${obj.jevelryId}`);
+    // $(".all-info #drop_5").text(`${obj.jevelryId}`);
     $(".all-info #drop_8").text(`${obj.ringEngrave}`);
   });
 
@@ -216,6 +228,17 @@ $(document).ready(function () {
     $(".all-info #drop_7").text(`${obj.metalColor}`);
   });
 
+
+
+  //popup the size window
+$("#show-dialog").on("click", function(e) { 
+  e.preventDefault();
+  $(".popup").addClass("visible");
+  console.log("popup");
+});
+
+
+
   $(".ring_sizes div").on("click", function () {
     $(".ring_sizes div").css({ border: "2px solid #d1cdcd" });
     $(this).css({ "border": "2px solid #cc8342", "transition": "0.3s" });
@@ -283,6 +306,9 @@ $(document).ready(function () {
     );
   });
 });
+
+
+
 
 
 // console.clear();
