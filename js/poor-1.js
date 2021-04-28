@@ -5,6 +5,9 @@
 
 $(document).ready(function () {
   function selector(target) {
+    // return document.querySelector(target).value;
+    if(document.querySelector(target).value == "")
+     return "";
     return document.querySelector(target).value;
   }
 
@@ -54,15 +57,15 @@ $(document).ready(function () {
   
 
   const obj = {
-    laserMark: "",
-    diamondColor: "",
-    caratSize: "",
-    cutShape: "",
-    certificates: "",
-    jevelryId: "",
-    ringSize: "",
-    metalColor: "",
-    ringEngrave: "",
+    laserMark: "N/A",
+    diamondColor: "N/A",
+    caratSize: "N/A",
+    cutShape: "N/A",
+    certificates: "N/A",
+    jevelryId: "N/A",
+    ringSize: "N/A",
+    metalColor: "N/A",
+    ringEngrave: "N/A",
   };
 
   function bordered(box, select) {
@@ -246,9 +249,10 @@ $("#show-dialog").on("click", function(e) {
     obj.ringSize = $(this).text();
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
-
-  $("#contact_section").on("submit", function (e) {
-    e.preventDefault();
+  
+  // $("#contact_section").on("submit", function (e) {
+    $(".email-submit").on("submit", function (e) {
+      e.preventDefault();
 
     const username = selector("#firstName");
     const userlname = selector("#lastName");
@@ -261,19 +265,18 @@ $("#show-dialog").on("click", function(e) {
     const state = selector("#state");
     const zip = selector("#zip");
     const country = selector("#country");
-
     const message = selector("#message");
 
     const contactInformation = ` ${username} ${userlname}`;
     const addresses = `${address1} , ${address2}`;
     const citys = `${city} , ${state}`;
     const countrys = `${zip} , ${country}`;
-
+    
     let templateParams = {
       from_name: contactInformation,
       mail: userMail,
       phone: phoneNumber,
-      to_name: "SunnyEden",
+      to_name: "SunnyEden™",
 
       address: addresses,
       city: citys,
@@ -281,7 +284,6 @@ $("#show-dialog").on("click", function(e) {
 
       //  diamond cuts
       laserMark: obj.laserMark,
-
       diamondColor: obj.diamondColor,
       caratSizes: obj.caratSize,
       cutShapes: obj.cutShape,
@@ -291,10 +293,8 @@ $("#show-dialog").on("click", function(e) {
       metalColor: obj.metalColor,
       ringEngraving: obj.ringEngrave,
       priceOfDiamond: priceObject.count(),
-
       message: message,
     };
-
     //  SEND EMAIL
     emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
       function (response) {
