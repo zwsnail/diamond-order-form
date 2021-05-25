@@ -351,6 +351,11 @@ close:active {
   background: yellow;
 }
 
+/* form validation */
+form .error {
+  color: #ff0000 !important;
+}
+
 @media (max-width: 1600px) {
   .d_images img {
     margin: -5px 5px !important;

@@ -192,6 +192,14 @@
       margin-top: 34px;
       @include con-button();
       margin-bottom: 0px;
+      &:hover {
+        transform: scale(1.03);
+        transition: all 0.2s ease-in-out;
+      }
+      &:active {
+        transform: scale(0.98);
+        transition: all 0.2s ease-in-out;
+      }
     }
     .message-text {
       text-align: left;
@@ -243,6 +251,14 @@
     @include con-button();
     color: #fff;
     background: #cc8342;
+    &:hover {
+      transform: scale(1.03);
+      transition: all 0.2s ease-in-out;
+    }
+    &:active {
+      transform: scale(0.98);
+      transition: all 0.2s ease-in-out;
+    }
   }
 }
 

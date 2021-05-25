@@ -6,8 +6,8 @@
 $(document).ready(function () {
   function selector(target) {
     // return document.querySelector(target).value;
-    if(document.querySelector(target).value == "")
-     return "";
+    if (document.querySelector(target).value == "")
+      return "";
     return document.querySelector(target).value;
   }
 
@@ -15,11 +15,11 @@ $(document).ready(function () {
 
   // obj.jevelryId = `$("#jewelry_id option:selected" ).text()`;
   // $("#jewelry_id option:selected" ).text();
-  $('#jewelry_id').on('change', function() {
+  $('#jewelry_id').on('change', function () {
     // obj.jevelryId = `$("#jewelry_id option:selected" ).text()`
     // obj.jevelryId = selector("#jewelry_id");
     obj.jevelryId = this.value;
-     $(".all-info #drop_5").text(`${obj.jevelryId}`);
+    $(".all-info #drop_5").text(`${obj.jevelryId}`);
   });
 
   $(".ring_engrave_form").on("submit", function (e) {
@@ -36,15 +36,15 @@ $(document).ready(function () {
 
   $(".personal_text").on("submit", function (e) {
     e.preventDefault();
-  
+
     obj.laserMark = selector("#laser_mark");
- 
+
     let cMark = Math.floor($("#laser_mark").attr("data-index-number"));
     showMarkPrice(cMark);
     $("#showAddedMarkMessage").text("Mark added!").fadeIn(1000).fadeOut(2000)
   });
 
-  $("#laser_mark").blur(function(){
+  $("#laser_mark").blur(function () {
     if (selector("#laser_mark") == "") {
       cMark = 0;
       priceObject.cMark = cMark;
@@ -54,7 +54,7 @@ $(document).ready(function () {
   });
 
 
-  
+
 
   const obj = {
     laserMark: "N/A",
@@ -73,13 +73,13 @@ $(document).ready(function () {
     select.addClass("borderBox");
   }
 
-  function isBordered(box){
-    if(box.hasClass("borderBox")) 
+  function isBordered(box) {
+    if (box.hasClass("borderBox"))
       return true;
     return false;
   }
 
-  function showCertificatePrice(cCertificate){
+  function showCertificatePrice(cCertificate) {
     priceObject.cCertificate = cCertificate;
     console.log(priceObject);
     console.log("count-", priceObject.count());
@@ -89,7 +89,7 @@ $(document).ready(function () {
     $(".all-info #drop_9").text("$ " + priceObject.count());
   }
 
-  function showMarkPrice(cMark){
+  function showMarkPrice(cMark) {
     priceObject.cMark = cMark;
     console.log(priceObject);
     console.log("count-", priceObject.count());
@@ -137,10 +137,10 @@ $(document).ready(function () {
     $(".counted__jeverly").text("$ " + priceObject.count());
     $(".all-info #drop_9").text("$ " + priceObject.count());
 
- 
+
     $(".caratSize div").css({ border: "2px solid #d1cdcd" });
     $(this).css({ "border": "2px solid #cc8342", "transition": "0.3s" });
- 
+
 
     obj.caratSize = $(this).text();
     $(".all-info #drop_2").text(`${obj.caratSize}`);
@@ -177,13 +177,13 @@ $(document).ready(function () {
       $("#showAddedCertMessage").text("GIA Removed!").fadeIn(1000).fadeOut(1000);
       return;
     }
-      bordered($(".certificates img"), $(this));
-      obj.certificates = $(this).attr("alt");
+    bordered($(".certificates img"), $(this));
+    obj.certificates = $(this).attr("alt");
 
-      showCertificatePrice(($(this).attr("data-index-number"))*1);
-      $("#showAddedCertMessage").text("GIA $100").fadeIn(1000).fadeOut(1000);
-      $(".all-info #drop_4").text(`${obj.certificates}`);
-    });
+    showCertificatePrice(($(this).attr("data-index-number")) * 1);
+    $("#showAddedCertMessage").text("GIA $100").fadeIn(1000).fadeOut(1000);
+    $(".all-info #drop_4").text(`${obj.certificates}`);
+  });
 
 
   // double click to remove the tag;
@@ -199,12 +199,12 @@ $(document).ready(function () {
       $("#showAddedCertMessage").text("IGI Removed!").fadeIn(1000).fadeOut(1000);
       return;
     }
-      bordered($(".certificates img"), $(this));
-      obj.certificates = $(this).attr("alt");
+    bordered($(".certificates img"), $(this));
+    obj.certificates = $(this).attr("alt");
 
-      showCertificatePrice(($(this).attr("data-index-number"))*1);
-      $("#showAddedCertMessage").text("IGI $150").fadeIn(1000).fadeOut(1000);
-      $(".all-info #drop_4").text(`${obj.certificates}`);
+    showCertificatePrice(($(this).attr("data-index-number")) * 1);
+    $("#showAddedCertMessage").text("IGI $150").fadeIn(1000).fadeOut(1000);
+    $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
   $("#laser-mark").on("click", function () {
@@ -217,11 +217,11 @@ $(document).ready(function () {
       showCertificatePrice(cCertificate);
       return;
     }
-      bordered($(".certificates img"), $(this));
-      obj.certificates = $(this).attr("alt");
+    bordered($(".certificates img"), $(this));
+    obj.certificates = $(this).attr("alt");
 
-      showCertificatePrice(($(this).attr("data-index-number"))*1);
-      $(".all-info #drop_4").text(`${obj.certificates}`);
+    showCertificatePrice(($(this).attr("data-index-number")) * 1);
+    $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
 
@@ -234,44 +234,62 @@ $(document).ready(function () {
 
 
   //popup the size window
-$("#show-dialog").on("click", function(e) { 
-  e.preventDefault();
-  $(".popup").addClass("visible");
-  console.log("popup");
-});
+  $("#show-dialog").on("click", function (e) {
+    e.preventDefault();
+    $(".popup").addClass("visible");
+    console.log("popup");
+  });
 
 
 
   $(".ring_sizes div").on("click", function () {
     $(".ring_sizes div").css({ border: "2px solid #d1cdcd" });
     $(this).css({ "border": "2px solid #cc8342", "transition": "0.3s" });
-    
+
     obj.ringSize = $(this).text();
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
-  
+
   // $("#contact_section").on("submit", function (e) {
-    $(".email-submit").on("submit", function (e) {
-      e.preventDefault();
+  $(".email-submit").on("submit", function (e) {
+    e.preventDefault();
 
-    const username = selector("#firstName");
-    const userlname = selector("#lastName");
-    const userMail = selector("#email");
-    const phoneNumber = selector("#phoneNumber");
 
-    const address1 = selector("#adress-1");
-    const address2 = selector("#adress-2");
-    const city = selector("#city");
-    const state = selector("#state");
-    const zip = selector("#zip");
-    const country = selector("#country");
-    const message = selector("#message");
 
-    const contactInformation = ` ${username} ${userlname}`;
-    const addresses = `${address1} , ${address2}`;
-    const citys = `${city} , ${state}`;
-    const countrys = `${zip} , ${country}`;
-    
+
+    // let username = (if(username == ""))?"":"";
+    // let userlname = "";
+    // let userMail = "";
+    // let phoneNumber = "";;
+    // let address1 =  "";
+    // let address2 = "";
+    // let city = "";
+    // let state =  "";
+    // let zip = "";
+    // let country = "";
+    // let message = "";
+    // let contactInformation = "";
+    // let addresses = "";
+    // let citys = "";
+    // let countrys = "";
+
+    let username = (selector("#firstName")) ? selector('#firstName') : "";
+    // let username = selector("#firstName");
+    let userlname = selector("#lastName");
+    let userMail = selector("#email");
+    let phoneNumber = selector("#phoneNumber");
+    let address1 = selector("#adress-1");
+    let address2 = selector("#adress-2");
+    let city = selector("#city");
+    let state = selector("#state");
+    let zip = selector("#zip");
+    let country = selector("#country");
+    let message = selector("#message");
+    let contactInformation = ` ${username} ${userlname}`;
+    let addresses = `${address1} , ${address2}`;
+    let citys = `${city} , ${state}`;
+    let countrys = `${zip} , ${country}`;
+
     let templateParams = {
       from_name: contactInformation,
       mail: userMail,
@@ -295,15 +313,53 @@ $("#show-dialog").on("click", function(e) {
       priceOfDiamond: priceObject.count(),
       message: message,
     };
-    //  SEND EMAIL
-    emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
-      function (response) {
-        console.log("SUCCESS!Email had been sent to you!", response.status, response.text);
-      },
-      function Error(error) {
-        console.log("FAILED...", error);
-      }
-    );
+
+
+
+
+    var form = $("form[name='email-submit']");
+    if (form.valid()) {
+      console.log('valid!');
+      // post something..
+
+
+
+
+
+
+
+
+      //  SEND EMAIL
+      emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
+        function (response) {
+          console.log("SUCCESS!Email had been sent to you!", response.status, response.text);
+
+          $(".notify").toggleClass("active");
+          $("#notifyType").toggleClass("success");
+
+          setTimeout(function () {
+            $(".notify").removeClass("active");
+            $("#notifyType").removeClass("success");
+          }, 2000);
+        },
+        function Error(error) {
+          console.log("FAILED...", error);
+          $(".notify").addClass("active");
+          $("#notifyType").addClass("failure");
+
+          setTimeout(function () {
+            $(".notify").removeClass("active");
+            $("#notifyType").removeClass("failure");
+          }, 2000);
+        }
+      );
+
+    } else {
+      console.log('invalid!');
+
+
+    }
+
   });
 });
 
