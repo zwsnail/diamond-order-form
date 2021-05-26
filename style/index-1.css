@@ -1,11 +1,9 @@
-@import url(//db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=SF+Pro+Display);
-@import url(//db.onlinewebfonts.com/c/64a2cfb57c4a5df1013e4f2e5bf3eff3?family=SF+Pro+Display);
 @font-face {
-  font-family: "Classica Pro";
-  src: url("classica/ClassicaPro-Regular.woff2") format("woff2"), url("classica/ClassicaPro-Regular.woff") format("woff"), url("classica/ClassicaPro-Regular.ttf") format("truetype"); }
+  font-family: "Fahkwang";
+  src: url("classica/Fahkwang-Regular.ttf"); }
 @font-face {
-  font-family: "Classica Pro Demi";
-  src: url("classica/ClassicaPro-Demi.ttf"), url("classica/ClassicaPro-Demi.woff"), url("classica/ClassicaPro-Demi.ttf"); }
+  font-family: "Larken";
+  src: url("classica/Larken+Light.ttf"); }
 html {
   scroll-behavior: smooth;
   overflow: scroll; }
@@ -22,21 +20,25 @@ body {
 
 .borderBox {
   transition: 0.2s;
-  border: 2px solid #cc8342; }
+  border: 2px solid #01282d; }
+
+.navBorderBox {
+  transition: 0.2s;
+  border-bottom: 7px solid #01282d; }
 
 h1 {
   text-align: center;
   font-size: 35px;
   font-family: "Larken";
   letter-spacing: 0px;
-  color: #252525; }
+  color: #01282d; }
   @media (max-width: 500px) {
     h1 {
       font-size: 25px; } }
 
 h3 {
   margin-top: 35px;
-  color: #0d0d0d;
+  color: #01282d;
   font: 400 25px/30px "Larken";
   text-transform: capitalize; }
   @media (max-width: 500px) {
@@ -59,7 +61,7 @@ input {
   font: 400 18px "Larken"; }
   input:focus {
     outline: none;
-    border-color: #073801; }
+    border-color: #01282d; }
 
 /* the alert section*/
 .notify {
@@ -72,6 +74,7 @@ input {
   color: yellow;
   text-align: center;
   font-size: xx-large;
+  font-family: "Larken";
   background: rgba(42, 97, 70, 0.192);
   overflow: hidden;
   box-sizing: border-box;
@@ -85,10 +88,10 @@ input {
   height: 100px; }
 
 .success:before {
-  content: "Submit Success!"; }
+  content: "Submit success!"; }
 
 .failure:before {
-  content: "Sorry!Submit Failed"; }
+  content: "Sorry! Submit failed"; }
 
 .group {
   position: relative;
@@ -196,7 +199,7 @@ input {
       padding: 9px 0 9px 0;
       border: 2px solid #d1cdcd;
       font: 400 16px "Fahkwang";
-      color: #525252;
+      color: #01282d;
       opacity: 0.7; }
     .main .blocks.cut_shape {
       margin-top: 20px;
@@ -209,7 +212,8 @@ input {
         cursor: pointer;
         background-size: cover;
         background-position: center;
-        background-repeat: no-repeat; }
+        background-repeat: no-repeat;
+        padding: 5px; }
   .main .certificates img {
     width: auto;
     height: 33px;
@@ -224,9 +228,9 @@ input {
   .main .personal_text input {
     width: 60%; }
   .main .personal_text button {
-    background: #073801;
+    background: #01282d;
     padding: 8px 34px;
-    border: 1px solid #013238;
+    border: 1px solid #fff880;
     font: 400 16px "Larken";
     color: #fff;
     cursor: pointer; }
@@ -243,11 +247,15 @@ input {
       height: 35px;
       font-size: 18px;
       font-weight: 400px;
-      font-style: normal; }
+      font-style: normal;
+      font-family: 'Fahkwang'; }
     .main .jewerly_section select:hover {
-      background-color: #fff9e7; }
+      background-color: #fff9ea; }
     .main .jewerly_section .ring_sizes {
       margin-bottom: 20px; }
+    .main .jewerly_section .ring_engrave_form a {
+      font-family: 'Fahkwang';
+      color: #01282d; }
     .main .jewerly_section small {
       text-align: left;
       text-decoration: underline;
@@ -286,9 +294,9 @@ input {
     .main .jewerly_section .ring_engraving input {
       width: 60%; }
     .main .jewerly_section .ring_engraving button {
-      background: #073801;
+      background: #01282d;
       padding: 8px 34px;
-      border: 1px solid #013238;
+      border: 1px solid #fff880;
       font: 400 16px "Larken";
       color: #fff;
       cursor: pointer; }
@@ -627,7 +635,7 @@ form .error {
   right: 0;
   top: 100px;
   height: 120px;
-  background: #e5e3df;
+  background: #fff9ea;
   color: #252525;
   z-index: 999;
   opacity: 0.7;
@@ -637,12 +645,11 @@ form .error {
   border-bottom: 1px solid #d1cdcd; }
   .headline a {
     text-decoration: none;
-    color: #013238;
+    color: #01282d;
     cursor: pointer;
-    font: 400 20px "Fahkwang";
+    font: 400 26px "Fahkwang";
     padding: 10px; }
     .headline a:hover {
-      font-size: larger;
       background-color: #fff980; }
   .headline h1 {
     font-family: "Fahkwang";
@@ -702,19 +709,22 @@ form .error {
     margin-bottom: 200px;
     display: flex;
     flex-direction: column; }
+    .contact_section .contact_form .all-info p {
+      font: 300 17px/29px "Fahkwang"; }
     .contact_section .contact_form .all-info span {
-      color: #28a4e5; }
+      color: #01282d;
+      padding-left: 10px; }
     .contact_section .contact_form h1 {
       font-size: 35px;
       font-weight: 600;
       font-family: "Larken";
-      color: #252525;
+      color: #01282d;
       margin: 0 0 46px 0; }
     .contact_section .contact_form label {
       display: block;
-      text-align: left;
+      text-align: center;
       font: 400 16px/21px "Fahkwang";
-      color: #525252;
+      color: #01282d;
       opacity: 1;
       margin: 10px 0 10px 0; }
     .contact_section .contact_form #message {
@@ -726,7 +736,7 @@ form .error {
       font: 400 18px "Fahkwang"; }
       .contact_section .contact_form #message:focus {
         outline: none;
-        border-color: #073801; }
+        border-color: #01282d; }
     .contact_section .contact_form .contacts {
       display: grid;
       grid-template-columns: 6fr 6fr;
@@ -771,7 +781,7 @@ form .error {
           opacity: 0;
           cursor: pointer; }
           .contact_section .contact_form .checkbox-all .checkbox-label input:checked ~ .checkbox-custom {
-            background-color: #cc8342;
+            background-color: #01282d;
             transform: rotate(0deg) scale(1);
             opacity: 1; }
           .contact_section .contact_form .checkbox-all .checkbox-label input:checked ~ .checkbox-custom:after {
@@ -793,7 +803,7 @@ form .error {
           height: 17px;
           background-color: transparent;
           transition: all 0.3s ease-out;
-          border: 2px solid #cc8342;
+          border: 2px solid #01282d;
           border-radius: 3px; }
           .contact_section .contact_form .checkbox-all .checkbox-label span:after {
             position: absolute;
@@ -817,16 +827,18 @@ form .error {
       width: 435px;
       height: 55px;
       z-index: 99;
-      border: 1px solid #cc8342;
+      border: 1px solid #01282d;
       cursor: pointer;
       background: none;
       display: flex;
       justify-content: center;
       align-items: center;
       font: 300 21px/28px "Fahkwang";
-      color: #cc8342;
-      text-transform: uppercase;
-      margin-bottom: 0px; }
+      color: #01282d;
+      margin-bottom: 0px;
+      border: 1px solid #01282d;
+      background-color: #01282d;
+      color: #fff9ea; }
       .contact_section .contact_form .order-summary:focus {
         outline: none; }
       .contact_section .contact_form .order-summary:hover {
@@ -856,17 +868,18 @@ form .error {
     width: 435px;
     height: 55px;
     z-index: 99;
-    border: 1px solid #cc8342;
+    border: 1px solid #01282d;
     cursor: pointer;
     background: none;
     display: flex;
     justify-content: center;
     align-items: center;
     font: 300 21px/28px "Fahkwang";
-    color: #cc8342;
-    text-transform: uppercase;
-    color: #fff;
-    background: #cc8342; }
+    color: #01282d;
+    color: #01282d;
+    background: #fff880;
+    border-radius: 0px;
+    border: 1px solid #fff880; }
     .contact_section .send_req:focus {
       outline: none; }
     .contact_section .send_req:hover {
@@ -959,8 +972,7 @@ form .error {
     grid-template-columns: 1fr; }
 
   .contact_section .send_req {
-    margin: 20px auto;
-    border-radius: 1px; }
+    margin: 20px auto; }
 
   .contact_section .contact_form .order-summary {
     margin: 0px auto; }
@@ -975,10 +987,10 @@ form .error {
     width: 100%; }
     .contact_section .send_req {
       width: 100%;
-      font-size: 18px; }
+      font-size: 25px; }
     .contact_section .order-summary {
       width: 100% !important;
-      font-size: 18px !important; }
+      font-size: 19px !important; }
       .contact_section .order-summary img {
         position: absolute;
         left: 5px; }
@@ -1014,7 +1026,7 @@ form .error {
   left: 0;
   right: 0;
   position: fixed;
-  background: #0d0d0dad;
+  background: #01282d;
   max-width: 100%;
   min-height: 130px;
   z-index: 99;
@@ -1024,14 +1036,15 @@ form .error {
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
-  color: #ffffff; }
+  color: #ffffff;
+  opacity: 0.9; }
   .footer_space #column-warranty {
     display: none; }
   .footer_space #column-support {
     display: none; }
   .footer_space .columns h2 {
     text-align: left;
-    font: 500 30px/40px "Larken";
+    font: 500 30px/40px "Fahkwang";
     color: #fff980;
     opacity: 1; }
   .footer_space .columns span {
@@ -1041,7 +1054,7 @@ form .error {
     font-style: normal;
     font: 17px/22px "Larken"; }
     .footer_space .columns span b {
-      color: #fe9b44; }
+      color: red; }
     .footer_space .columns span img {
       position: absolute;
       margin-left: -40px; }
@@ -1053,12 +1066,11 @@ form .error {
   .footer_space {
     padding: 0 30px; }
     .footer_space .columns h2 {
-      font: 500 24px/36px "Larken"; }
+      font: 500 24px/36px "Fahkwang"; }
     .footer_space .columns span {
       font: 300 14px/18px "Larken"; } }
 @media (max-width: 500px) {
   .footer_space {
-    background: #0d0d0dad;
     padding: 0 30px; }
     .footer_space #column-warranty {
       display: none; }
@@ -1067,9 +1079,9 @@ form .error {
     .footer_space #column-rull {
       margin-bottom: 10px; }
     .footer_space .columns h2 {
-      font: 300 24px/36px "Larken"; }
+      font: 300 24px/36px "Fahkwang"; }
     .footer_space .columns span {
-      font: 100 14px/18px "Larken";
+      font: 100 12px/18px "Fahkwang";
       margin-top: 0px; } }
 
 /*# sourceMappingURL=index-1.css.map */

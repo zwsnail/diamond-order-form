@@ -3,7 +3,8 @@
   left: 0;
   right: 0;
   position: fixed;
-  background: #0d0d0dad;
+  // background: #0d0d0dad;
+  background: $green;
   max-width: 100%;
   min-height: 130px;
   z-index: 99;
@@ -16,6 +17,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   color: #ffffff;
+  opacity: 0.9;
 
   #column-warranty {
     display: none;
@@ -28,7 +30,7 @@
   .columns {
     h2 {
       text-align: left;
-      font: 500 30px/40px "Larken";
+      font: 500 30px/40px "Fahkwang";
       color: #fff980;
       opacity: 1;
     }
@@ -40,7 +42,8 @@
       font-style: normal;
       font: 17px/22px "Larken";
       b {
-        color: #fe9b44;
+        // color: #fe9b44;
+        color: red;
       }
       img {
         position: absolute;
@@ -60,7 +63,7 @@
     padding: 0 30px;
     .columns {
       h2 {
-        font: 500 24px/36px "Larken";
+        font: 500 24px/36px "Fahkwang";
       }
 
       span {
@@ -84,16 +87,16 @@
       margin-bottom: 10px;
     }
 
-    background: #0d0d0dad;
+    // background: #0d0d0dad;
 
     padding: 0 30px;
     .columns {
       h2 {
-        font: 300 24px/36px "Larken";
+        font: 300 24px/36px "Fahkwang";
       }
 
       span {
-        font: 100 14px/18px "Larken";
+        font: 100 12px/18px "Fahkwang";
         margin-top: 0px;
       }
     }

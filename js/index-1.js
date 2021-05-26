@@ -21,10 +21,10 @@ $(document).ready(function () {
       $(".footer_space").show();
       // $(".head").show();
       $(".head").hide();
-      $(".a-di").addClass("borderBox");
-      $(".a-je").removeClass("borderBox");
-      $(".a-co").removeClass("borderBox");
-      $(".a-su").removeClass("borderBox");
+      $(".a-di").addClass("navBorderBox");
+      $(".a-je").removeClass("navBorderBox");
+      $(".a-co").removeClass("navBorderBox");
+      $(".a-su").removeClass("navBorderBox");
     });
 
     $(".a-je").click(function () {
@@ -36,10 +36,10 @@ $(document).ready(function () {
       //  $(".head").hide();
       $(".footer_space").show();
       // $(".headline").show();
-      $(".a-di").removeClass("borderBox");
-      $(".a-je").addClass("borderBox");
-      $(".a-co").removeClass("borderBox");
-      $(".a-su").removeClass("borderBox");
+      $(".a-di").removeClass("navBorderBox");
+      $(".a-je").addClass("navBorderBox");
+      $(".a-co").removeClass("navBorderBox");
+      $(".a-su").removeClass("navBorderBox");
     });
 
     $(".a-co").click(function () {
@@ -54,10 +54,10 @@ $(document).ready(function () {
       $(".head").hide();
 
       $(".headline").show();
-      $(".a-di").removeClass("borderBox");
-      $(".a-je").removeClass("borderBox");
-      $(".a-co").addClass("borderBox");
-      $(".a-su").removeClass("borderBox");
+      $(".a-di").removeClass("navBorderBox");
+      $(".a-je").removeClass("navBorderBox");
+      $(".a-co").addClass("navBorderBox");
+      $(".a-su").removeClass("navBorderBox");
     });
 
     $(".a-su").click(function () {
@@ -72,10 +72,10 @@ $(document).ready(function () {
       $(".head").hide();
 
       $(".headline").show();
-      $(".a-di").removeClass("borderBox");
-      $(".a-je").removeClass("borderBox");
-      $(".a-co").removeClass("borderBox");
-      $(".a-su").addClass("borderBox");
+      $(".a-di").removeClass("navBorderBox");
+      $(".a-je").removeClass("navBorderBox");
+      $(".a-co").removeClass("navBorderBox");
+      $(".a-su").addClass("navBorderBox");
 
 
       // if ($("form[name='email-submit']").valid()) {
@@ -129,10 +129,10 @@ $(document).ready(function () {
         $(".head").hide();
 
         $(".headline").show();
-        $(".a-di").removeClass("borderBox");
-        $(".a-je").removeClass("borderBox");
-        $(".a-co").addClass("borderBox");
-        $(".a-su").removeClass("borderBox");
+        $(".a-di").removeClass("navBorderBox");
+        $(".a-je").removeClass("navBorderBox");
+        $(".a-co").addClass("navBorderBox");
+        $(".a-su").removeClass("navBorderBox");
       }
 
 

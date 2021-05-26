@@ -139,7 +139,7 @@ $(document).ready(function () {
 
 
     $(".caratSize div").css({ border: "2px solid #d1cdcd" });
-    $(this).css({ "border": "2px solid #cc8342", "transition": "0.3s" });
+    $(this).css({ "border": "2px solid #01282d", "transition": "0.3s" });
 
 
     obj.caratSize = $(this).text();
@@ -244,7 +244,7 @@ $(document).ready(function () {
 
   $(".ring_sizes div").on("click", function () {
     $(".ring_sizes div").css({ border: "2px solid #d1cdcd" });
-    $(this).css({ "border": "2px solid #cc8342", "transition": "0.3s" });
+    $(this).css({ "border": "2px solid #01282d", "transition": "0.3s" });
 
     obj.ringSize = $(this).text();
     $(".all-info #drop_6").text(`${obj.ringSize}`);
@@ -319,7 +319,7 @@ $(document).ready(function () {
 
     var form = $("form[name='email-submit']");
     if (form.valid()) {
-      console.log('valid!');
+      console.log('valid! going to send email');
       // post something..
 
 
@@ -330,7 +330,8 @@ $(document).ready(function () {
 
 
       //  SEND EMAIL
-      emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
+      // "service_zli7li4", "template_lxvedrh"
+      emailjs.send("s", "template_lxvedrh", templateParams).then(
         function (response) {
           console.log("SUCCESS!Email had been sent to you!", response.status, response.text);
 

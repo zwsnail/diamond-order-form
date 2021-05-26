@@ -19,11 +19,24 @@ $c-dexin: #073801;
 $c-line: #d1cdcd;
 $g-color: #252525;
 
+$green: #01282d;
+$yellow: #fff880;
+$grey: #fff9ea;
+
 .borderBox {
   // transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
   transition: 0.2s;
   // border: 2px solid $c-dexin;
-  border: 2px solid rgb(204, 131, 66);
+  border: 2px solid $green;
+  // background-color: #fff980;
+}
+
+
+.navBorderBox {
+  // transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: 0.2s;
+  // border: 2px solid $c-dexin;
+  border-bottom: 7px solid $green;
   // background-color: #fff980;
 }
 
@@ -32,7 +45,7 @@ h1 {
   font-size: 35px;
   font-family: "Larken";
   letter-spacing: 0px;
-  color: $g-color;
+  color: $green;
   @media (max-width: 500px) {
     font-size: 25px;
   }
@@ -40,7 +53,7 @@ h1 {
 
 h3 {
   margin-top: 35px;
-  color: #0d0d0d;
+  color: $green;
   font: 400 25px/30px "Larken";
   text-transform: capitalize;
   @media (max-width: 500px) {
@@ -65,7 +78,7 @@ input {
   font: 400 18px "Larken";
   &:focus {
     outline: none;
-    border-color: $c-dexin;
+    border-color: $green;
   }
 }
 
@@ -81,6 +94,7 @@ input {
   color: yellow;
   text-align: center;
   font-size: xx-large;
+  font-family: "Larken";
   background: rgba(42, 97, 70, 0.192);
   overflow: hidden;
   box-sizing: border-box;
@@ -89,6 +103,7 @@ input {
 
 #notifyType:before {
   display: block;
+  // display: none;
   margin-top: 15px;
 }
 
@@ -97,11 +112,11 @@ input {
 }
 
 .success:before {
-  content: "Submit Success!";
+  content: "Submit success!";
 }
 
 .failure:before {
-  content: "Sorry!Submit Failed";
+  content: "Sorry! Submit failed";
 }
 
 @mixin inline() {
@@ -145,9 +160,10 @@ input {
     width: 60%;
   }
   button {
-    background: $c-dexin;
+    background: $green;
     padding: 8px 34px;
-    border: 1px solid #013238;
+    // border: 1px solid #013238;
+    border: 1px solid $yellow;
     // border-radius: 5px;
     font: 400 16px "Larken";
     color: #fff;

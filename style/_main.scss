@@ -128,7 +128,7 @@
       padding: 9px 0 9px 0;
       border: 2px solid #d1cdcd;
       font: 400 16px "Fahkwang";
-      color: #525252;
+      color: $green;  
       opacity: 0.7;
     }
 
@@ -143,6 +143,7 @@
         height: 65px;
         cursor: pointer;
         @include background();
+        padding: 5px;
       }
     }
   }
@@ -174,10 +175,11 @@
       font-size: 18px;
       font-weight: 400px;
       font-style: normal;
+      font-family: 'Fahkwang';
     }
 
     select:hover {
-      background-color: #fff9e7;
+      background-color: $grey;
     }
 
     // select > option:hover {
@@ -192,6 +194,14 @@
     .ring_sizes {
       margin-bottom: 20px;
     }
+
+    .ring_engrave_form {
+      a {
+        font-family: 'Fahkwang';
+        color: $green;
+      }
+    }
+
     small {
       text-align: left;
       text-decoration: underline;

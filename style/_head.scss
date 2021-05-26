@@ -6,7 +6,7 @@
   top: 100px;
   height: 120px;
   // width: 100%;
-  background: #e5e3df;
+  background: $grey;
   color: $g-color;
   z-index: 999;
   opacity: 0.7;
@@ -18,12 +18,12 @@
 
   a {
     text-decoration: none;
-    color: #013238;
+    color: $green;
     cursor: pointer;
-    font: 400 20px "Fahkwang";
+    font: 400 26px "Fahkwang";
     padding: 10px;
     &:hover {
-      font-size: larger;
+      // font-size: larger;
       background-color: #fff980;
     }
   }
