@@ -78,66 +78,50 @@ $(document).ready(function () {
       $(".a-su").addClass("navBorderBox");
 
 
-      // if ($("form[name='email-submit']").valid()) {
-      //   console.log("valid")
-      // } else {
-      //   console.log("invalid")
-      // };
+      // var form = $("form[name='email-submit']");
+      // var validationForm = false;
 
-      // var isValid = true;
-      // $("form[name='email-submit']").map(function () {
-      //   isValid &= this.validity['valid'];
+      // form.submit(function (event) {
+      //   var $this = $(this);
+      //   validationForm = $this.get(0).reportValidity();
+      //   console.log(validationForm);
+
+      //   if (validationForm) {
+      //     console.log('valid!');
+      //     console.log(form);
+
+      //     $(".jewerly_section").hide();
+      //     $(".contact_section").hide();
+      //     $(".diamond_section").hide();
+      //     $("#summary_section").show();
+      //     $(".group").hide();
+
+      //     $(".footer_space").show();
+      //     $(".head").hide();
+
+      //     $(".headline").show();
+      //     $(".a-di").removeClass("navBorderBox");
+      //     $(".a-je").removeClass("navBorderBox");
+      //     $(".a-co").removeClass("navBorderBox");
+      //     $(".a-su").addClass("navBorderBox");
+      //   } else {
+      //     console.log('not valid!');
+      //     $(".jewerly_section").hide();
+      //     $(".contact_section").show();
+      //     $(".diamond_section").hide();
+      //     $("#summary_section").hide();
+      //     $(".group").hide();
+
+      //     $(".footer_space").show();
+      //     $(".head").hide();
+
+      //     $(".headline").show();
+      //     $(".a-di").removeClass("navBorderBox");
+      //     $(".a-je").removeClass("navBorderBox");
+      //     $(".a-co").addClass("navBorderBox");
+      //     $(".a-su").removeClass("navBorderBox");
+      //   }
       // });
-      // if (isValid) {
-      //   console.log('valid!');
-      //   // post something..
-      // } else {
-      //   console.log('not valid!');
-      //   $(".jewerly_section").hide();
-      //   $(".contact_section").show();
-      //   $(".diamond_section").hide();
-      //   $("#summary_section").hide();
-      //   $(".group").hide();
-
-      //   $(".footer_space").show();
-      //   $(".head").hide();
-
-      //   $(".headline").show();
-      //   $(".a-di").removeClass("borderBox");
-      //   $(".a-je").removeClass("borderBox");
-      //   $(".a-co").addClass("borderBox");
-      //   $(".a-su").removeClass("borderBox");
-      // }
-
-
-      var form = $("form[name='email-submit']");
-
-
-      if (!form.reportValidity()) {
-        console.log('valid!');
-        console.log(form);
-        // post something..
-      } else {
-        console.log('not valid!');
-        $(".jewerly_section").hide();
-        $(".contact_section").show();
-        $(".diamond_section").hide();
-        $("#summary_section").hide();
-        $(".group").hide();
-
-        $(".footer_space").show();
-        $(".head").hide();
-
-        $(".headline").show();
-        $(".a-di").removeClass("navBorderBox");
-        $(".a-je").removeClass("navBorderBox");
-        $(".a-co").addClass("navBorderBox");
-        $(".a-su").removeClass("navBorderBox");
-      }
-
-
-
-
 
 
 

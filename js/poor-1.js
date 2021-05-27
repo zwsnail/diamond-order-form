@@ -250,12 +250,9 @@ $(document).ready(function () {
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
 
-  // $("#contact_section").on("submit", function (e) {
   $(".email-submit").on("submit", function (e) {
+    // $(".send_req").on("submit", function (e) {
     e.preventDefault();
-
-
-
 
     // let username = (if(username == ""))?"":"";
     // let userlname = "";
@@ -314,26 +311,33 @@ $(document).ready(function () {
       message: message,
     };
 
-
-
-
     var form = $("form[name='email-submit']");
+    var validationForm = false;
+
+    // form.submit(function (event) {
+    //   var $this = $(this);
+    //   validationForm = $this.get(0).reportValidity();
+    //   console.log("2:", validationForm);
+
+    // });
+
+
+    var $this = $(this);
+    console.log("$this:", $this);
+    validationForm = $this.get(0).reportValidity();
+    console.log("$this.get(0):", $this.get(0));
+    console.log("3 validationForm", validationForm);
+    console.log("$this.get(0).reportValidity()", $this.get(0).reportValidity());
+    console.log("form.valid()", form.valid());
+
+
     if (form.valid()) {
       console.log('valid! going to send email');
-      // post something..
-
-
-
-
-
-
-
-
       //  SEND EMAIL
-      // "service_zli7li4", "template_lxvedrh"
+      // "service_zli7li4"
       emailjs.send("s", "template_lxvedrh", templateParams).then(
         function (response) {
-          console.log("SUCCESS!Email had been sent to you!", response.status, response.text);
+          console.log("SUCCESS! Email had been sent to you!", response.status, response.text);
 
           $(".notify").toggleClass("active");
           $("#notifyType").toggleClass("success");
@@ -344,20 +348,42 @@ $(document).ready(function () {
           }, 2000);
         },
         function Error(error) {
-          console.log("FAILED...", error);
+          console.log("Email server failed...", error);
           $(".notify").addClass("active");
           $("#notifyType").addClass("failure");
 
           setTimeout(function () {
             $(".notify").removeClass("active");
             $("#notifyType").removeClass("failure");
-          }, 2000);
+          }, 3000);
         }
       );
 
     } else {
-      console.log('invalid!');
+      console.log('invalid! validation');
+      $(".notify").toggleClass("active");
+      $("#notifyType").toggleClass("validation");
 
+      setTimeout(function () {
+        $(".notify").removeClass("active");
+        $("#notifyType").removeClass("validation");
+      }, 3000);
+
+
+      $(".jewerly_section").hide();
+      $(".contact_section").show();
+      $(".diamond_section").hide();
+      $("#summary_section").hide();
+      $(".group").hide();
+
+      $(".footer_space").show();
+      $(".head").hide();
+
+      $(".headline").show();
+      $(".a-di").removeClass("navBorderBox");
+      $(".a-je").removeClass("navBorderBox");
+      $(".a-co").addClass("navBorderBox");
+      $(".a-su").removeClass("navBorderBox");
 
     }
 

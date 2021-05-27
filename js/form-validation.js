@@ -3,8 +3,9 @@ $(function () {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
   console.log("Initializing");
+  var $this = $("form[name='email-submit']");
   $("form[name='email-submit']").validate({
-
+    ignore: "",
     rules: {
       firstName: "required",
       // lastName: "required",
@@ -45,11 +46,15 @@ $(function () {
       form.submit();
     }
 
-
   });
 
-  $(".a-su").click(function () {
-    $(".email-submit").submit();
-  });
+
+
+  // $(".a-su").click(function () {
+  //   $(".email-submit").submit();
+  // });
+
+  console.log("Initializing done");
+
 
 });
