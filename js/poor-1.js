@@ -1,5 +1,6 @@
 (function () {
   emailjs.init("user_F1infr4XnoJN5o3sHvo0J");
+  console.log("emailjs init here");
 })();
 
 
@@ -36,10 +37,14 @@ $(document).ready(function () {
 
   $(".personal_text").on("submit", function (e) {
     e.preventDefault();
-
     obj.laserMark = selector("#laser_mark");
+    let cMark = 100;
+    if (priceObject.cCertificate != 0) {
+      // let cMark = Math.floor($("#laser_mark").attr("data-index-number"));
+      cMark = 0;
+      console.log("chose certificate");
+    }
 
-    let cMark = Math.floor($("#laser_mark").attr("data-index-number"));
     showMarkPrice(cMark);
     $("#showAddedMarkMessage").text("Mark added!").fadeIn(1000).fadeOut(2000)
   });
@@ -175,13 +180,15 @@ $(document).ready(function () {
       cCertificate = 0;
       showCertificatePrice(cCertificate);
       $("#showAddedCertMessage").text("GIA Removed!").fadeIn(1000).fadeOut(1000);
+      //remove Cert the laser Mark cost $100
+      showMarkPrice(100);
       return;
     }
     bordered($(".certificates img"), $(this));
     obj.certificates = $(this).attr("alt");
 
     showCertificatePrice(($(this).attr("data-index-number")) * 1);
-    $("#showAddedCertMessage").text("GIA $100").fadeIn(1000).fadeOut(1000);
+    $("#showAddedCertMessage").text("GIA $350").fadeIn(1000).fadeOut(1000);
     $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
@@ -190,39 +197,26 @@ $(document).ready(function () {
   // *1 is used to parse the string to a number
   $("#igi").on("click", function () {
     if (isBordered($("#igi"))) {
-      console.log($("#igi").attr("alt"));
+      console.log("igi-attr:", $("#igi").attr("alt"));
       $("#igi").removeClass("borderBox");
       $(".all-info #drop_4").text(``);
 
       cCertificate = 0;
       showCertificatePrice(cCertificate);
       $("#showAddedCertMessage").text("IGI Removed!").fadeIn(1000).fadeOut(1000);
+      //remove Cert the laser Mark cost $100
+      showMarkPrice(100);
       return;
     }
     bordered($(".certificates img"), $(this));
     obj.certificates = $(this).attr("alt");
 
     showCertificatePrice(($(this).attr("data-index-number")) * 1);
-    $("#showAddedCertMessage").text("IGI $150").fadeIn(1000).fadeOut(1000);
+    $("#showAddedCertMessage").text("IGI $250").fadeIn(1000).fadeOut(1000);
     $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
-  $("#laser-mark").on("click", function () {
-    if ($("#laser-mark").attr()) {
-      console.log($("#igi").attr("alt"));
-      $("#igi").removeClass("borderBox");
-      $(".all-info #drop_4").text(``);
 
-      cCertificate = 0;
-      showCertificatePrice(cCertificate);
-      return;
-    }
-    bordered($(".certificates img"), $(this));
-    obj.certificates = $(this).attr("alt");
-
-    showCertificatePrice(($(this).attr("data-index-number")) * 1);
-    $(".all-info #drop_4").text(`${obj.certificates}`);
-  });
 
 
   $(".metals img").on("click", function () {
@@ -312,7 +306,7 @@ $(document).ready(function () {
     };
 
     var form = $("form[name='email-submit']");
-    var validationForm = false;
+
 
     // form.submit(function (event) {
     //   var $this = $(this);
@@ -322,13 +316,13 @@ $(document).ready(function () {
     // });
 
 
-    var $this = $(this);
-    console.log("$this:", $this);
-    validationForm = $this.get(0).reportValidity();
-    console.log("$this.get(0):", $this.get(0));
-    console.log("3 validationForm", validationForm);
-    console.log("$this.get(0).reportValidity()", $this.get(0).reportValidity());
-    console.log("form.valid()", form.valid());
+    // var $this = $(this);
+    // console.log("$this:", $this);
+    // validationForm = $this.get(0).reportValidity();
+    // console.log("$this.get(0):", $this.get(0));
+    // console.log("3 validationForm", validationForm);
+    // console.log("$this.get(0).reportValidity()", $this.get(0).reportValidity());
+    // console.log("form.valid()", form.valid());
 
 
     if (form.valid()) {
