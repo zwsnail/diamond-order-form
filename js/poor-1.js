@@ -3,6 +3,8 @@
 })();
 
 
+
+
 $(document).ready(function () {
   function selector(target) {
     // return document.querySelector(target).value;
@@ -10,8 +12,6 @@ $(document).ready(function () {
       return "";
     return document.querySelector(target).value;
   }
-
-
 
   // obj.jevelryId = `$("#jewelry_id option:selected" ).text()`;
   // $("#jewelry_id option:selected" ).text();
@@ -60,11 +60,14 @@ $(document).ready(function () {
 
 
 
-  const obj = {
+  var obj = {
     laserMark: "N/A",
     diamondColor: "N/A",
-    caratSize: "N/A",
+    // diamondColor: "Colorless",
+    caratSize: 0,
+    // caratSize: 0.5,
     cutShape: "N/A",
+    // cutShape: "Brilliant Cut",
     certificates: "N/A",
     jevelryId: "N/A",
     ringSize: "N/A",
@@ -105,64 +108,199 @@ $(document).ready(function () {
   // Price calculation
 
   const priceObject = {
-    dPrice: 0,
-    cSize: 0,
-    cShape: 0,
+    // dPrice: 0,
+    // cSize: 0,
+    // cShape: 0,
     cCertificate: 0,
     cMark: 0,
 
+    // count: function () {
+    //   let sep = this.dPrice + this.cSize + this.cShape + this.cCertificate + this.cMark;
+    //   return sep;
+    // },
     count: function () {
-      let sep = this.dPrice + this.cSize + this.cShape + this.cCertificate + this.cMark;
+      let sep = colorSizeCutPrice() + this.cCertificate + this.cMark;
       return sep;
     },
   };
 
 
   $("#diamond_box img").on("click", function diamonds() {
-    let dPrice = Math.floor($(this).attr("data-index-number"));
-    priceObject.dPrice = dPrice;
-    console.log(priceObject);
-    console.log("count-", priceObject.count());
+    // let dPrice = Math.floor($(this).attr("data-index-number"));
+    // priceObject.dPrice = dPrice;
+    // console.log(priceObject);
+    // console.log("count-", priceObject.count());
 
-    $(".counted__jeverly").text("$ " + priceObject.count());
-    $(".all-info #drop_9").text("$ " + priceObject.count());
 
     bordered($("#diamond_box img"), $(this));
     obj.diamondColor = $(this).attr("alt");
     $(".all-info #drop_1").text(`${obj.diamondColor}`);
+    console.log("obj.diamondColor", obj.diamondColor);
+    $(".counted__jeverly").text("$ " + priceObject.count());
+    $(".all-info #drop_9").text("$ " + priceObject.count());
   });
 
   $(".caratSize div").on("click", function () {
-    let cSize = Math.floor($(this).attr("data-index-number"));
-    priceObject.cSize = cSize;
-    console.log(priceObject);
-    console.log("count-", priceObject.count());
-
-    $(".counted__jeverly").text("$ " + priceObject.count());
-    $(".all-info #drop_9").text("$ " + priceObject.count());
-
+    // let cSize = Math.floor($(this).attr("data-index-number"));
+    // priceObject.cSize = cSize;
+    // console.log(priceObject);
+    // console.log("count-", priceObject.count());
 
     $(".caratSize div").css({ border: "2px solid #d1cdcd" });
     $(this).css({ "border": "2px solid #01282d", "transition": "0.3s" });
 
 
-    obj.caratSize = $(this).text();
+    // obj.caratSize = $(this).text();
+    obj.caratSize = Number($(this).text());
+    console.log("obj.caratSize--", obj.caratSize)
     $(".all-info #drop_2").text(`${obj.caratSize}`);
-  });
-
-  $(".cut_shape img").on("click", function () {
-    let cShape = Math.floor($(this).attr("data-index-number"));
-    priceObject.cShape = cShape;
-    console.log(priceObject);
-    console.log("count-", priceObject.count());
 
     $(".counted__jeverly").text("$ " + priceObject.count());
     $(".all-info #drop_9").text("$ " + priceObject.count());
+  });
+
+  $(".cut_shape img").on("click", function () {
+    // let cShape = Math.floor($(this).attr("data-index-number"));
+    // priceObject.cShape = cShape;
 
     bordered($(".cut_shape img"), $(this));
+
     obj.cutShape = $(this).attr("alt");
     $(".all-info #drop_3").text(`${obj.cutShape}`);
+
+    $(".counted__jeverly").text("$ " + priceObject.count());
+    $(".all-info #drop_9").text("$ " + priceObject.count());
   });
+
+
+  function colorSizeCutPrice() {
+    const differencePrice = 500;
+    const colorlessHalfCarat = 2000;
+
+    var beforeCutPrice = 0;
+    var afterCutPrice = 0;
+
+    if (obj.diamondColor == "Colorless") {
+
+      switch (obj.caratSize) {
+        case 0.5:
+          console.log("obj.caratSize: 0.5; _caratColor: colorless");
+          beforeCutPrice = colorlessHalfCarat;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 1:
+          console.log("obj.caratSize: 1; _caratColor: colorless");
+          beforeCutPrice = colorlessHalfCarat * 2 + differencePrice;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 1.5:
+          console.log("obj.caratSize: 1.5; _caratColor: colorless");
+          beforeCutPrice = colorlessHalfCarat * 4;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 2:
+          console.log("obj.caratSize: 2; _caratColor: colorless");
+          beforeCutPrice = colorlessHalfCarat * 4 * 1.5;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        default:
+          console.log("Not yet choose size 1");
+      }
+    }
+    if (obj.diamondColor == "Pink" || obj.diamondColor == "Green" || obj.diamondColor == "Blue") {
+      switch (obj.caratSize) {
+        case 0.5:
+          console.log("obj.caratSize: 0.5; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = (colorlessHalfCarat + differencePrice) + differencePrice;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 1:
+          console.log("obj.caratSize: 1; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = ((colorlessHalfCarat + differencePrice) + differencePrice) * 2 + differencePrice;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 1.5:
+          console.log("obj.caratSize: 1.5; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = ((colorlessHalfCarat + differencePrice) + differencePrice) * 4;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 2:
+          console.log("obj.caratSize: 2; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = ((colorlessHalfCarat + differencePrice) + differencePrice) * 4 * 1.5;
+          console.log("beforeCut Price=", beforeCutPrice);
+        default:
+          console.log("Not yet choose size 2");
+      }
+    }
+    if (obj.diamondColor == "Yellow") {
+      switch (obj.caratSize) {
+        case 0.5:
+          console.log("obj.caratSize: 0.5; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = colorlessHalfCarat + differencePrice;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 1:
+          console.log("obj.caratSize: 1; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = (colorlessHalfCarat + differencePrice) * 2 + differencePrice;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 1.5:
+          console.log("obj.caratSize: 1.5; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = (colorlessHalfCarat + differencePrice) * 4;
+          console.log("beforeCut Price=", beforeCutPrice);
+          break;
+        case 2:
+          console.log("obj.caratSize: 2; obj.diamondColor:", obj.diamondColor);
+          beforeCutPrice = (colorlessHalfCarat + differencePrice) * 4 * 1.5;
+          console.log("beforeCut Price=", beforeCutPrice);
+        default:
+          console.log("Not yet choose size 3");
+      }
+    }
+    if (obj.diamondColor == "N/A") {
+      console.log("Not color yet~");
+    }
+
+    console.log("beforeCut Price=", beforeCutPrice);
+
+    if (obj.cutShape != "N/A") {
+
+      switch (obj.cutShape) {
+        case "Brilliant Cut":
+          afterCutPrice = beforeCutPrice;
+          console.log("afterCutPrice: ", afterCutPrice);
+          break;
+        case "Asscher Cut":
+        case "Princess Cut":
+        case "Radiant Cut":
+          afterCutPrice = beforeCutPrice * 1.15;
+          console.log("afterCutPrice: ", afterCutPrice);
+          break;
+        case "Cushion Cut":
+        case "Emerald Cut":
+        case "Heart Cut":
+          afterCutPrice = beforeCutPrice * 1.30;
+          console.log("afterCutPrice: ", afterCutPrice);
+          break;
+        case "Oval Cut":
+        case "Marquise Cut":
+        case "Pear Cut":
+          afterCutPrice = beforeCutPrice * 1.50;
+          console.log("afterCutPrice: ", afterCutPrice);
+          break;
+        default:
+          console.log("Not yet choose shape 4");
+          afterCutPrice = 0;
+      }
+    } else {
+      // To avoid choose the cert first without return any number
+      afterCutPrice = 0;
+    }
+    console.log("afterCutPrice=", afterCutPrice);
+
+    return Math.round(afterCutPrice);
+  }//end of function
+
 
   // $(".certificates img").on("click", function () {
   //   bordered($(".certificates img"), $(this));
