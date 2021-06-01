@@ -1,6 +1,5 @@
 (function () {
-  emailjs.init("user_F1infr4XnoJN5o3sHvo0J");
-  console.log("emailjs init here");
+  emailjs.init("uo");
 })();
 
 
@@ -328,8 +327,8 @@ $(document).ready(function () {
     if (form.valid()) {
       console.log('valid! going to send email');
       //  SEND EMAIL
-      // "service_zli7li4"
-      emailjs.send("s", "template_lxvedrh", templateParams).then(
+      // ""
+      emailjs.send("s", "t", templateParams).then(
         function (response) {
           console.log("SUCCESS! Email had been sent to you!", response.status, response.text);
 
