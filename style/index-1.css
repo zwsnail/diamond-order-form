@@ -284,6 +284,7 @@ input {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      font-family: "Larken";
       margin-top: 5px;
       gap: 30px; }
       .main .jewerly_section .metal-color div {
@@ -428,7 +429,35 @@ close:active {
 
 /* form validation */
 form .error {
-  color: #ff0000 !important; }
+  color: #e41749 !important; }
+
+/* =================== experiment hover ================================= */
+.container-hover {
+  position: relative; }
+
+.container-hover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 2s ease-in-out; }
+
+.overlay {
+  position: absolute;
+  bottom: -15px;
+  white-space: nowrap;
+  width: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  color: #01282d;
+  font-size: 20px;
+  font-family: "Fahkwang";
+  text-align: center; }
+
+.container-hover:hover .overlay {
+  opacity: 1; }
+
+.container-hover:hover {
+  transform: scale(1.1); }
 
 @media (max-width: 1600px) {
   .d_images img {
@@ -650,6 +679,28 @@ form .error {
   justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid #d1cdcd; }
+  .headline .border {
+    position: absolute;
+    background: none;
+    transition: all .5s ease-in-out; }
+  .headline #second {
+    padding: 10px,0px; }
+  .headline #second > .border:nth-of-type(1) {
+    top: -5px;
+    left: 50%;
+    width: 0;
+    border-top: 1px solid #01282d;
+    transition: width .5s ease-in-out, transform 0.6s ease-in-out; }
+  .headline #second > .border:nth-of-type(2) {
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    border-bottom: 1px solid #01282d;
+    transition: width .5s ease-in-out, transform 0.6s ease-in-out; }
+  .headline #second:hover .border {
+    transform: translate(-50%, 0);
+    width: 100%;
+    transition: width .8s ease-in-out, transform .3s ease-in-out; }
   .headline a {
     text-decoration: none;
     color: #01282d;
@@ -657,6 +708,7 @@ form .error {
     font: 400 26px "Fahkwang";
     padding: 10px; }
     .headline a:hover {
+      transition: all ease-in 0.5s;
       background-color: #fff980; }
   .headline h1 {
     font-family: "Fahkwang";
@@ -1061,7 +1113,7 @@ form .error {
     font-style: normal;
     font: 17px/22px "Larken"; }
     .footer_space .columns span b {
-      color: red; }
+      color: #fff980; }
     .footer_space .columns span img {
       position: absolute;
       margin-left: -40px; }

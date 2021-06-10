@@ -219,6 +219,7 @@
     }
     .metal-color {
       @include inline();
+      font-family: "Larken";
       margin-top: 5px;
       gap: 30px;
       & div {
@@ -363,8 +364,48 @@ close:active {
 
 /* form validation */
 form .error {
-  color: #ff0000 !important;
+  color: #e41749 !important;
 }
+
+
+
+/* =================== experiment hover ================================= */
+.container-hover {
+  position: relative;
+  // width: 50%;
+  // max-width: 300px;
+}
+
+.container-hover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: all 2s ease-in-out;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: -15px; 
+  // background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  white-space:nowrap;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: $green;
+  font-size: 20px;
+  font-family: "Fahkwang";
+  text-align: center;
+}
+
+.container-hover:hover .overlay {
+  opacity: 1;
+}
+.container-hover:hover {
+  transform: scale(1.1); ;
+}
+
+
+
 
 @media (max-width: 1600px) {
   .d_images img {

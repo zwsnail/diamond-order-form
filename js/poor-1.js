@@ -13,6 +13,10 @@ $(document).ready(function () {
     return document.querySelector(target).value;
   }
 
+
+
+
+  // -------------------------------- jewelry ring Engrave--------------------------------
   // obj.jevelryId = `$("#jewelry_id option:selected" ).text()`;
   // $("#jewelry_id option:selected" ).text();
   $('#jewelry_id').on('change', function () {
@@ -24,15 +28,24 @@ $(document).ready(function () {
 
   $(".ring_engrave_form").on("submit", function (e) {
     e.preventDefault();
-    // obj.jevelryId = selector("#style_id");
     obj.ringEngrave = selector("#diamond_text_engrave");
-
-    console.log(obj);
-
     // $(".jeverly-id-text").append(`${obj.jevelryId}`);
-    // $(".all-info #drop_5").text(`${obj.jevelryId}`);
     $(".all-info #drop_8").text(`${obj.ringEngrave}`);
+
   });
+
+  $("#diamond_text_engrave").blur(function () {
+    if (selector("#diamond_text_engrave") == "") {
+      obj.ringEngrave = selector("#diamond_text_engrave");
+      $(".all-info #drop_8").text(`${obj.ringEngrave}`);
+    }
+  });
+
+
+
+  // -------------------------------- laser mark --------------------------------
+
+
 
   $(".personal_text").on("submit", function (e) {
     e.preventDefault();
@@ -54,6 +67,10 @@ $(document).ready(function () {
       priceObject.cMark = cMark;
       showMarkPrice(cMark);
       $("#showAddedMarkMessage").text("Mark removed!").fadeIn(1000).fadeOut(2000)
+
+      obj.laserMark = selector("#laser_mark");
+      // $(".jeverly-id-text").append(`${obj.jevelryId}`);
+      $(".all-info #drop_10").text(`${obj.laserMark}`);
     }
   });
 
@@ -477,16 +494,60 @@ $(document).ready(function () {
             $(".notify").removeClass("active");
             $("#notifyType").removeClass("success");
           }, 2000);
+
+
+
+
+
+
+
         },
         function Error(error) {
           console.log("Email server failed...", error);
-          $(".notify").addClass("active");
-          $("#notifyType").addClass("failure");
+          // $(".notify").addClass("active");
+          // $("#notifyType").addClass("failure");
 
-          setTimeout(function () {
-            $(".notify").removeClass("active");
-            $("#notifyType").removeClass("failure");
-          }, 3000);
+          // setTimeout(function () {
+          //   $(".notify").removeClass("active");
+          //   $("#notifyType").removeClass("failure");
+          // }, 3000);
+
+
+          // alert the box to choose stay this page or go to home page
+          var dialog = bootbox.dialog({
+            title: 'a',
+            message: "<p>Thanks for your query!</p>",
+            size: 'large',
+            centerVertical: 'true',
+            buttons: {
+              cancel: {
+                label: "Stay here",
+                className: 'btn-danger',
+                callback: function () {
+                  console.log('Custom cancel clicked');
+                }
+              },
+              // noclose: {
+              //     label: "I don't close the modal!",
+              //     className: 'btn-warning',
+              //     callback: function(){
+              //         console.log('Custom button clicked');
+              //         return false;
+              //     }
+              // },
+              ok: {
+                label: "Home",
+                className: 'btn-info',
+                callback: function () {
+                  console.log('Custom OK clicked');
+                  window.location.replace("https://www.sunnyeden.com");
+                }
+              }
+            }
+          });
+          console.log("alert:", dialog);
+          dialog.init();
+
         }
       );
 

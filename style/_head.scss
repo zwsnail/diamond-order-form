@@ -16,6 +16,42 @@
 
   border-bottom: 1px solid $c-line;
 
+  .border{
+    position:absolute;
+    background:none;
+    transition:all .5s ease-in-out;
+  }
+
+
+  // header hover effect
+  #second {
+    padding: 10px,0px;
+  }
+
+  #second>.border:nth-of-type(1){
+    top:-5px;
+    left:50%;
+    width:0;
+    border-top:1px solid $green;
+    transition:width .5s ease-in-out, transform 0.6s ease-in-out;
+  }
+  
+  #second>.border:nth-of-type(2){
+    bottom:-10px;
+    left:50%;
+    width:0;
+    border-bottom:1px solid $green;
+    transition:width .5s ease-in-out, transform 0.6s ease-in-out;
+  }
+  
+  #second:hover .border{
+    transform:translate(-50%, 0);
+    width:100%;
+    transition:width .8s ease-in-out, transform .3s ease-in-out;
+  }
+
+
+
   a {
     text-decoration: none;
     color: $green;
@@ -23,7 +59,8 @@
     font: 400 26px "Fahkwang";
     padding: 10px;
     &:hover {
-      // font-size: larger;
+      // font-size: 110%;
+      transition: all ease-in 0.5s;
       background-color: #fff980;
     }
   }
