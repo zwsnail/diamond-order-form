@@ -3,22 +3,43 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Daimonds</title>
+    <title>Custom Order</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script type="text/css" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"></script>
     <link rel="stylesheet" href="style/index-1.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_F1infr4XnoJN5o3sHvo0J");
+        console.log("emailjs");
+        })();
+    </script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="/js/jquery.min.js"></script>
 
+        <!-- <script>
+            jQuery(document).ready(function($){
+                function openSizeWindow() {
+                    $(".popup").addClass("visible");
+                }
+    
+                $(".close").on("click", function () { $(".popup").removeClass("visible"); });
+            });
+        </script> -->
+</head>
+<body>
     <div class="headline">
         <!-- <h1>Brand Logo</h1> -->
-        <a href="#top" class="d-sec a-di navBorderBox">① Diamond </a>
+        <a class="d-sec a-di navBorderBox">① Diamond </a>
         <div style="position: relative;">
             <div id="second">
-                <a href="#top" class="a-je">② Jewerly </a>
+                <a class="a-je">② Jewerly </a>
                 <div class="border"></div>
                 <div class="border"></div>
             </div>
         </div>
         <!-- <a href="#top" class="a-je">② Jewerly </a> -->
-        <a href="#contact_section" class="a-co">③ Contact </a>
+        <a class="a-co">③ Contact </a>
         <!-- <div class="US">US</div> -->
         <!-- <a href="#summary_section" class="a-su">Summary</a> -->
         <a class="a-su">④ Summary</a>
@@ -184,10 +205,10 @@
                         <div class="size">8.25</div>
                     </div>
                     <!-- <small><a id="#show-dialog">Size Guide</a></small> -->
-                    <a onclick="openSizeWindow();return false;" href="">Size Guide</a>
-                    <div class="popup">
+                    <a onclick="openSizeWindow(); return false;" href="">Size Guide</a>
+                    <div id="popup">
                         <img src="s/International-Ring-Size-Chart.jpeg">
-                        <div class="close"></div>
+                        <div id="close"></div>
                     </div>
 
                     <div class="lines"></div>
@@ -221,12 +242,12 @@
         </div><!-- end of main class  -->
     </div> <!-- end of group class  -->
     <!-- onSubmit="draft(); return false;"multipart/form-data  method="POST" enctype="application/x-www-form-urlencoded"-->
-    <form class="email-submit" name="email-submit">
+    <form class="email-submit" name="email-submit" method="POST" enctype="multipart/form-data" id="contact-form-emailjs">
         <div class="contact_section" id="contact_section">
             <div class="contact_form sections" id="contact-form">
                 <h1>Contact</h1>
-                <span style="color:#e41749">Required*</span>
                 <div class="lines"></div>
+                <span style="color:#e41749">Required*</span>
                 <div class="contacts">
                     <div class="f-row">
                         <h2>Contact Information</h2>
@@ -287,31 +308,32 @@
                     <!-- <img src="s/Charlize-large.png" /> -->
                     <!-- <h4 class="jeverly-id-text">ID:</h4> -->
                     <div class="all-info">
-                        <div class="all-info-left">
-                            <h1 style="text-align:center;">Your Order Summary</h1>
-                            <br>
-                            <hr />
-                            <p>Diamond color: <span id="drop_1"></span></p>
-                            <p>Carat sizes: <span id="drop_2"></span></p>
-                            <p>Cut Shapes: <span id="drop_3"></span></p>
-                            <p>Certificates: <span id="drop_4"></span></p>
-                            <p>Laser Mark: <span id="drop_10"></span></p>
-                        </div>
-                        <div class="all-info-right">
-                            <hr />
-                            <p>Jewelry ID: <span id="drop_5"></span></p>
-                            <p>Ring size: <span id="drop_6"></span></p>
-                            <p>Metal color: <span id="drop_7"></span></p>
-                            <p>Ring engraving: <span id="drop_8"></span></p>
-                            <p>Price of Diamond: <span id="drop_9"></span></p>
-                            <hr />
+                        <h1 style="text-align:center;">Your Order Summary</h1>
+                        <br>
+                        <div class="lines"></div>
+                        <div class="all-info-list">
+                            <div class="all-info-left">
+                                <p>Diamond color: <span id="drop_1"></span></p>
+                                <p>Carat sizes: <span id="drop_2"></span></p>
+                                <p>Cut Shapes: <span id="drop_3"></span></p>
+                                <p>Certificates: <span id="drop_4"></span></p>
+                                <p>Laser Mark: <span id="drop_10"></span></p>
+                            </div>
+                            <div class="all-info-right">
+                                <p>Jewelry ID: <span id="drop_5"></span></p>
+                                <p>Ring size: <span id="drop_6"></span></p>
+                                <p>Metal color: <span id="drop_7"></span></p>
+                                <p>Ring engraving: <span id="drop_8"></span></p>
+                                <p>Price of Diamond: <span id="drop_9"></span></p>
+                            </div>
                         </div>
                         <!-- <div class="under-price">Price calculated based on DIAMOND ONLY (Color & Size & Shape &
                             Certificate & Laser Mark)</div>
-                        <div class="under-price">
-                            Price of Jewelry will be separately provided via email.
-                        </div> -->
+                            <div class="under-price">
+                                Price of Jewelry will be separately provided via email.
+                            </div> -->
                     </div>
+                    <div class="lines"></div>
                     <div class="checkbox-all">
                         <!-- <label class="checkbox-label">
                         <input type="checkbox" />
@@ -358,34 +380,34 @@
             <span><img src="s/diamond-i.png" />Sustainably created diamonds</span>
         </div>
     </div>
+</body>
 
 
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script>
-    <script type="text/css" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"></script>
-
-
-    <script defer type="text/javascript"
-        src="https://github.com/makeusabrew/bootbox/releases/download/v4.4.0/bootbox.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script defer src="js/jquery.min.js"></script>
-
-    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"></script> -->
+    
+    
+   
+    
+    <script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="https://github.com/makeusabrew/bootbox/releases/download/v4.4.0/bootbox.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>  -->
     <script defer src="js/form-validation.js"></script>
     <script defer src="js/index-1.js"></script>
     <script defer src="js/poor-1.js"></script>
+
     <script>
-        function openSizeWindow() {
-            $(".popup").addClass("visible");
-        }
+        var size_popup = document.getElementById ("popup");
+            function openSizeWindow() {
+                size_popup.classList.add("visible");
+                alert("wait")
+            }
 
-        $(".close").on("click", function () { $(".popup").removeClass("visible"); });
-
+            var close_tag = document.getElementById ("close");
+            close_tag.addEventListener("click", function () {
+                size_popup.classList.remove("visible"); 
+            });
     </script>
-    </body>
 
 </html>

@@ -36,14 +36,21 @@
   .contact_form {
     width: 1060px;
     position: relative;
-    margin-left: 250px;
-    margin-top: 120px;
+    margin-left: 360px;
+    margin-top: 55px;
     margin-bottom: 200px;
     display: flex;
     flex-direction: column;
 
     .all-info {
-      // display: flex;
+      .all-info-list{
+        display: flex;
+        justify-content:start;
+
+        .all-info-right {
+          margin-left: 400px;
+        }
+      }
 
       p{
         font: 300 17px/29px "Fahkwang";
@@ -57,10 +64,14 @@
 
     h1 {
       font-size: 35px;
-      font-weight: 600;
+      font-weight: 500;
       font-family: "Larken";
       color: $green;
-      margin: 0 0 46px 0;
+      margin-bottom: 0px;
+    }
+
+    .lines {
+      margin-top: 0px;
     }
 
     label {
@@ -277,9 +288,17 @@
 }
 
 #contact-form {
-  margin-left: 237px;
-  margin-top: 114px;
+  margin-left: 315px;
+  margin-top: 85px;
   width: 1060px;
+  margin-left: 330px;
+  h1 {
+    margin-top:30px;
+    margin-bottom: 0px;
+  }
+  .lines {
+    margin-top: 20px;
+  }
 }
 
 // ---------------- right side checkbox
@@ -357,6 +376,15 @@
       color: #28a4e5;
     }
   }
+
+  // // bootbox style
+  // .btn-info {
+  //   color: $yellow;
+  //   background-color: $green;
+  //   border-color: $green;
+  // }
+
+
 }
 
 @media (max-width: 1249px) {
@@ -399,6 +427,9 @@
     width: 100%;
     // padding-bottom: 100px;
 
+
+    
+
     .send_req {
       width: 100%;
       font-size: 25px;
@@ -417,6 +448,18 @@
       padding-bottom: 10px;
       margin-top: 0px;
       width: 340px;
+
+      .all-info {
+        .all-info-list {
+          display: flex;
+          justify-content: normal;
+          flex-direction: column;
+
+          .all-info-right {
+            margin-left: 0px;
+          }
+        }   
+      }
     }
 
     .contact_form h1 {
@@ -450,4 +493,8 @@
   #summary_section {
     margin-top: -155px;
   }
+
+ 
+  
+
 }

@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+
+
+
   $('.btn--border').click(function () {
     $('.header').css({
       "z-index": "1"
@@ -15,6 +18,7 @@ $(document).ready(function () {
     $(".a-di").click(function () {
       $(".jewerly_section").hide();
       $(".contact_section").hide();
+      // $("#contact-form").hide();
       $(".diamond_section").show();
       $("#summary_section").hide();
       $(".group").show();
@@ -29,6 +33,7 @@ $(document).ready(function () {
 
     $(".a-je").click(function () {
       $(".jewerly_section").show();
+      // $("#contact-form").hide();
       $(".contact_section").hide();
       $(".diamond_section").hide();
       $("#summary_section").hide();
@@ -45,11 +50,12 @@ $(document).ready(function () {
     $(".a-co").click(function () {
       $(".jewerly_section").hide();
       $(".contact_section").show();
+      // $("#contact-form").show();
       $(".diamond_section").hide();
       $("#summary_section").hide();
       $(".group").hide();
 
-      //  $(".footer_space").hide();
+
       $(".footer_space").show();
       $(".head").hide();
 
@@ -63,11 +69,11 @@ $(document).ready(function () {
     $(".a-su").click(function () {
       $(".jewerly_section").hide();
       $(".contact_section").hide();
+      // $("#contact-form").hide();
       $(".diamond_section").hide();
       $("#summary_section").show();
       $(".group").hide();
 
-      //  $(".footer_space").hide();
       $(".footer_space").show();
       $(".head").hide();
 
@@ -76,52 +82,6 @@ $(document).ready(function () {
       $(".a-je").removeClass("navBorderBox");
       $(".a-co").removeClass("navBorderBox");
       $(".a-su").addClass("navBorderBox");
-
-
-      // var form = $("form[name='email-submit']");
-      // var validationForm = false;
-
-      // form.submit(function (event) {
-      //   var $this = $(this);
-      //   validationForm = $this.get(0).reportValidity();
-      //   console.log(validationForm);
-
-      //   if (validationForm) {
-      //     console.log('valid!');
-      //     console.log(form);
-
-      //     $(".jewerly_section").hide();
-      //     $(".contact_section").hide();
-      //     $(".diamond_section").hide();
-      //     $("#summary_section").show();
-      //     $(".group").hide();
-
-      //     $(".footer_space").show();
-      //     $(".head").hide();
-
-      //     $(".headline").show();
-      //     $(".a-di").removeClass("navBorderBox");
-      //     $(".a-je").removeClass("navBorderBox");
-      //     $(".a-co").removeClass("navBorderBox");
-      //     $(".a-su").addClass("navBorderBox");
-      //   } else {
-      //     console.log('not valid!');
-      //     $(".jewerly_section").hide();
-      //     $(".contact_section").show();
-      //     $(".diamond_section").hide();
-      //     $("#summary_section").hide();
-      //     $(".group").hide();
-
-      //     $(".footer_space").show();
-      //     $(".head").hide();
-
-      //     $(".headline").show();
-      //     $(".a-di").removeClass("navBorderBox");
-      //     $(".a-je").removeClass("navBorderBox");
-      //     $(".a-co").addClass("navBorderBox");
-      //     $(".a-su").removeClass("navBorderBox");
-      //   }
-      // });
 
 
 
@@ -192,5 +152,5 @@ $(document).ready(function () {
 
 
 
-});
+});//$(document).ready(function () {   end
 

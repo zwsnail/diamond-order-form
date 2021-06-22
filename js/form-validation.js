@@ -1,4 +1,7 @@
 // Wait for the DOM to be ready
+// setTimeout(function () {
+
+
 $(function () {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
@@ -39,22 +42,19 @@ $(function () {
         required: "Please enter your zip"
       },
       country: "Please enter your country"
-    },
+    }
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
-    submitHandler: function (form) {
-      form.submit();
-    }
+    // submitHandler: function (form) {
+    //   // form.submit();
+    //   $(form).ajaxSubmit();
+    // }
 
   });
-
-
-
-  // $(".a-su").click(function () {
-  //   $(".email-submit").submit();
-  // });
 
   console.log("Initializing done");
 
 
 });
+
+// }, 3000);

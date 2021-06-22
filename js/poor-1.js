@@ -1,6 +1,7 @@
-(function () {
-  emailjs.init("uo");
-})();
+// (function () {
+//   emailjs.init("user_F1infr4XnoJN5o3sHvo0J");
+//   console.log("here");
+// })();
 
 
 
@@ -315,7 +316,8 @@ $(document).ready(function () {
     }
     console.log("afterCutPrice=", afterCutPrice);
 
-    return Math.round(afterCutPrice);
+    // return Math.round(afterCutPrice);
+    return Math.ceil(afterCutPrice / 100) * 100;
   }//end of function
 
 
@@ -481,12 +483,14 @@ $(document).ready(function () {
 
     if (form.valid()) {
       console.log('valid! going to send email');
-      //  SEND EMAIL
-      // ""
-      emailjs.send("s", "t", templateParams).then(
+      //"service_jt9l9dt", "template_yevxgca"
+      alert("here0");
+      emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
+        // emailjs.send("s", "template_lxvedrh", templateParams).then(
+        // emailjs.sendForm("service_zli7li4", "template_lxvedrh", templateParams, "contact-form-emailjs", "user_F1infr4XnoJN5o3sHvo0J").then(
         function (response) {
+          alert("here1");
           console.log("SUCCESS! Email had been sent to you!", response.status, response.text);
-
           $(".notify").toggleClass("active");
           $("#notifyType").toggleClass("success");
 
@@ -495,15 +499,14 @@ $(document).ready(function () {
             $("#notifyType").removeClass("success");
           }, 2000);
 
-
-
-
-
-
+          showBootbox();
 
         },
-        function Error(error) {
+
+        function (error) {
           console.log("Email server failed...", error);
+
+
           // $(".notify").addClass("active");
           // $("#notifyType").addClass("failure");
 
@@ -511,45 +514,7 @@ $(document).ready(function () {
           //   $(".notify").removeClass("active");
           //   $("#notifyType").removeClass("failure");
           // }, 3000);
-
-
-          // alert the box to choose stay this page or go to home page
-          var dialog = bootbox.dialog({
-            title: 'a',
-            message: "<p>Thanks for your query!</p>",
-            size: 'large',
-            centerVertical: 'true',
-            buttons: {
-              cancel: {
-                label: "Stay here",
-                className: 'btn-danger',
-                callback: function () {
-                  console.log('Custom cancel clicked');
-                }
-              },
-              // noclose: {
-              //     label: "I don't close the modal!",
-              //     className: 'btn-warning',
-              //     callback: function(){
-              //         console.log('Custom button clicked');
-              //         return false;
-              //     }
-              // },
-              ok: {
-                label: "Home",
-                className: 'btn-info',
-                callback: function () {
-                  console.log('Custom OK clicked');
-                  window.location.replace("https://www.sunnyeden.com");
-                }
-              }
-            }
-          });
-          console.log("alert:", dialog);
-          dialog.init();
-
-        }
-      );
+        });
 
     } else {
       console.log('invalid! validation');
@@ -579,8 +544,56 @@ $(document).ready(function () {
 
     }
 
-  });
-});
+  });//$(".email-submit").on("submit", function (e) {
+
+
+
+  // alert the box to choose stay this page or go to home page
+  function showBootbox() {
+
+    let username = (selector("#firstName")) ? selector('#firstName') : "";
+
+    var dialog = bootbox.dialog({
+      title: 'Dear ' + username,
+      message: "<p>Thanks for your query!</p>",
+      size: 'large',
+      centerVertical: 'true',
+      buttons: {
+        cancel: {
+          label: "Stay here",
+          className: 'btn-danger',
+          callback: function () {
+            console.log('Custom cancel clicked');
+          }
+        },
+        // noclose: {
+        //     label: "I don't close the modal!",
+        //     className: 'btn-warning',
+        //     callback: function(){
+        //         console.log('Custom button clicked');
+        //         return false;
+        //     }
+        // },
+        ok: {
+          label: "Home",
+          className: 'btn-info',
+          callback: function () {
+            console.log('Custom OK clicked');
+            window.location.replace("https://www.sunnyeden.com");
+          }
+        }
+      }
+    });
+    console.log("alert:", dialog);
+    dialog.init();
+  }
+
+
+
+
+});//$(document).ready(function () {
+
+
 
 
 
