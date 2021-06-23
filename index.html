@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Order</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <script type="text/css" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-notify@0.5.1/dist/simple-notify.min.css" />
     <link rel="stylesheet" href="style/index-1.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -16,7 +18,6 @@
     </script>
         <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="/js/jquery.min.js"></script>
-
         <!-- <script>
             jQuery(document).ready(function($){
                 function openSizeWindow() {
@@ -205,7 +206,7 @@
                         <div class="size">8.25</div>
                     </div>
                     <!-- <small><a id="#show-dialog">Size Guide</a></small> -->
-                    <a onclick="openSizeWindow(); return false;" href="">Size Guide</a>
+                    <a onclick="openSizeWindow(); return false;">Size Guide</a>
                     <div id="popup">
                         <img src="s/International-Ring-Size-Chart.jpeg">
                         <div id="close"></div>
@@ -344,9 +345,10 @@
                             the Order Agreement, Terms of
                             Use, and Privacy Notice.</span>
                     </div>
-                    <button class="order-summary">
+                    <button class="order-summary"  onclick="downloadPDF(); return false;">
                         <img src="s/pdf.png" /> &nbsp; Download order summary
                     </button>
+                    <!-- <input type="submit" class="send_req" value="Send price request" /> -->
                     <input type="submit" class="send_req" value="Send price request" />
                 </div>
             </div>
@@ -388,14 +390,19 @@
     
     
    
-    
+
     <script defer type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script defer type="text/javascript" src="https://github.com/makeusabrew/bootbox/releases/download/v4.4.0/bootbox.min.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script>  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script> 
     <script defer src="js/form-validation.js"></script>
     <script defer src="js/index-1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-notify@0.5.1/dist/simple-notify.min.js"></script>
     <script defer src="js/poor-1.js"></script>
+
+
+
+
 
     <script>
         var size_popup = document.getElementById ("popup");
@@ -408,6 +415,23 @@
             close_tag.addEventListener("click", function () {
                 size_popup.classList.remove("visible"); 
             });
+
+            function downloadPDF(){
+                alert("wait");
+                var pdf = new jsPDF();
+                var specialElementHandlers = {
+                    "#editor": function (element, renderer) {
+                         return true;
+                    },
+                };
+                pdf.addImage("s/Charlize-11.png", "JPEG", 15, 40, 180, 180);
+                pdf.fromHTML($(".all-info").html(), 15, 15, {
+                width: 170,
+                elementHandlers: specialElementHandlers,
+                });
+                pdf.save("my-order-summery.pdf");
+            }
+
     </script>
 
 </html>

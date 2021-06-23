@@ -125,29 +125,14 @@ $(document).ready(function () {
 
   }
 
-  $(".headline ion-icon").click(function () {
-    $(".slaves").toggleClass("active");
-    if ($(".slaves").hasClass("active")) {
-      $(".headline ion-icon").attr("name", "close");
-    } else {
-      $(".headline ion-icon").attr("name", "menu-sharp");
-    }
-  });
-
-  $(".order-summary").click(function () {
-    var pdf = new jsPDF();
-    var specialElementHandlers = {
-      "#editor": function (element, renderer) {
-        return true;
-      },
-    };
-
-    pdf.fromHTML($(".all-info").html(), 15, 15, {
-      width: 170,
-      elementHandlers: specialElementHandlers,
-    });
-    pdf.save("my-order-summery.pdf");
-  });
+  // $(".headline ion-icon").click(function () {
+  //   $(".slaves").toggleClass("active");
+  //   if ($(".slaves").hasClass("active")) {
+  //     $(".headline ion-icon").attr("name", "close");
+  //   } else {
+  //     $(".headline ion-icon").attr("name", "menu-sharp");
+  //   }
+  // });
 
 
 

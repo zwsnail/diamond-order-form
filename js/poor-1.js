@@ -14,8 +14,27 @@ $(document).ready(function () {
     return document.querySelector(target).value;
   }
 
+  // -------------------------------- Notify --------------------------------
 
-
+  function notify(title, status) {
+    new Notify({
+      status: status,
+      title: title,
+      text: 'text',
+      effect: 'slide',
+      speed: 300,
+      customClass: 'myNotify',
+      customIcon: null,
+      showIcon: true,
+      showCloseButton: true,
+      autoclose: false,
+      autotimeout: 3000,
+      gap: 20,
+      distance: 20,
+      type: 3,
+      position: 'bottom y-center'
+    })
+  }
 
   // -------------------------------- jewelry ring Engrave--------------------------------
   // obj.jevelryId = `$("#jewelry_id option:selected" ).text()`;
@@ -33,7 +52,10 @@ $(document).ready(function () {
     // $(".jeverly-id-text").append(`${obj.jevelryId}`);
     $(".all-info #drop_8").text(`${obj.ringEngrave}`);
 
+    notify(obj.ringEngrave, 'success');
   });
+
+
 
   $("#diamond_text_engrave").blur(function () {
     if (selector("#diamond_text_engrave") == "") {
@@ -400,9 +422,9 @@ $(document).ready(function () {
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
 
-  $(".email-submit").on("submit", function (e) {
-    // $(".send_req").on("submit", function (e) {
-    e.preventDefault();
+  // $(".email-submit").on("submit", function (e) {
+  $(".send_req").on("submit", function (e) {
+    // e.preventDefault();
 
     // let username = (if(username == ""))?"":"";
     // let userlname = "";
@@ -526,22 +548,25 @@ $(document).ready(function () {
         $("#notifyType").removeClass("validation");
       }, 3000);
 
+      //mobile version no need to hide anything
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      console.log("isMobile:", isMobile);
+      if (!isMobile) {
+        $(".jewerly_section").hide();
+        $(".contact_section").show();
+        $(".diamond_section").hide();
+        $("#summary_section").hide();
+        $(".group").hide();
 
-      $(".jewerly_section").hide();
-      $(".contact_section").show();
-      $(".diamond_section").hide();
-      $("#summary_section").hide();
-      $(".group").hide();
+        $(".footer_space").show();
+        $(".head").hide();
 
-      $(".footer_space").show();
-      $(".head").hide();
-
-      $(".headline").show();
-      $(".a-di").removeClass("navBorderBox");
-      $(".a-je").removeClass("navBorderBox");
-      $(".a-co").addClass("navBorderBox");
-      $(".a-su").removeClass("navBorderBox");
-
+        $(".headline").show();
+        $(".a-di").removeClass("navBorderBox");
+        $(".a-je").removeClass("navBorderBox");
+        $(".a-co").addClass("navBorderBox");
+        $(".a-su").removeClass("navBorderBox");
+      }
     }
 
   });//$(".email-submit").on("submit", function (e) {
@@ -555,12 +580,12 @@ $(document).ready(function () {
 
     var dialog = bootbox.dialog({
       title: 'Dear ' + username,
-      message: "<p>Thanks for your query!</p>",
+      message: "<p style='text-aglign: center;'>Thanks for your query!</p>",
       size: 'large',
       centerVertical: 'true',
       buttons: {
         cancel: {
-          label: "Stay here",
+          label: "Stay",
           className: 'btn-danger',
           callback: function () {
             console.log('Custom cancel clicked');

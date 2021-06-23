@@ -150,7 +150,7 @@
 
   .certificates img {
     width: auto;
-    height: 33px;
+    height: 60px;
     padding: 10px;
   }
 
@@ -367,7 +367,24 @@ form .error {
   color: #e41749 !important;
 }
 
-
+/* =================== bootbox ================================= */
+.modal-title,.modal-body,.modal-footer {
+  font-family: 'Fahkwang';
+}
+.modal-content {
+  background-color: $grey;
+}
+.btn-danger {
+  border-radius: 0px;
+  background-color: $green;
+  border-color: $green;
+}
+.btn-info {
+  border-radius: 0px;
+  border-color: $green;
+  background-color: $yellow;
+  color: $green;
+}
 
 /* =================== experiment hover ================================= */
 .container-hover {
@@ -602,14 +619,14 @@ form .error {
 
 
         
-  .popup {
+  #popup {
     position: fixed;
     // width: 803px; /* Using fixed width but can be anything! */
     // height: 100px;
     top: calc(
       50% - 200px
     ); /* Using calc for proper centering, 50 = height / 2 */
-    left: calc(50% - 177px);
+    left: calc(50% - 164px);
     width: 328px;
     margin: 0 auto;
     text-align: center;
@@ -620,7 +637,7 @@ form .error {
     opacity: 0; /* We can't animate visiblity so we set opacity to 0 */
     transition: all 0.6s;
     img {
-      width: 330px;
+      width: 300px;
     }
   }
   /* When we want to show the overlay we add the visible class */
@@ -629,7 +646,7 @@ form .error {
     opacity: 1;
   }
   /* Using a pseudo-selector to create an overlay */
-  .popup:before {
+  #popup:before {
     content: "";
     position: fixed;
     width: 100vw;
@@ -639,7 +656,7 @@ form .error {
     background: #19180a94;
     z-index: -2; /* Needs to be less than :after */
   }
-  .popup:after {
+  #popup:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -652,7 +669,7 @@ form .error {
     z-index: -1; /* to be below the parent element but in front of before */
   }
 
-  .close {
+  #close {
     position: absolute;
     top: 5px;
     right: 5px;
@@ -664,8 +681,8 @@ form .error {
     border-radius: 5px;
     background-color: #cccccc;
   }
-  .close::after,
-  .close::before {
+  #close::after,
+  #close::before {
     content: "";
     position: absolute;
     width: 3px;
@@ -674,14 +691,14 @@ form .error {
     left: 50%;
     background: #fff980;
   }
-  .close:hover,
-  close:active {
+  #close:hover,
+  #close:active {
     background-color: #013238;
   }
-  .close::after {
+  #close::after {
     transform: translate(-50%, -50%) rotate(45deg);
   }
-  .close:before {
+  #close:before {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
