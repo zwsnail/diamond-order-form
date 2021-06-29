@@ -63,7 +63,6 @@ input {
     outline: none;
     border-color: #01282d; }
 
-/* the alert section*/
 .notify {
   --notify-success: #fff9ea; }
   .notify .notify-content .notify__title {
@@ -77,6 +76,28 @@ input {
 .myNotify {
   font-family: "Larken";
   color: #01282d; }
+
+/* the alert section*/
+.alertFeedback {
+  position: fixed;
+  line-height: 60px;
+  top: 0px;
+  width: 100%;
+  height: 0;
+  box-sizing: border-box;
+  color: #01282d;
+  text-align: center;
+  font-size: xx-large;
+  font-family: "Larken";
+  background: #fff880;
+  opacity: 0.9;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: height 1s; }
+
+#alertFeedbackId:before {
+  display: block;
+  margin-top: 15px; }
 
 .active {
   height: 80px;
@@ -93,6 +114,10 @@ input {
   content: "Please fulfill the required fields.";
   color: #01282d; }
 
+@media (max-width: 767px) {
+  .notifications-container.notify-is-y-center {
+    top: 33%;
+    transform: translateY(-50%); } }
 .group {
   position: relative;
   width: 85%;
@@ -175,7 +200,7 @@ input {
   padding: 0;
   width: 83%;
   height: auto;
-  margin: 155px 40px; }
+  margin: 156px auto; }
   .main .blocks {
     display: flex;
     flex-direction: row;
@@ -235,9 +260,11 @@ input {
     color: #fff;
     cursor: pointer; }
   .main .diamond_section {
-    margin-left: 161px; }
+    margin: 0 auto;
+    max-width: 1000px; }
   .main .jewerly_section {
-    margin-left: 148px; }
+    margin: 0 auto;
+    max-width: 1000px; }
     .main .jewerly_section .style_id {
       margin-top: 15px;
       width: 25%;
@@ -302,46 +329,13 @@ input {
       color: #fff;
       cursor: pointer; }
 
-#diamond_box .item {
-  overflow: hidden; }
-#diamond_box .item img {
-  opacity: 1; }
-#diamond_box .item:hover img {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
-  opacity: 0.5; }
-#diamond_box .item .caption {
-  position: absolute;
-  bottom: -50px;
-  margin-left: 10px;
-  opacity: 0;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s; }
-#diamond_box .item .caption p {
-  margin: 0;
-  color: #f52323;
-  font-size: 1em;
-  font-family: "Lato", sans-serif;
-  letter-spacing: 1px; }
-#diamond_box .item:hover .caption {
-  opacity: 1;
-  bottom: 10px; }
-
-.showMessage {
-  display: none;
-  background-color: #bbbbbb;
-  padding: 5px;
-  color: #fff980;
-  border-radius: 1px; }
-
+/* ===================  jewelry size popup affection  ================================= */
 #popup {
   position: fixed;
-  top: calc(50% - 360px);
+  top: 20%;
   /* Using calc for proper centering, 50 = height / 2 */
-  left: calc(50% - 360px);
-  width: 800px;
+  left: 25%;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
   z-index: 1000;
@@ -354,7 +348,7 @@ input {
   /* We can't animate visiblity so we set opacity to 0 */
   transition: all 0.6s; }
   #popup img {
-    width: 777px; }
+    width: 100%; }
 
 /* When we want to show the overlay we add the visible class */
 .visible {
@@ -442,7 +436,7 @@ form .error {
   background-color: #fff880;
   color: #01282d; }
 
-/* =================== experiment hover ================================= */
+/* ===================  hover affection  ================================= */
 .container-hover {
   position: relative; }
 
@@ -460,7 +454,7 @@ form .error {
   transition: .5s ease;
   opacity: 0;
   color: #01282d;
-  font-size: 20px;
+  font-size: 13px;
   font-family: "Fahkwang";
   text-align: center; }
 
@@ -468,56 +462,10 @@ form .error {
   opacity: 1; }
 
 .container-hover:hover {
-  transform: scale(1.1); }
+  transform: scale(1.1);
+  transition: all 0.8s; }
 
-@media (max-width: 1600px) {
-  .d_images img {
-    margin: -5px 5px !important;
-    width: 130px; } }
-@media (max-width: 1366px) {
-  .d_images img {
-    display: none !important; }
-
-  .daimons_min {
-    margin: 400px auto !important; }
-
-  .head {
-    width: 50%; } }
-@media (max-width: 1249px) {
-  .d_images img {
-    display: none !important; }
-
-  .daimons_min {
-    margin: 400px auto !important; }
-
-  .group {
-    grid-template-columns: 1fr; }
-
-  .head {
-    position: relative;
-    width: 100%;
-    margin-top: 310px;
-    height: auto; }
-    .head .h_image {
-      top: 0; }
-    .head .daimons_min {
-      display: none; }
-
-  .main {
-    width: 85%;
-    margin: 160px auto; }
-
-  .jewerly_section {
-    margin-top: 30px;
-    border-top: 1px solid #d1cdcd;
-    padding-top: 40px; } }
-@media (max-width: 655px) {
-  .head {
-    margin-top: 250px; }
-    .head .h_image {
-      width: 500px;
-      height: 500px; } }
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .head {
     margin-top: 180px; }
     .head .h_image {
@@ -528,11 +476,16 @@ form .error {
     width: 100%; }
 
   .main {
-    width: 90%; }
+    width: 90%;
+    margin: 100px auto; }
+    .main .overlay {
+      font-size: 10px; }
     .main .diamond_section {
       margin-top: -100px;
       padding-top: 20px;
       margin-left: 0px; }
+      .main .diamond_section .certificates img {
+        height: 80%; }
     .main .jewerly_section {
       padding-top: 20px;
       margin-left: 0px;
@@ -598,10 +551,11 @@ form .error {
 
   #popup {
     position: fixed;
-    top: calc( 50% - 200px );
+    top: 30%;
     /* Using calc for proper centering, 50 = height / 2 */
-    left: calc(50% - 164px);
-    width: 328px;
+    left: 16%;
+    width: 70%;
+    height: 38%;
     margin: 0 auto;
     text-align: center;
     z-index: 1000;
@@ -614,7 +568,7 @@ form .error {
     /* We can't animate visiblity so we set opacity to 0 */
     transition: all 0.6s; }
     #popup img {
-      width: 300px; }
+      width: 100%; }
 
   /* When we want to show the overlay we add the visible class */
   .visible {
@@ -676,6 +630,24 @@ form .error {
 
   #close:before {
     transform: translate(-50%, -50%) rotate(-45deg); } }
+@media (width: 375px) {
+  #popup {
+    height: 31%; } }
+@media (max-width: 360px) {
+  .container-hover {
+    width: 20%; }
+
+  .main .blocks .size {
+    width: 64px; }
+
+  .main .jewerly_section .metal-color div {
+    width: 16%; }
+
+  .main .jewerly_section .metals img {
+    width: 20%; } }
+@media (max-width: 320px) {
+  .main .blocks .size {
+    width: 20%; } }
 .headline {
   position: relative;
   left: 0;
@@ -694,21 +666,21 @@ form .error {
     position: absolute;
     background: none;
     transition: all .5s ease-in-out; }
-  .headline #second {
+  .headline .second {
     padding: 10px,0px; }
-  .headline #second > .border:nth-of-type(1) {
+  .headline .second > .border:nth-of-type(1) {
     top: -5px;
     left: 50%;
     width: 0;
     border-top: 1px solid #01282d;
-    transition: width .5s ease-in-out, transform 0.6s ease-in-out; }
-  .headline #second > .border:nth-of-type(2) {
+    transition: width .5s ease-in-out, transform 1s ease-in-out; }
+  .headline .second > .border:nth-of-type(2) {
     bottom: -10px;
     left: 50%;
     width: 0;
     border-bottom: 1px solid #01282d;
-    transition: width .5s ease-in-out, transform 0.6s ease-in-out; }
-  .headline #second:hover .border {
+    transition: width .5s ease-in-out, transform 1s ease-in-out; }
+  .headline .second:hover .border {
     transform: translate(-50%, 0);
     width: 100%;
     transition: width .8s ease-in-out, transform .3s ease-in-out; }
@@ -719,7 +691,7 @@ form .error {
     font: 400 26px "Fahkwang";
     padding: 10px; }
     .headline a:hover {
-      transition: all ease-in 0.5s;
+      transition: all ease-in 1s;
       background-color: #fff980; }
   .headline h1 {
     font-family: "Fahkwang";
@@ -769,26 +741,25 @@ form .error {
   height: auto;
   z-index: 99;
   opacity: 1;
-  background: #fff;
-  padding-top: 40px; }
+  margin: 126px auto 200px auto;
+  max-width: 1000px; }
   .contact_section .contact_form {
-    width: 1060px;
     position: relative;
-    margin-left: 360px;
-    margin-top: 55px;
-    margin-bottom: 200px;
     display: flex;
     flex-direction: column; }
-    .contact_section .contact_form .all-info .all-info-list {
-      display: flex;
-      justify-content: start; }
-      .contact_section .contact_form .all-info .all-info-list .all-info-right {
-        margin-left: 400px; }
-    .contact_section .contact_form .all-info p {
-      font: 300 17px/29px "Fahkwang"; }
-    .contact_section .contact_form .all-info span {
-      color: #01282d;
-      padding-left: 10px; }
+    .contact_section .contact_form .all-info {
+      padding-top: 10px; }
+      .contact_section .contact_form .all-info .all-info-list {
+        display: flex;
+        justify-content: start; }
+        .contact_section .contact_form .all-info .all-info-list .all-info-right {
+          margin-left: 30%; }
+      .contact_section .contact_form .all-info p {
+        font: 300 17px/29px "Fahkwang"; }
+      .contact_section .contact_form .all-info span {
+        color: #01282d;
+        padding-left: 10px;
+        background: #fff880; }
     .contact_section .contact_form h1 {
       font-size: 35px;
       font-weight: 500;
@@ -967,10 +938,8 @@ form .error {
       transition: all 0.2s ease-in-out; }
 
 #contact-form {
-  margin-left: 315px;
-  margin-top: 85px;
-  width: 1060px;
-  margin-left: 330px; }
+  margin: 0 auto;
+  max-width: 1000px; }
   #contact-form h1 {
     margin-top: 30px;
     margin-bottom: 0px; }
@@ -1040,37 +1009,16 @@ form .error {
     .checkbox-first span a {
       color: #28a4e5; }
 
-@media (max-width: 1249px) {
-  .contact_section {
-    margin-top: -155px; } }
-@media (max-width: 990px) {
-  .contact_info {
-    display: none !important; }
-
-  .contact_section .contact_form {
-    margin-left: 20px;
-    margin-right: 20px; }
-
-  .contact_section {
-    grid-template-columns: 1fr; }
-
-  .contact_section .send_req {
-    margin: 20px auto; }
-
-  .contact_section .contact_form .order-summary {
-    margin: 0px auto; }
-
-  .checkbox-first {
-    display: flex; } }
-@media (max-width: 764px) {
-  .contact_form .contacts {
-    grid-template-columns: 12fr !important; } }
-@media (max-width: 500px) {
+@media (width: 768px) {
+  .contact_form .all-info .all-info-list .all-info-right {
+    margin-left: 20% !important; } }
+@media (max-width: 767px) {
   .contact_section {
     width: 100%; }
     .contact_section .send_req {
       width: 100%;
-      font-size: 25px; }
+      font-size: 25px;
+      margin-top: 15px; }
     .contact_section .order-summary {
       width: 100% !important;
       font-size: 19px !important; }
@@ -1079,34 +1027,37 @@ form .error {
         left: 5px; }
     .contact_section .contact_form {
       padding-bottom: 10px;
-      margin-top: 0px;
-      width: 340px; }
+      margin: auto;
+      width: 90%; }
       .contact_section .contact_form .all-info .all-info-list {
         display: flex;
         justify-content: normal;
         flex-direction: column; }
         .contact_section .contact_form .all-info .all-info-list .all-info-right {
           margin-left: 0px; }
+      .contact_section .contact_form .all-info p {
+        font: 300 12px/29px "Fahkwang"; }
     .contact_section .contact_form h1 {
       font-size: 25px;
       margin: 0; }
     .contact_section .contact_form .contacts .f-row h2 {
-      font-size: 20px;
+      font-size: 16px;
       margin-top: 20px; }
+    .contact_section .contact_form .contacts .f-row input {
+      width: 88%; }
     .contact_section .contact_form label {
-      font-size: 14px; }
+      font-size: 12px;
+      margin: 0px 0px 3px 0px; }
     .contact_section .contact_form .message-text {
       font-size: 20px; }
     .contact_section .contact_form .checkbox-all {
-      margin-bottom: 50px; }
+      margin-top: 0px; }
 
   #contact_section {
     padding-bottom: 0px; }
 
   #contact-form {
-    width: 345px;
-    margin-top: 25px;
-    margin-left: 22px; }
+    margin-top: 25px; }
 
   #summary_section {
     margin-top: -155px; } }
@@ -1131,36 +1082,33 @@ form .error {
     display: none; }
   .footer_space #column-support {
     display: none; }
-  .footer_space .columns h2 {
-    text-align: left;
-    font: 500 30px/40px "Fahkwang";
-    color: #fff980;
-    opacity: 1; }
-  .footer_space .columns span {
-    color: #ffffff;
-    display: block;
-    margin-top: 15px;
-    font-style: normal;
-    font: 17px/22px "Larken"; }
-    .footer_space .columns span b {
-      color: #fff980; }
-    .footer_space .columns span img {
-      position: absolute;
-      margin-left: -40px; }
-
-@media (max-width: 1500px) {
-  .footer_space {
-    padding: 0 60px; } }
-@media (max-width: 1245px) {
-  .footer_space {
-    padding: 0 30px; }
+  .footer_space .columns {
+    font-size: 1.4em;
+    font-family: 'Fahkwang';
+    margin-bottom: 5px; }
     .footer_space .columns h2 {
-      font: 500 24px/36px "Fahkwang"; }
+      text-align: left;
+      font: 500 30px/40px "Fahkwang";
+      color: #fff980;
+      opacity: 1;
+      margin-top: 0; }
     .footer_space .columns span {
-      font: 300 14px/18px "Larken"; } }
-@media (max-width: 500px) {
+      color: #ffffff;
+      display: block;
+      font-style: normal;
+      font: 17px/22px "Larken"; }
+      .footer_space .columns span b {
+        color: #fff980; }
+      .footer_space .columns span img {
+        position: absolute;
+        margin-left: -40px; }
+
+@media (max-width: 1151px) {
   .footer_space {
-    padding: 0 30px; }
+    padding: 0; } }
+@media (max-width: 767px) {
+  .footer_space {
+    padding: 0 7px; }
     .footer_space #column-warranty {
       display: none; }
     .footer_space #column-support {
@@ -1168,9 +1116,18 @@ form .error {
     .footer_space #column-rull {
       margin-bottom: 10px; }
     .footer_space .columns h2 {
-      font: 300 24px/36px "Fahkwang"; }
+      font: 300 24px/15px "Fahkwang";
+      margin-bottom: -0.7em; }
     .footer_space .columns span {
-      font: 100 12px/18px "Fahkwang";
+      font: 100 12px/13px "Fahkwang";
+      margin-top: 0px; }
+    .footer_space #column-rull {
       margin-top: 0px; } }
+@media (max-width: 360px) {
+  .footer_space .columns h2 {
+    margin-bottom: 0.2em; }
+
+  .footer_space #column-rull {
+    margin-bottom: 0px; } }
 
 /*# sourceMappingURL=index-1.css.map */

@@ -26,29 +26,29 @@
   height: auto;
   z-index: 99;
   opacity: 1;
-  background: #fff;
+  // background: green;
+  margin: 126px auto 200px auto;
+  max-width: 1000px;
 
-  padding-top: 40px;
+
 
   // display: grid;
   // grid-template-columns: 55% auto;
 
   .contact_form {
-    width: 1060px;
+
     position: relative;
-    margin-left: 360px;
-    margin-top: 55px;
-    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
 
     .all-info {
+      padding-top: 10px;
       .all-info-list{
         display: flex;
         justify-content:start;
 
         .all-info-right {
-          margin-left: 400px;
+          margin-left: 30%;
         }
       }
 
@@ -59,6 +59,7 @@
       span {
         color: $green;
         padding-left:10px;
+        background: $yellow;
       }
     }
 
@@ -288,10 +289,10 @@
 }
 
 #contact-form {
-  margin-left: 315px;
-  margin-top: 85px;
-  width: 1060px;
-  margin-left: 330px;
+  margin: 0 auto;
+  // background-color: #28a4e5;
+  max-width: 1000px;
+
   h1 {
     margin-top:30px;
     margin-bottom: 0px;
@@ -387,52 +388,72 @@
 
 }
 
-@media (max-width: 1249px) {
-  .contact_section {
-    margin-top: -155px;
+// @media (max-width: 1249px) {
+//   .contact_section {
+//     margin-top: -155px;
+//   }
+// }
+
+// @media (max-width: 990px) {
+//   .contact_info {
+//     display: none !important;
+//   }
+//   .contact_section .contact_form {
+//     margin-left: 20px;
+//     margin-right: 20px;
+//   }
+//   .contact_section {
+//     grid-template-columns: 1fr;
+//   }
+
+//   .contact_section .send_req {
+//     margin: 20px auto;
+//     // border-radius: 1px;
+//   }
+//   .contact_section .contact_form .order-summary {
+//     margin: 0px auto;
+//   }
+//   .checkbox-first {
+//     display: flex;
+//   }
+// }
+
+// @media (max-width: 764px) {
+//   .contact_form .contacts {
+//     grid-template-columns: 12fr !important;
+//   }
+// }
+
+
+//ipad pro size
+@media (max-width: 1024px) {
+
+}
+
+//ipad 
+@media (width: 768px) { 
+  .contact_form {
+
+    .all-info {
+      .all-info-list {
+
+        .all-info-right {
+          margin-left: 20% !important;
+        }
+      }
+    }
+
   }
 }
 
-@media (max-width: 990px) {
-  .contact_info {
-    display: none !important;
-  }
-  .contact_section .contact_form {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .contact_section {
-    grid-template-columns: 1fr;
-  }
-
-  .contact_section .send_req {
-    margin: 20px auto;
-    // border-radius: 1px;
-  }
-  .contact_section .contact_form .order-summary {
-    margin: 0px auto;
-  }
-  .checkbox-first {
-    display: flex;
-  }
-}
-
-@media (max-width: 764px) {
-  .contact_form .contacts {
-    grid-template-columns: 12fr !important;
-  }
-}
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   .contact_section {
     width: 100%;
     // padding-bottom: 100px;
-
-
-    
-
     .send_req {
       width: 100%;
       font-size: 25px;
+      margin-top:15px;
     }
     .order-summary {
       width: 100% !important;
@@ -446,8 +467,10 @@
 
     .contact_form {
       padding-bottom: 10px;
-      margin-top: 0px;
-      width: 340px;
+      margin: auto;
+      width: 90%;
+
+
 
       .all-info {
         .all-info-list {
@@ -458,8 +481,13 @@
           .all-info-right {
             margin-left: 0px;
           }
-        }   
+        }
+        
+        p{
+          font: 300 12px/29px "Fahkwang";
+        }
       }
+
     }
 
     .contact_form h1 {
@@ -467,27 +495,30 @@
       margin: 0;
     }
     .contact_form .contacts .f-row h2 {
-      font-size: 20px;
+      font-size: 16px;
       margin-top: 20px;
     }
+    .contact_form .contacts .f-row input {
+      width: 88%;
+    }
     .contact_form label {
-      font-size: 14px;
+      font-size: 12px;
+      margin: 0px 0px 3px 0px;
     }
     .contact_form .message-text {
       font-size: 20px;
     }
     .contact_form .checkbox-all {
-      margin-bottom: 50px;
+      margin-top: 0px;
     }
   }
   #contact_section {
+
     padding-bottom: 0px;
   }
 
   #contact-form {
-    width: 345px;
     margin-top: 25px;
-    margin-left: 22px;
   }
 
   #summary_section {

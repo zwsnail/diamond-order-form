@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
   });
 
-  if (window.matchMedia("(min-width: 1249px)").matches) {
+  if (window.matchMedia("(min-width: 768px)").matches) {
     $(".jewerly_section").hide();
     $(".contact_section").hide();
     $(".diamond_section").show();
@@ -102,23 +102,29 @@ $(document).ready(function () {
     //      }
     //      return false;
     //    });
+
+
+
+
+
+
   }
 
-  if (window.matchMedia("(max-width: 1249px)").matches) {
-    $(".sections").show();
-    $(".footer_space").show();
-  }
+  // if (window.matchMedia("(max-width: 1249px)").matches) {
+  //   $(".sections").show();
+  //   $(".footer_space").show();
+  // }
 
-  if (window.matchMedia("(max-width: 990px)").matches) {
-    //...
-    // $(
-    //   '<input type="submit" class="send_req" value="Send Price Request!">'
-    // ).insertBefore($(".order-summary"));
-  } else {
-    $("").insertBefore($(".order-summary"));
-  }
+  // if (window.matchMedia("(max-width: 990px)").matches) {
+  //   //...
+  //   // $(
+  //   //   '<input type="submit" class="send_req" value="Send Price Request!">'
+  //   // ).insertBefore($(".order-summary"));
+  // } else {
+  //   $("").insertBefore($(".order-summary"));
+  // }
 
-  if (window.matchMedia("(max-width:650px)").matches) {
+  if (window.matchMedia("(max-width:767px)").matches) {
     $(".headline a").wrapAll('<div class="slaves">');
     $(".footer_space").show();
     $(".headline").hide();

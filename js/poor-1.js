@@ -16,7 +16,7 @@ $(document).ready(function () {
 
   // -------------------------------- Notify --------------------------------
 
-  function notify(title, status) {
+  function notifyFunction(title, status) {
     new Notify({
       status: status,
       title: title,
@@ -27,7 +27,7 @@ $(document).ready(function () {
       customIcon: null,
       showIcon: true,
       showCloseButton: true,
-      autoclose: false,
+      autoclose: true,
       autotimeout: 3000,
       gap: 20,
       distance: 20,
@@ -52,7 +52,7 @@ $(document).ready(function () {
     // $(".jeverly-id-text").append(`${obj.jevelryId}`);
     $(".all-info #drop_8").text(`${obj.ringEngrave}`);
 
-    notify(obj.ringEngrave, 'success');
+    notifyFunction(obj.ringEngrave, 'success');
   });
 
 
@@ -61,6 +61,8 @@ $(document).ready(function () {
     if (selector("#diamond_text_engrave") == "") {
       obj.ringEngrave = selector("#diamond_text_engrave");
       $(".all-info #drop_8").text(`${obj.ringEngrave}`);
+
+      notifyFunction("Removed", "success");
     }
   });
 
@@ -69,7 +71,7 @@ $(document).ready(function () {
   // -------------------------------- laser mark --------------------------------
 
 
-
+  //diamond 
   $(".personal_text").on("submit", function (e) {
     e.preventDefault();
     obj.laserMark = selector("#laser_mark");
@@ -77,11 +79,12 @@ $(document).ready(function () {
     if (priceObject.cCertificate != 0) {
       // let cMark = Math.floor($("#laser_mark").attr("data-index-number"));
       cMark = 0;
-      console.log("chose certificate");
+
     }
+    notifyFunction(obj.laserMark, "success");
 
     showMarkPrice(cMark);
-    $("#showAddedMarkMessage").text("Mark added!").fadeIn(1000).fadeOut(2000)
+
   });
 
   $("#laser_mark").blur(function () {
@@ -89,8 +92,8 @@ $(document).ready(function () {
       cMark = 0;
       priceObject.cMark = cMark;
       showMarkPrice(cMark);
-      $("#showAddedMarkMessage").text("Mark removed!").fadeIn(1000).fadeOut(2000)
 
+      notifyFunction("Removed!", "success");
       obj.laserMark = selector("#laser_mark");
       // $(".jeverly-id-text").append(`${obj.jevelryId}`);
       $(".all-info #drop_10").text(`${obj.laserMark}`);
@@ -128,8 +131,6 @@ $(document).ready(function () {
 
   function showCertificatePrice(cCertificate) {
     priceObject.cCertificate = cCertificate;
-    console.log(priceObject);
-    console.log("count-", priceObject.count());
 
     $(".counted__jeverly").text("$ " + priceObject.count());
     // $(".all-info #drop_10").text(`${obj.laserMark}`);
@@ -138,8 +139,6 @@ $(document).ready(function () {
 
   function showMarkPrice(cMark) {
     priceObject.cMark = cMark;
-    console.log(priceObject);
-    console.log("count-", priceObject.count());
     $(".counted__jeverly").text("$ " + priceObject.count());
     $(".all-info #drop_9").text("$ " + priceObject.count());
     $(".all-info #drop_10").text(`${obj.laserMark}`);
@@ -166,16 +165,10 @@ $(document).ready(function () {
 
 
   $("#diamond_box img").on("click", function diamonds() {
-    // let dPrice = Math.floor($(this).attr("data-index-number"));
-    // priceObject.dPrice = dPrice;
-    // console.log(priceObject);
-    // console.log("count-", priceObject.count());
-
-
     bordered($("#diamond_box img"), $(this));
     obj.diamondColor = $(this).attr("alt");
+    notifyFunction(obj.diamondColor, "success");
     $(".all-info #drop_1").text(`${obj.diamondColor}`);
-    console.log("obj.diamondColor", obj.diamondColor);
     $(".counted__jeverly").text("$ " + priceObject.count());
     $(".all-info #drop_9").text("$ " + priceObject.count());
   });
@@ -206,6 +199,7 @@ $(document).ready(function () {
     bordered($(".cut_shape img"), $(this));
 
     obj.cutShape = $(this).attr("alt");
+    notifyFunction(obj.cutShape, "success");
     $(".all-info #drop_3").text(`${obj.cutShape}`);
 
     $(".counted__jeverly").text("$ " + priceObject.count());
@@ -224,109 +218,81 @@ $(document).ready(function () {
 
       switch (obj.caratSize) {
         case 0.5:
-          console.log("obj.caratSize: 0.5; _caratColor: colorless");
           beforeCutPrice = colorlessHalfCarat;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 1:
-          console.log("obj.caratSize: 1; _caratColor: colorless");
           beforeCutPrice = colorlessHalfCarat * 2 + differencePrice;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 1.5:
-          console.log("obj.caratSize: 1.5; _caratColor: colorless");
           beforeCutPrice = colorlessHalfCarat * 4;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 2:
-          console.log("obj.caratSize: 2; _caratColor: colorless");
           beforeCutPrice = colorlessHalfCarat * 4 * 1.5;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         default:
           console.log("Not yet choose size 1");
       }
     }
-    if (obj.diamondColor == "Pink" || obj.diamondColor == "Green" || obj.diamondColor == "Blue") {
+    if (obj.diamondColor == "Rose Pink" || obj.diamondColor == "Eden Green" || obj.diamondColor == "Sky Blue") {
       switch (obj.caratSize) {
         case 0.5:
-          console.log("obj.caratSize: 0.5; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = (colorlessHalfCarat + differencePrice) + differencePrice;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 1:
-          console.log("obj.caratSize: 1; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = ((colorlessHalfCarat + differencePrice) + differencePrice) * 2 + differencePrice;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 1.5:
-          console.log("obj.caratSize: 1.5; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = ((colorlessHalfCarat + differencePrice) + differencePrice) * 4;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 2:
-          console.log("obj.caratSize: 2; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = ((colorlessHalfCarat + differencePrice) + differencePrice) * 4 * 1.5;
-          console.log("beforeCut Price=", beforeCutPrice);
         default:
           console.log("Not yet choose size 2");
       }
     }
-    if (obj.diamondColor == "Yellow") {
+    if (obj.diamondColor == "Sunny Yellow") {
       switch (obj.caratSize) {
         case 0.5:
-          console.log("obj.caratSize: 0.5; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = colorlessHalfCarat + differencePrice;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 1:
-          console.log("obj.caratSize: 1; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = (colorlessHalfCarat + differencePrice) * 2 + differencePrice;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 1.5:
-          console.log("obj.caratSize: 1.5; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = (colorlessHalfCarat + differencePrice) * 4;
-          console.log("beforeCut Price=", beforeCutPrice);
           break;
         case 2:
-          console.log("obj.caratSize: 2; obj.diamondColor:", obj.diamondColor);
           beforeCutPrice = (colorlessHalfCarat + differencePrice) * 4 * 1.5;
-          console.log("beforeCut Price=", beforeCutPrice);
         default:
           console.log("Not yet choose size 3");
       }
     }
     if (obj.diamondColor == "N/A") {
-      console.log("Not color yet~");
+      console.log("No color yet");
     }
 
-    console.log("beforeCut Price=", beforeCutPrice);
+    // console.log("beforeCut Price=", beforeCutPrice);
 
     if (obj.cutShape != "N/A") {
 
       switch (obj.cutShape) {
         case "Brilliant Cut":
           afterCutPrice = beforeCutPrice;
-          console.log("afterCutPrice: ", afterCutPrice);
           break;
         case "Asscher Cut":
         case "Princess Cut":
         case "Radiant Cut":
           afterCutPrice = beforeCutPrice * 1.15;
-          console.log("afterCutPrice: ", afterCutPrice);
           break;
         case "Cushion Cut":
         case "Emerald Cut":
         case "Heart Cut":
           afterCutPrice = beforeCutPrice * 1.30;
-          console.log("afterCutPrice: ", afterCutPrice);
           break;
         case "Oval Cut":
         case "Marquise Cut":
         case "Pear Cut":
           afterCutPrice = beforeCutPrice * 1.50;
-          console.log("afterCutPrice: ", afterCutPrice);
           break;
         default:
           console.log("Not yet choose shape 4");
@@ -336,7 +302,7 @@ $(document).ready(function () {
       // To avoid choose the cert first without return any number
       afterCutPrice = 0;
     }
-    console.log("afterCutPrice=", afterCutPrice);
+    // console.log("afterCutPrice=", afterCutPrice);
 
     // return Math.round(afterCutPrice);
     return Math.ceil(afterCutPrice / 100) * 100;
@@ -355,18 +321,23 @@ $(document).ready(function () {
       console.log($("#gia").attr("alt"));
       $("#gia").removeClass("borderBox");
       $(".all-info #drop_4").text(``);
-      cCertificate = 0;
-      showCertificatePrice(cCertificate);
-      $("#showAddedCertMessage").text("GIA Removed!").fadeIn(1000).fadeOut(1000);
+
+      showCertificatePrice(0);
+
+
+      notifyFunction("GIA removed", "success");
       //remove Cert the laser Mark cost $100
       showMarkPrice(100);
       return;
     }
+    // obj.cMark = 0;
+
     bordered($(".certificates img"), $(this));
     obj.certificates = $(this).attr("alt");
 
     showCertificatePrice(($(this).attr("data-index-number")) * 1);
-    $("#showAddedCertMessage").text("GIA $350").fadeIn(1000).fadeOut(1000);
+    showMarkPrice(0);
+    notifyFunction("GIA - $350", "success");
     $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
@@ -375,13 +346,13 @@ $(document).ready(function () {
   // *1 is used to parse the string to a number
   $("#igi").on("click", function () {
     if (isBordered($("#igi"))) {
-      console.log("igi-attr:", $("#igi").attr("alt"));
+
       $("#igi").removeClass("borderBox");
       $(".all-info #drop_4").text(``);
 
-      cCertificate = 0;
-      showCertificatePrice(cCertificate);
-      $("#showAddedCertMessage").text("IGI Removed!").fadeIn(1000).fadeOut(1000);
+      showCertificatePrice(0);
+
+      notifyFunction("IGI removed!", "success");
       //remove Cert the laser Mark cost $100
       showMarkPrice(100);
       return;
@@ -390,7 +361,8 @@ $(document).ready(function () {
     obj.certificates = $(this).attr("alt");
 
     showCertificatePrice(($(this).attr("data-index-number")) * 1);
-    $("#showAddedCertMessage").text("IGI $250").fadeIn(1000).fadeOut(1000);
+    showMarkPrice(0);
+    notifyFunction("IGI - $250", "success");
     $(".all-info #drop_4").text(`${obj.certificates}`);
   });
 
@@ -422,9 +394,12 @@ $(document).ready(function () {
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
 
+
+
   // $(".email-submit").on("submit", function (e) {
-  $(".send_req").on("submit", function (e) {
-    // e.preventDefault();
+  // $(".send_req").on("submit", function (e) {
+  $(".send_req").click(function (e) {
+    e.preventDefault();
 
     // let username = (if(username == ""))?"":"";
     // let userlname = "";
@@ -504,21 +479,19 @@ $(document).ready(function () {
 
 
     if (form.valid()) {
-      console.log('valid! going to send email');
+      // console.log('valid! going to send email');
       //"service_jt9l9dt", "template_yevxgca"
-      alert("here0");
       emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
         // emailjs.send("s", "template_lxvedrh", templateParams).then(
         // emailjs.sendForm("service_zli7li4", "template_lxvedrh", templateParams, "contact-form-emailjs", "user_F1infr4XnoJN5o3sHvo0J").then(
         function (response) {
-          alert("here1");
-          console.log("SUCCESS! Email had been sent to you!", response.status, response.text);
-          $(".notify").toggleClass("active");
-          $("#notifyType").toggleClass("success");
+          // console.log("SUCCESS! Email had been sent to you!", response.status, response.text);
+          $(".alertFeedback").toggleClass("active");
+          $("#nalertFeedbackId").toggleClass("success");
 
           setTimeout(function () {
-            $(".notify").removeClass("active");
-            $("#notifyType").removeClass("success");
+            $(".alertFeedback").removeClass("active");
+            $("#alertFeedbackId").removeClass("success");
           }, 2000);
 
           showBootbox();
@@ -527,30 +500,29 @@ $(document).ready(function () {
 
         function (error) {
           console.log("Email server failed...", error);
+          $(".alertFeedback").addClass("active");
+          $("#nalertFeedbackId").addClass("failure");
 
-
-          // $(".notify").addClass("active");
-          // $("#notifyType").addClass("failure");
-
-          // setTimeout(function () {
-          //   $(".notify").removeClass("active");
-          //   $("#notifyType").removeClass("failure");
-          // }, 3000);
+          setTimeout(function () {
+            $(".alertFeedback").removeClass("active");
+            $("#alertFeedbackId").removeClass("failure");
+          }, 3000);
         });
 
     } else {
-      console.log('invalid! validation');
-      $(".notify").toggleClass("active");
-      $("#notifyType").toggleClass("validation");
+      // console.log('invalid! validation');
+      $(".alertFeedback").toggleClass("active");
+      $("#alertFeedbackId").toggleClass("validation");
 
       setTimeout(function () {
-        $(".notify").removeClass("active");
-        $("#notifyType").removeClass("validation");
+        $(".alertFeedback").removeClass("active");
+        $("#alertFeedbackId").removeClass("validation");
       }, 3000);
 
       //mobile version no need to hide anything
-      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      console.log("isMobile:", isMobile);
+      // var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      var isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
+      // console.log("isMobile:", isMobile);
       if (!isMobile) {
         $(".jewerly_section").hide();
         $(".contact_section").show();
@@ -580,7 +552,7 @@ $(document).ready(function () {
 
     var dialog = bootbox.dialog({
       title: 'Dear ' + username,
-      message: "<p style='text-aglign: center;'>Thanks for your query!</p>",
+      message: "<p style='text-align: center;'>Thank you for being our valued customer.<br>We will reply to you within 48 hours.<br>Please let us know if we can do anything else to help. We are so grateful for the pleasure of serving you and hope we met your expectations. </p>",
       size: 'large',
       centerVertical: 'true',
       buttons: {
@@ -588,7 +560,7 @@ $(document).ready(function () {
           label: "Stay",
           className: 'btn-danger',
           callback: function () {
-            console.log('Custom cancel clicked');
+            // console.log('');
           }
         },
         // noclose: {
@@ -611,7 +583,9 @@ $(document).ready(function () {
     });
     console.log("alert:", dialog);
     dialog.init();
-  }
+  }//bootbox
+
+
 
 
 

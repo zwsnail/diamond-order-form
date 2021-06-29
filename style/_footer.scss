@@ -28,17 +28,22 @@
   }
 
   .columns {
+    font-size: 1.4em;
+    font-family: 'Fahkwang';
+    margin-bottom: 5px;
     h2 {
       text-align: left;
       font: 500 30px/40px "Fahkwang";
       color: #fff980;
       opacity: 1;
+      margin-top: 0;
+      // margin-bottom: -0.8em;
     }
 
     span {
       color: #ffffff;
       display: block;
-      margin-top: 15px;
+      // margin-top: 15px;
       font-style: normal;
       font: 17px/22px "Larken";
       b {
@@ -52,27 +57,14 @@
   }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1151px) {
   .footer_space {
-    padding: 0 60px;
-  }
-}
-@media (max-width: 1245px) {
-  .footer_space {
-    padding: 0 30px;
-    .columns {
-      h2 {
-        font: 500 24px/36px "Fahkwang";
-      }
-
-      span {
-        font: 300 14px/18px "Larken";
-      }
-    }
+    padding: 0;
   }
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 767px) {
   .footer_space {
     #column-warranty {
       display: none;
@@ -88,16 +80,40 @@
 
     // background: #0d0d0dad;
 
-    padding: 0 30px;
+    padding: 0 7px;
     .columns {
+      // margin-top: 10px;
       h2 {
-        font: 300 24px/36px "Fahkwang";
+        font: 300 24px/15px "Fahkwang";
+        margin-bottom: -0.7em;
       }
 
       span {
-        font: 100 12px/18px "Fahkwang";
+        font: 100 12px/13px "Fahkwang";
         margin-top: 0px;
       }
     }
+
+    #column-rull {
+      margin-top: 0px;
+    }
+
   }
+}
+
+
+//Moto G4
+@media (max-width: 360px) {
+  .footer_space .columns {
+    h2 {
+      margin-bottom:0.2em;
+    }
+  }
+  .footer_space #column-rull {
+    margin-bottom: 0px;
+}
+}
+//iphone 5/SE
+@media (max-width: 320px) {
+
 }

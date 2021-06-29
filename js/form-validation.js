@@ -27,18 +27,18 @@ $(function () {
     },
     // Specify validation error messages
     messages: {
-      firstName: "Please enter your first name",
-      lastName: "Please enter your last name",
+      firstName: "Please enter first name",
+      lastName: "Please enter last name",
       // password: {
       //   required: "Please provide a password",
       //   minlength: "Your password must be at least 5 characters long"
       // },
-      email: "Please enter a valid email address",
-      adress1: "Please enter at least one address",
+      email: "Invalid email address",
+      adress1: "Please enter one address",
       city: "Please enter your city",
       state: "Please enter your state",
       zip: {
-        digits: " Please only enter numbers!",
+        digits: "Only numbers",
         required: "Please enter your zip"
       },
       country: "Please enter your country"
@@ -46,8 +46,8 @@ $(function () {
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     // submitHandler: function (form) {
-    //   // form.submit();
-    //   $(form).ajaxSubmit();
+    //   form.submit();
+    //   // $(form).ajaxSubmit();
     // }
 
   });

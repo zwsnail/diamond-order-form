@@ -107,7 +107,7 @@
   padding: 0;
   width: 83%;
   height: auto;
-  margin: 155px 40px;
+  margin: 156px auto;
   // border: 1px solid rgb(209, 209, 209);
 
   .blocks {
@@ -159,11 +159,12 @@
   }
 
   .diamond_section {
-    margin-left: 161px;
+    margin: 0 auto;
+    max-width: 1000px;
   }
   .jewerly_section {
-    // margin: auto, 50px;
-    margin-left: 148px;
+    margin: 0 auto;
+    max-width: 1000px;
 
     .style_id {
       margin-top: 15px;
@@ -235,56 +236,53 @@
 }
 
 #diamond_box {
-  .item {
-    overflow: hidden;
-  }
-  .item img {
-    opacity: 1;
-  }
-  .item:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
-    opacity: 0.5;
-  }
+  // .item {
+  //   overflow: hidden;
+  // }
+  // .item img {
+  //   opacity: 1;
+  // }
+  // .item:hover img {
+  //   -webkit-transform: scale(1.1);
+  //   transform: scale(1.1);
+  //   -webkit-transition: all 0.8s;
+  //   transition: all 0.8s;
+  //   // opacity: 0.5;
+  // }
 
-  .item .caption {
-    position: absolute;
-    bottom: -50px;
-    margin-left: 10px;
-    opacity: 0;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  .item .caption p {
-    margin: 0;
-    color: rgb(245, 35, 35);
-    font-size: 1em;
-    font-family: "Lato", sans-serif;
-    letter-spacing: 1px;
-  }
-  .item:hover .caption {
-    opacity: 1;
-    bottom: 10px;
-  }
+  // .item .caption {
+  //   position: absolute;
+  //   bottom: -50px;
+  //   margin-left: 10px;
+  //   opacity: 0;
+  //   -webkit-transition: all 0.4s;
+  //   transition: all 0.4s;
+  // }
+  // .item .caption p {
+  //   margin: 0;
+  //   color: rgb(245, 35, 35);
+  //   font-size: 1em;
+  //   font-family: "Lato", sans-serif;
+  //   letter-spacing: 1px;
+  // }
+  // .item:hover .caption {
+  //   opacity: 1;
+  //   bottom: 10px;
+  // }
 }
 
-.showMessage {
-  display: none;
-  background-color: #bbbbbb;
-  padding: 5px;
-  color: #fff980;
-  border-radius: 1px;
-}
 
+
+/* ===================  jewelry size popup affection  ================================= */
 #popup {
   position: fixed;
   // width: 803px; /* Using fixed width but can be anything! */
   // height: 100px;
-  top: calc(50% - 360px); /* Using calc for proper centering, 50 = height / 2 */
-  left: calc(50% - 360px);
-  width: 800px;
+  // top: calc(50% - 25em); /* Using calc for proper centering, 50 = height / 2 */
+  top: 20%; /* Using calc for proper centering, 50 = height / 2 */
+  // left: calc(50% - 28.5em);
+  left: 25%;
+  width: 50%;
   margin: 0 auto;
   text-align: center;
   z-index: 1000; /* Should be greater than the topmost element to ensure front position */
@@ -294,7 +292,8 @@
   opacity: 0; /* We can't animate visiblity so we set opacity to 0 */
   transition: all 0.6s;
   img {
-    width: 777px;
+    width: 100%;
+    // margin-top: 14%;
   }
 }
 /* When we want to show the overlay we add the visible class */
@@ -386,7 +385,7 @@ form .error {
   color: $green;
 }
 
-/* =================== experiment hover ================================= */
+/* ===================  hover affection  ================================= */
 .container-hover {
   position: relative;
   // width: 50%;
@@ -397,6 +396,7 @@ form .error {
   display: block;
   width: 100%;
   height: auto;
+  // transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
 }
 
@@ -409,7 +409,7 @@ form .error {
   transition: .5s ease;
   opacity:0;
   color: $green;
-  font-size: 20px;
+  font-size: 13px;
   font-family: "Fahkwang";
   text-align: center;
 }
@@ -419,83 +419,63 @@ form .error {
 }
 .container-hover:hover {
   transform: scale(1.1); ;
+  transition: all 0.8s;
 }
 
 
 
 
-@media (max-width: 1600px) {
-  .d_images img {
-    margin: -5px 5px !important;
-    width: 130px;
-  }
-}
 
-@media (max-width: 1366px) {
-  .d_images img {
-    display: none !important;
-  }
-  .daimons_min {
-    margin: 400px auto !important;
-  }
 
-  // .group {
-  //   grid-template-columns: 55% 45%;
-  // }
 
-  .head {
-    width: 50%;
-  }
-}
+// @media (max-width: 1249px) {
+//   .footer_space {
+//     // display: none !important;
+//   }
+//   .d_images img {
+//     display: none !important;
+//   }
+//   .daimons_min {
+//     margin: 400px auto !important;
+//   }
 
-@media (max-width: 1249px) {
-  .footer_space {
-    // display: none !important;
-  }
-  .d_images img {
-    display: none !important;
-  }
-  .daimons_min {
-    margin: 400px auto !important;
-  }
+//   .group {
+//     grid-template-columns: 1fr;
+//   }
 
-  .group {
-    grid-template-columns: 1fr;
-  }
+//   .head {
+//     position: relative;
+//     width: 100%;
+//     margin-top: 310px;
+//     height: auto;
+//     .h_image {
+//       top: 0;
+//     }
+//     .daimons_min {
+//       display: none;
+//     }
+//   }
+//   .main {
+//     width: 85%;
+//     margin: 160px auto;
+//   }
+//   .jewerly_section {
+//     margin-top: 30px;
+//     border-top: 1px solid #d1cdcd;
+//     padding-top: 40px;
+//   }
+// }
 
-  .head {
-    position: relative;
-    width: 100%;
-    margin-top: 310px;
-    height: auto;
-    .h_image {
-      top: 0;
-    }
-    .daimons_min {
-      display: none;
-    }
-  }
-  .main {
-    width: 85%;
-    margin: 160px auto;
-  }
-  .jewerly_section {
-    margin-top: 30px;
-    border-top: 1px solid #d1cdcd;
-    padding-top: 40px;
-  }
-}
-
-@media (max-width: 655px) {
-  .head {
-    margin-top: 250px;
-    .h_image {
-      width: 500px;
-      height: 500px;
-    }
-  }
-}
-@media (max-width: 500px) {
+// @media (max-width: 655px) {
+//   .head {
+//     margin-top: 250px;
+//     .h_image {
+//       width: 500px;
+//       height: 500px;
+//     }
+//   }
+// }
+@media (max-width: 767px) {
   .head {
     margin-top: 180px;
     .h_image {
@@ -509,11 +489,18 @@ form .error {
   }
   .main {
     width: 90%;
+    margin: 100px auto;
 
+    .overlay {
+      font-size: 10px;
+    }
     .diamond_section {
       margin-top: -100px;
       padding-top: 20px;
       margin-left: 0px;
+      .certificates img {
+        height: 80%;
+      }
     }
 
     .jewerly_section {
@@ -623,11 +610,14 @@ form .error {
     position: fixed;
     // width: 803px; /* Using fixed width but can be anything! */
     // height: 100px;
-    top: calc(
-      50% - 200px
-    ); /* Using calc for proper centering, 50 = height / 2 */
-    left: calc(50% - 164px);
-    width: 328px;
+    top: 30%; /* Using calc for proper centering, 50 = height / 2 */
+    left: 16%;
+    // top: calc(
+    //   50% - 200px
+    // ); /* Using calc for proper centering, 50 = height / 2 */
+    // left: calc(50% - 164px);
+    width: 70%;
+    height: 38%;
     margin: 0 auto;
     text-align: center;
     z-index: 1000; /* Should be greater than the topmost element to ensure front position */
@@ -637,7 +627,7 @@ form .error {
     opacity: 0; /* We can't animate visiblity so we set opacity to 0 */
     transition: all 0.6s;
     img {
-      width: 300px;
+      width: 100%;
     }
   }
   /* When we want to show the overlay we add the visible class */
@@ -700,5 +690,33 @@ form .error {
   }
   #close:before {
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+//iphone X
+@media (width: 375px) {
+  #popup {
+    height: 31%;
+  }
+}
+
+//Moto G4
+@media (max-width: 360px) {
+  .container-hover {
+    width: 20%;
+  }
+  .main .blocks .size {
+    width: 64px;
+  }
+  .main .jewerly_section .metal-color div {
+    width: 16%;
+  }
+  .main .jewerly_section .metals img {
+    width: 20%;
+  }
+}
+//iphone 5/SE
+@media (max-width: 320px) {
+  .main .blocks .size {
+    width: 20%;
   }
 }
