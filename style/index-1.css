@@ -101,7 +101,8 @@ input {
 
 .active {
   height: 80px;
-  z-index: 100; }
+  z-index: 100;
+  right: 0px; }
 
 .success:before {
   content: "Submit success!"; }
@@ -120,7 +121,6 @@ input {
     transform: translateY(-50%); } }
 .group {
   position: relative;
-  width: 85%;
   margin: 0px auto; }
 
 .head {
@@ -476,12 +476,11 @@ form .error {
     width: 100%; }
 
   .main {
-    width: 90%;
-    margin: 100px auto; }
+    width: 100%;
+    margin: 0 auto; }
     .main .overlay {
       font-size: 10px; }
     .main .diamond_section {
-      margin-top: -100px;
       padding-top: 20px;
       margin-left: 0px; }
       .main .diamond_section .certificates img {
@@ -494,8 +493,9 @@ form .error {
       margin-top: 10px; }
       .main .blocks img {
         box-sizing: border-box;
-        width: 67px;
-        height: 62px; }
+        width: auto;
+        height: 52px;
+        padding: 0px; }
       .main .blocks .size {
         box-sizing: border-box;
         margin-left: 7px;
@@ -533,11 +533,13 @@ form .error {
       padding: 8px 10px;
       border-radius: 2px; }
     .main .jewerly_section .metals {
-      gap: 15px; }
+      gap: 8px; }
       .main .jewerly_section .metals img {
         box-sizing: border-box;
         width: 70px;
         height: 46px; }
+    .main .jewerly_section .metal-color {
+      gap: 25px; }
     .main .jewerly_section .metal-color div {
       display: block;
       font-size: 10px;
@@ -632,7 +634,7 @@ form .error {
     transform: translate(-50%, -50%) rotate(-45deg); } }
 @media (width: 375px) {
   #popup {
-    height: 31%; } }
+    height: 38%; } }
 @media (max-width: 360px) {
   .container-hover {
     width: 20%; }
@@ -647,7 +649,14 @@ form .error {
     width: 20%; } }
 @media (max-width: 320px) {
   .main .blocks .size {
-    width: 20%; } }
+    width: 20%; }
+
+  .main .blocks.cut_shape {
+    grid-gap: 0px; }
+    .main .blocks.cut_shape .container-hover {
+      width: 17% img;
+        width-width: 54px;
+        width-height: auto; } }
 .headline {
   position: relative;
   left: 0;
@@ -688,7 +697,7 @@ form .error {
     text-decoration: none;
     color: #01282d;
     cursor: pointer;
-    font: 400 26px "Fahkwang";
+    font: 400 2em "Fahkwang";
     padding: 10px; }
     .headline a:hover {
       transition: all ease-in 1s;
@@ -737,7 +746,7 @@ form .error {
       margin-bottom: 10px; } }
 .contact_section {
   position: relative;
-  width: 70%;
+  width: 83%;
   height: auto;
   z-index: 99;
   opacity: 1;

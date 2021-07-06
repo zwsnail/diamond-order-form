@@ -552,7 +552,7 @@ $(document).ready(function () {
 
     var dialog = bootbox.dialog({
       title: 'Dear ' + username,
-      message: "<p style='text-align: center;'>Thank you for being our valued customer.<br>We will reply to you within 48 hours.<br>Please let us know if we can do anything else to help. We are so grateful for the pleasure of serving you and hope we met your expectations. </p>",
+      message: "<p style='text-align: center;'>Thank you for being our valued customer.<br>We will reply to you within 48 hours.<br>Please let us know if we can do anything else to help. <br>We are so grateful for the pleasure of serving you and hope we met your expectations. </p>",
       size: 'large',
       centerVertical: 'true',
       buttons: {

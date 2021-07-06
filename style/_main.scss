@@ -7,7 +7,7 @@
   position: relative;
   // width: 100%;
   // height: auto;
-  width: 85%;
+  // width: 85%;
   // margin: 160px auto;
   margin: 0px auto;
 
@@ -488,14 +488,16 @@ form .error {
     width: 100%;
   }
   .main {
-    width: 90%;
-    margin: 100px auto;
+    // width: 90%;
+    width: 100%;
+    margin: 0 auto;
+    // margin: 100px auto;
 
     .overlay {
       font-size: 10px;
     }
     .diamond_section {
-      margin-top: -100px;
+      // margin-top: -100px;
       padding-top: 20px;
       margin-left: 0px;
       .certificates img {
@@ -512,8 +514,10 @@ form .error {
       margin-top: 10px;
       img {
         box-sizing: border-box;
-        width: 67px;
-        height: 62px;
+        // width: 67px;
+        width: auto;
+        height: 52px;
+        padding: 0px;
       }
       .size {
         box-sizing: border-box;
@@ -573,7 +577,7 @@ form .error {
       }
     }
     .jewerly_section .metals {
-      gap: 15px;
+      gap: 8px;
       img {
         box-sizing: border-box;
         width: 70px;
@@ -581,7 +585,7 @@ form .error {
       }
     }
     .jewerly_section .metal-color {
-      // gap: 15px;
+      gap: 25px;
       // img {
       //   box-sizing: border-box;
       //   width: 70px;
@@ -692,10 +696,10 @@ form .error {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
-//iphone X
+//iphone 6/7/8
 @media (width: 375px) {
   #popup {
-    height: 31%;
+    height: 38%;
   }
 }
 
@@ -718,5 +722,17 @@ form .error {
 @media (max-width: 320px) {
   .main .blocks .size {
     width: 20%;
+  }
+  .main .blocks.cut_shape {
+    grid-gap: 0px;
+
+    .container-hover {
+      width: 17%
+
+      img {
+        width: 54px;
+        height: auto;
+      }
+    }
   }
 }
