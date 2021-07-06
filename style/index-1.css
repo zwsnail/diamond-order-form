@@ -64,7 +64,7 @@ input {
     border-color: #01282d; }
 
 .notify {
-  --notify-success: #fff9ea; }
+  --notify-success: #fff880; }
   .notify .notify-content .notify__title {
     font-size: 2rem; }
   .notify .notify-content .notify__text {
@@ -280,9 +280,20 @@ input {
       background-color: #fff9ea; }
     .main .jewerly_section .ring_sizes {
       margin-bottom: 20px; }
+    .main .jewerly_section .ring-container {
+      width: 300px;
+      margin-left: 1%;
+      margin-bottom: 4%; }
+      .main .jewerly_section .ring-container .ring-size-value {
+        font-size: 1.3em;
+        text-align: center; }
+      .main .jewerly_section .ring-container .slider input {
+        width: 100%;
+        margin: 0 10px; }
     .main .jewerly_section .ring_engrave_form a {
       font-family: 'Fahkwang';
-      color: #01282d; }
+      color: #fff880;
+      background: #01282d; }
     .main .jewerly_section small {
       text-align: left;
       text-decoration: underline;
@@ -448,7 +459,6 @@ form .error {
 
 .overlay {
   position: absolute;
-  bottom: -15px;
   white-space: nowrap;
   width: 100%;
   transition: .5s ease;
@@ -705,6 +715,8 @@ form .error {
     font-family: "Fahkwang";
     font-size: 30px;
     color: #0d0d0d; }
+  .headline b {
+    font-family: "Fahkwang"; }
   .headline .US {
     font: 600 20px "SF Pro Display"; }
   .headline ion-icon {

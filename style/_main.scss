@@ -192,14 +192,48 @@
     //   box-shadow: 0 0 10px 100px #1882a8 inset;
     // }
 
+
+    
     .ring_sizes {
       margin-bottom: 20px;
     }
 
+    .ring-container {
+      width: 300px;
+      // margin: 1rem auto 0;
+      // margin: 1rem auto 1rem;
+      margin-left: 1%;
+      margin-bottom: 4%;
+
+      .ring-size-value {
+        font-size: 1.3em;
+        text-align: center;
+      }
+      .slider {
+        // display: flex;
+        // justify-content: space-between;
+        input {
+          width: 100%;
+          margin: 0 10px;
+        }
+      }
+    }
+    // input[type=range] {
+    //   -webkit-appearance: none;
+    //   background-color: rgb(189, 57, 57);
+    // }
+    
+    // input[type="range"]::-webkit-slider-thumb {
+    //     -webkit-appearance: none;
+    //     background-color: rgb(48, 212, 42);
+    // }
+
+
     .ring_engrave_form {
       a {
         font-family: 'Fahkwang';
-        color: $green;
+        color: $yellow;
+        background: $green;
       }
     }
 
@@ -403,7 +437,7 @@ form .error {
 
 .overlay {
   position: absolute; 
-  bottom: -15px; 
+  // bottom: -15px; 
   // background: rgba(0, 0, 0, 0.5); /* Black see-through */
   white-space:nowrap;
   width: 100%;

@@ -88,10 +88,10 @@
                 <!-- SELECT COLOR -->
                 <div class="blocks" id="diamond_box">
                     <div class="container-hover">
-                        <img data-index-number="120" src="s/cushion-cut-colorless.png" alt="Colorless"
+                        <img data-index-number="120" src="s/cushion-cut-colorless.png" alt="Clearly Colorless"
                             class="container-hover-image" />
                         <div class="overlay">
-                            <p>Colorless</p>
+                            <p>Clearly Colorless</p>
                         </div>
                     </div>
                     <div class="container-hover">
@@ -280,7 +280,7 @@
                     <div class="lines"></div>
 
                     <h3>Ring Size</h3>
-                    <div class="blocks ring_sizes">
+                    <!-- <div class="blocks ring_sizes">
                         <div class="size">4.5</div>
                         <div class="size">4.75</div>
                         <div class="size">5</div>
@@ -297,7 +297,20 @@
                         <div class="size">7.75</div>
                         <div class="size">8</div>
                         <div class="size">8.25</div>
+                    </div> -->
+
+                    <div class="ring-container">
+                        <div class="ring-size-value">
+                            <span id="ring-range-value">4</span>
+                        </div>
+                        <div class="slider">
+                          <!-- <span>Yay!</span> -->
+                          <input type="range" value="0" min="0" max="27" step="1">
+                          <!-- <span>GTFO!!</span> -->
+                        </div>
                     </div>
+                    
+
                     <!-- <small><a id="#show-dialog">Size Guide</a></small> -->
                     <a onclick="openSizeWindow(); return false;">Size Guide</a>
                     <div id="popup">
@@ -309,18 +322,48 @@
 
                     <h3>Select Metal Color</h3>
 
-                    <div class="metals">
+                    <!-- <div class="metals">
                         <img src="s/Metal_YG2.png" alt="Yellow Gold" />
                         <img src="s/Metal_WG2-1.png" alt="White Gold"/>
                         <img src="s/Metal_RG.png" alt="Rose Gold" />
                         <img src="s/Metal_WG2.png" alt="Platinum" />
+                    </div> -->
+                    <div class="blocks metals">
+                        <div class=" container-hover">
+                            <img src="s/Metal_YG2.png" alt="Yellow Gold"
+                                class="container-hover-image" title="Yellow Gold" />
+                            <div class="overlay">
+                                <p>Yellow Gold</p>
+                            </div>
+                        </div>
+                        <div class="container-hover">
+                            <img src="s/Metal_WG2-1.png" alt="White Gold"
+                                class="container-hover-image" title="White Gold" />
+                            <div class="overlay">
+                                <p>White Gold</p>
+                            </div>
+                        </div>
+                        <div class="container-hover">
+                            <img src="s/Metal_RG.png" alt="Rose Gold"
+                                class="container-hover-image" title="Rose Gold" />
+                            <div class="overlay">
+                                <p>Rose Gold</p>
+                            </div>
+                        </div>
+                        <div class="container-hover">
+                            <img src="s/Metal_WG2.png" alt="Platinum"
+                                class="container-hover-image" title="Platinum" />
+                            <div class="overlay">
+                                <p>Platinum</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="metal-color">
+                    <!-- <div class="metal-color">
                         <div class="">Yellow Gold</div>
                         <div class="">White Gold</div>
                         <div class="">Rose Gold</div>
                         <div class="platinum">Platinum</div>
-                    </div>
+                    </div> -->
 
                     <div class="lines"></div>
 

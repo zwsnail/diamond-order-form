@@ -371,7 +371,10 @@ $(document).ready(function () {
 
   $(".metals img").on("click", function () {
     bordered($(".metals img"), $(this));
+
+
     obj.metalColor = $(this).attr("alt");
+    notifyFunction(obj.metalColor, "success");
     $(".all-info #drop_7").text(`${obj.metalColor}`);
   });
 
@@ -394,6 +397,19 @@ $(document).ready(function () {
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
 
+  const ringSizes = ['4', '4.25', '4.5', '4.75', '5', '5.25', '5.5', '5.75', '6', '6.25', '6.5', '6.75', '7', '7.25', '7.5', '7.75', '8', '8.25', '8.5', '8.75', '9', '9.25', '9.5', '9.75', '10', '10.25', '10.5', '10.75'];
+  $('.ring-container .slider input').on('input', (e) => {
+    let rangeNumber = e.target.value;
+
+    const ringSizeValue = $('#ring-range-value');
+
+    ringSizeValue.textContent = ringSizes[rangeNumber];
+    ringSizeValue.html(ringSizeValue.textContent);
+
+    obj.ringSize = ringSizeValue.textContent;
+    $(".all-info #drop_6").text(`${obj.ringSize}`);
+
+  });
 
 
   // $(".email-submit").on("submit", function (e) {
