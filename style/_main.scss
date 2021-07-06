@@ -275,11 +275,12 @@
 
 /* ===================  jewelry size popup affection  ================================= */
 #popup {
-  position: fixed;
+  position: absolute;
+  // position: fixed;
   // width: 803px; /* Using fixed width but can be anything! */
   // height: 100px;
   // top: calc(50% - 25em); /* Using calc for proper centering, 50 = height / 2 */
-  top: 20%; /* Using calc for proper centering, 50 = height / 2 */
+  top: 0%; /* Using calc for proper centering, 50 = height / 2 */
   // left: calc(50% - 28.5em);
   left: 25%;
   width: 50%;
@@ -621,7 +622,8 @@ form .error {
     // ); /* Using calc for proper centering, 50 = height / 2 */
     // left: calc(50% - 164px);
     width: 70%;
-    height: 38%;
+    // height: 38%;
+
     margin: 0 auto;
     text-align: center;
     z-index: 1000; /* Should be greater than the topmost element to ensure front position */
@@ -696,12 +698,18 @@ form .error {
     transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
-//iphone 6/7/8
-@media (width: 375px) {
+//iphone 6/7/8 Plus
+@media (width: 414px) {
   #popup {
-    height: 38%;
+    height: 46%;
   }
 }
+//iphone 6/7/8
+// @media (width: 375px) {
+//   #popup {
+//     height: 46%;
+//   }
+// }
 
 //Moto G4
 @media (max-width: 360px) {
