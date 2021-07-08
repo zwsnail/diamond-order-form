@@ -27,7 +27,7 @@ $grey: #fff9ea;
   // transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
   transition: 0.2s;
   // border: 2px solid $c-dexin;
-  border: 2px solid $green;
+  border: 2px solid $green !important;
   // background-color: #fff980;
 }
 
@@ -130,7 +130,7 @@ input {
   box-sizing: border-box;
   color: $green;
   text-align: center;
-  font-size: xx-large;
+  font-size: 1.3em;
   font-family: "Larken";
   background: $yellow;
   opacity: 0.9;

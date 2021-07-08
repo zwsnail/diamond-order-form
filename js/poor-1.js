@@ -185,7 +185,7 @@ $(document).ready(function () {
 
     // obj.caratSize = $(this).text();
     obj.caratSize = Number($(this).text());
-    console.log("obj.caratSize--", obj.caratSize)
+
     $(".all-info #drop_2").text(`${obj.caratSize}`);
 
     $(".counted__jeverly").text("$ " + priceObject.count());
@@ -230,7 +230,7 @@ $(document).ready(function () {
           beforeCutPrice = colorlessHalfCarat * 4 * 1.5;
           break;
         default:
-          console.log("Not yet choose size 1");
+        // console.log("Not yet choose size 1");
       }
     }
     if (obj.diamondColor == "Rose Pink" || obj.diamondColor == "Eden Green" || obj.diamondColor == "Sky Blue") {
@@ -247,7 +247,7 @@ $(document).ready(function () {
         case 2:
           beforeCutPrice = ((colorlessHalfCarat + differencePrice) + differencePrice) * 4 * 1.5;
         default:
-          console.log("Not yet choose size 2");
+        // console.log("Not yet choose size 2");
       }
     }
     if (obj.diamondColor == "Sunny Yellow") {
@@ -264,11 +264,11 @@ $(document).ready(function () {
         case 2:
           beforeCutPrice = (colorlessHalfCarat + differencePrice) * 4 * 1.5;
         default:
-          console.log("Not yet choose size 3");
+        // console.log("Not yet choose size 3");
       }
     }
     if (obj.diamondColor == "N/A") {
-      console.log("No color yet");
+      // console.log("No color yet");
     }
 
     // console.log("beforeCut Price=", beforeCutPrice);
@@ -503,7 +503,7 @@ $(document).ready(function () {
         function (response) {
           // console.log("SUCCESS! Email had been sent to you!", response.status, response.text);
           $(".alertFeedback").toggleClass("active");
-          $("#nalertFeedbackId").toggleClass("success");
+          $("#alertFeedbackId").toggleClass("success");
 
           setTimeout(function () {
             $(".alertFeedback").removeClass("active");
@@ -517,7 +517,7 @@ $(document).ready(function () {
         function (error) {
           console.log("Email server failed...", error);
           $(".alertFeedback").addClass("active");
-          $("#nalertFeedbackId").addClass("failure");
+          $("#alertFeedbackId").addClass("failure");
 
           setTimeout(function () {
             $(".alertFeedback").removeClass("active");
@@ -526,6 +526,7 @@ $(document).ready(function () {
         });
 
     } else {
+      $("#slide-item-3").click();
       // console.log('invalid! validation');
       $(".alertFeedback").toggleClass("active");
       $("#alertFeedbackId").toggleClass("validation");
@@ -554,6 +555,7 @@ $(document).ready(function () {
         $(".a-je").removeClass("navBorderBox");
         $(".a-co").addClass("navBorderBox");
         $(".a-su").removeClass("navBorderBox");
+
       }
     }
 
@@ -591,13 +593,13 @@ $(document).ready(function () {
           label: "Home",
           className: 'btn-info',
           callback: function () {
-            console.log('Custom OK clicked');
+            // console.log('Custom OK clicked');
             window.location.replace("https://www.sunnyeden.com");
           }
         }
       }
     });
-    console.log("alert:", dialog);
+    // console.log("alert:", dialog);
     dialog.init();
   }//bootbox
 

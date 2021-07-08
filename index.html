@@ -33,7 +33,7 @@
         </div>
         <div style="position: relative;">
             <div class="second">
-                <a class="a-je">② Jewerly </a>
+                <a class="a-je">② Jewelry </a>
                 <div class="border"></div>
                 <div class="border"></div>
             </div>
@@ -259,22 +259,29 @@
                     <!-- <input type="text" class="style_id" id="style_id" required /> -->
                     <select class="style_id" name="jewelry_id" id="jewelry_id">
                         <option value=""> Choose Your Jewelry: </option>
-                        <optgroup label="Ring">
-                            <option value="Ring 1">Ring 1</option>
-                            <option value="R2">Ring 2</option>
-                            <option value="R3">Ring 3</option>
-                            <option value="R4">Ring 4</option>
-                            <option value="R5">Ring 5</option>
-                            <option value="R6">Ring 6</option>
+                        <optgroup label="Cushion Cut">
+                            <option value="RI7476">RI7476</option>
+                            <option value="RI8856">RI8856</option>
+                            <option value="RI9183">RI9183</option>
+                            <option value="RI7006">RI7006</option>
+                            <option value="RI8030">RI8030</option>
+                            <option value="RI1059">RI1059</option>
+                            <option value="RI2896">RI2896</option>
+                            <option value="RI3700">RI3700</option>
+                            <option value="RI0385">RI0385</option>
+                            <option value="RI6121">RI6121</option>
+                            <option value="RI7469">RI7469</option>
+                            <option value="RI9262">RI9262</option>
+                            <option value="RI7008">RI7008</option>
                         </optgroup>
-                        <!-- <optgroup label="Pendant">
-                                <option value="dog">Dog</option>
-                                <option value="cat">Cat</option>
-                                <option value="hamster">Hamster</option>
-                                <option value="parrot">Parrot</option>
-                                <option value="spider">Spider</option>
-                                <option value="goldfish">Goldfish</option>
-                            </optgroup> -->
+                        <!-- <optgroup label="Solitaire|Collection">
+                            <option value="dog">Solitaire-1</option>
+                            <option value="cat">Solitaire-1</option>
+                            <option value="hamster">Solitaire-1</option>
+                            <option value="parrot">Solitaire-1</option>
+                            <option value="spider">Solitaire-1</option>
+                            <option value="goldfish">Solitaire-1</option>
+                        </optgroup> -->
                     </select>
 
                     <div class="lines"></div>
@@ -284,19 +291,6 @@
                         <div class="size">4.5</div>
                         <div class="size">4.75</div>
                         <div class="size">5</div>
-                        <div class="size">5.25</div>
-                        <div class="size">5.5</div>
-                        <div class="size">5.75</div>
-                        <div class="size">6</div>
-                        <div class="size">6.25</div>
-                        <div class="size">6.5</div>
-                        <div class="size">6.75</div>
-                        <div class="size">7</div>
-                        <div class="size">7.25</div>
-                        <div class="size">7.5</div>
-                        <div class="size">7.75</div>
-                        <div class="size">8</div>
-                        <div class="size">8.25</div>
                     </div> -->
 
                     <div class="ring-container">
@@ -304,9 +298,9 @@
                             <span id="ring-range-value">4</span>
                         </div>
                         <div class="slider">
-                          <!-- <span>Yay!</span> -->
+                          <!-- <span>before</span> -->
                           <input type="range" value="0" min="0" max="27" step="1">
-                          <!-- <span>GTFO!!</span> -->
+                          <!-- <span>after</span> -->
                         </div>
                     </div>
                     
@@ -375,9 +369,9 @@
                     </div>
                 </form>
             </div>
-
         </div><!-- end of main class  -->
     </div> <!-- end of group class  -->
+
     <!-- onSubmit="draft(); return false;"multipart/form-data  method="POST" enctype="application/x-www-form-urlencoded"-->
     <form class="email-submit" name="email-submit" method="POST" enctype="multipart/form-data">
         <div class="contact_section" id="contact_section">
@@ -399,25 +393,25 @@
                     </div>
                     <div class="f-row">
                         <h2>Delivery Address</h2>
-                        <label for="adress">Address line 1*</label>
+                        <label for="adress">Address line 1</label>
                         <input type="text" id="adress-1" name="adress1" />
                         <label for="lastName">Address line 2</label>
                         <input type="text" id="adress-2" name="adress2" />
                         <div class="s-row">
                             <div>
-                                <label for="city">City*</label>
+                                <label for="city">City</label>
                                 <input type="text" id="city" name="city" />
                             </div>
                             <div>
-                                <label for="state">State*</label>
+                                <label for="state">State</label>
                                 <input type="text" id="state" name="state" />
                             </div>
                             <div>
-                                <label for="zip">Zip Code*</label>
+                                <label for="zip">Zip Code</label>
                                 <input type="text" id="zip" name="zip" />
                             </div>
                             <div>
-                                <label for="country">Country*</label>
+                                <label for="country">Country</label>
                                 <input type="text" id="country" name="country" />
                             </div>
                         </div>
@@ -492,11 +486,31 @@
         </div><!-- end of summary_section  -->
     </form>
 
+
+    <nav class="slidemenu">
+  
+        <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle" checked/>
+        <label for="slide-item-1"><p class="icon">1</p><span>Diamond</span></label>
+        
+        <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle"/>
+        <label for="slide-item-2"><p class="icon">2</p><span>Jewelry</span></label>
+        
+        <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+        <label for="slide-item-3"><p class="icon">3</p><span>Contact</span></label>
+        
+        <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+        <label for="slide-item-4"><p class="icon">4</p><span>Summary</span></label>
+        
+        <div class="clear"></div>
+        
+        <!-- Bar -->
+        <div class="slider-bar">
+          <div class="bar"></div>
+        </div>
+        
+      </nav>
+
     <div class="alertFeedback"><span id="alertFeedbackId" class=""></span></div>
-
-
-
-
 
     <div class="footer_space">
 

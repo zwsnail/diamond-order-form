@@ -9,6 +9,72 @@ $(document).ready(function () {
     });
   });
 
+  function diamondClick() {
+    $(".jewerly_section").hide();
+    $(".contact_section").hide();
+    // $("#contact-form").hide();
+    $(".diamond_section").show();
+    $("#summary_section").hide();
+    $(".group").show();
+    $(".footer_space").show();
+    // $(".head").show();
+    $(".head").hide();
+    $(".a-di").addClass("navBorderBox");
+    $(".a-je").removeClass("navBorderBox");
+    $(".a-co").removeClass("navBorderBox");
+    $(".a-su").removeClass("navBorderBox");
+  }
+  function jewelryClick() {
+    $(".jewerly_section").show();
+    // $("#contact-form").hide();
+    $(".contact_section").hide();
+    $(".diamond_section").hide();
+    $("#summary_section").hide();
+    $(".group").show();
+    //  $(".head").hide();
+    $(".footer_space").show();
+    // $(".headline").show();
+    $(".a-di").removeClass("navBorderBox");
+    $(".a-je").addClass("navBorderBox");
+    $(".a-co").removeClass("navBorderBox");
+    $(".a-su").removeClass("navBorderBox");
+  }
+  function contactClick() {
+    $(".jewerly_section").hide();
+    $(".contact_section").show();
+    // $("#contact-form").show();
+    $(".diamond_section").hide();
+    $("#summary_section").hide();
+    $(".group").hide();
+
+
+    $(".footer_space").show();
+    $(".head").hide();
+
+    $(".headline").show();
+    $(".a-di").removeClass("navBorderBox");
+    $(".a-je").removeClass("navBorderBox");
+    $(".a-co").addClass("navBorderBox");
+    $(".a-su").removeClass("navBorderBox");
+  }
+  function summaryClick() {
+    $(".jewerly_section").hide();
+    $(".contact_section").hide();
+    // $("#contact-form").hide();
+    $(".diamond_section").hide();
+    $("#summary_section").show();
+    $(".group").hide();
+
+    $(".footer_space").show();
+    $(".head").hide();
+
+    $(".headline").show();
+    $(".a-di").removeClass("navBorderBox");
+    $(".a-je").removeClass("navBorderBox");
+    $(".a-co").removeClass("navBorderBox");
+    $(".a-su").addClass("navBorderBox");
+  }
+
   if (window.matchMedia("(min-width: 768px)").matches) {
     $(".jewerly_section").hide();
     $(".contact_section").hide();
@@ -16,76 +82,38 @@ $(document).ready(function () {
 
 
     $(".a-di").click(function () {
-      $(".jewerly_section").hide();
-      $(".contact_section").hide();
-      // $("#contact-form").hide();
-      $(".diamond_section").show();
-      $("#summary_section").hide();
-      $(".group").show();
-      $(".footer_space").show();
-      // $(".head").show();
-      $(".head").hide();
-      $(".a-di").addClass("navBorderBox");
-      $(".a-je").removeClass("navBorderBox");
-      $(".a-co").removeClass("navBorderBox");
-      $(".a-su").removeClass("navBorderBox");
+      diamondClick();
+      $("#slide-item-1").click();
     });
+    $("#slide-item-1").click(function () {
+      diamondClick();
+    })
+
 
     $(".a-je").click(function () {
-      $(".jewerly_section").show();
-      // $("#contact-form").hide();
-      $(".contact_section").hide();
-      $(".diamond_section").hide();
-      $("#summary_section").hide();
-      $(".group").show();
-      //  $(".head").hide();
-      $(".footer_space").show();
-      // $(".headline").show();
-      $(".a-di").removeClass("navBorderBox");
-      $(".a-je").addClass("navBorderBox");
-      $(".a-co").removeClass("navBorderBox");
-      $(".a-su").removeClass("navBorderBox");
+      jewelryClick();
+      $("#slide-item-2").click();
     });
+    $("#slide-item-2").click(function () {
+      jewelryClick();
+    })
+
 
     $(".a-co").click(function () {
-      $(".jewerly_section").hide();
-      $(".contact_section").show();
-      // $("#contact-form").show();
-      $(".diamond_section").hide();
-      $("#summary_section").hide();
-      $(".group").hide();
-
-
-      $(".footer_space").show();
-      $(".head").hide();
-
-      $(".headline").show();
-      $(".a-di").removeClass("navBorderBox");
-      $(".a-je").removeClass("navBorderBox");
-      $(".a-co").addClass("navBorderBox");
-      $(".a-su").removeClass("navBorderBox");
+      contactClick();
+      $("#slide-item-3").click();
     });
+    $("#slide-item-3").click(function () {
+      contactClick();
+    })
 
     $(".a-su").click(function () {
-      $(".jewerly_section").hide();
-      $(".contact_section").hide();
-      // $("#contact-form").hide();
-      $(".diamond_section").hide();
-      $("#summary_section").show();
-      $(".group").hide();
-
-      $(".footer_space").show();
-      $(".head").hide();
-
-      $(".headline").show();
-      $(".a-di").removeClass("navBorderBox");
-      $(".a-je").removeClass("navBorderBox");
-      $(".a-co").removeClass("navBorderBox");
-      $(".a-su").addClass("navBorderBox");
-
-
-
+      summaryClick();
+      $("#slide-item-4").click();
     });
+    $("#slide-item-4").click(function () {
+      summaryClick();
+    })
 
 
 
@@ -128,6 +156,7 @@ $(document).ready(function () {
     $(".headline a").wrapAll('<div class="slaves">');
     $(".footer_space").show();
     $(".headline").hide();
+    $(".slidemenu").hide();
 
   }
 

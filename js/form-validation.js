@@ -5,7 +5,7 @@
 $(function () {
   // Initialize form validation on the registration form.
   // It has the name attribute "registration"
-  console.log("Initializing");
+  // console.log("Initializing");
 
   $("form[name='email-submit']").validate({
     ignore: "",
@@ -16,14 +16,13 @@ $(function () {
         required: true,
         email: true
       },
-      adress1: "required",
-      city: "required",
-      state: "required",
+      //adress1: "required",
+      //city: "required",
+      //state: "required",
       zip: {
-        digits: true,
-        required: true
+        digits: true
       },
-      country: "required"
+      //country: "required"
     },
     // Specify validation error messages
     messages: {
@@ -52,7 +51,7 @@ $(function () {
 
   });
 
-  console.log("Initializing done");
+  // console.log("Initializing done");
 
 
 });

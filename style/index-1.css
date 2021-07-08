@@ -20,7 +20,7 @@ body {
 
 .borderBox {
   transition: 0.2s;
-  border: 2px solid #01282d; }
+  border: 2px solid #01282d !important; }
 
 .navBorderBox {
   transition: 0.2s;
@@ -87,7 +87,7 @@ input {
   box-sizing: border-box;
   color: #01282d;
   text-align: center;
-  font-size: xx-large;
+  font-size: 1.3em;
   font-family: "Larken";
   background: #fff880;
   opacity: 0.9;
@@ -242,7 +242,8 @@ input {
   .main .certificates img {
     width: auto;
     height: 60px;
-    padding: 10px; }
+    padding: 10px;
+    border: 2px solid transparent; }
   .main .personal_text span {
     margin: 10px 0 20px 0;
     display: block;
@@ -293,7 +294,8 @@ input {
     .main .jewerly_section .ring_engrave_form a {
       font-family: 'Fahkwang';
       color: #fff880;
-      background: #01282d; }
+      background: #01282d;
+      padding: 0.3em; }
     .main .jewerly_section small {
       text-align: left;
       text-decoration: underline;
@@ -441,11 +443,23 @@ form .error {
   background-color: #01282d;
   border-color: #01282d; }
 
+.btn-danger:hover {
+  border-radius: 0px;
+  background-color: #fff880;
+  border-color: #01282d;
+  color: #01282d; }
+
 .btn-info {
   border-radius: 0px;
   border-color: #01282d;
   background-color: #fff880;
   color: #01282d; }
+
+.btn-info:hover {
+  border-radius: 0px;
+  border-color: #fff880;
+  background-color: #01282d;
+  color: #fff880; }
 
 /* ===================  hover affection  ================================= */
 .container-hover {
@@ -475,6 +489,7 @@ form .error {
   transform: scale(1.1);
   transition: all 0.8s; }
 
+/* ===================  Reset Select style  ================================= */
 @media (max-width: 767px) {
   .head {
     margin-top: 180px; }
@@ -504,7 +519,7 @@ form .error {
       .main .blocks img {
         box-sizing: border-box;
         width: auto;
-        height: 52px;
+        height: 4.8em;
         padding: 0px; }
       .main .blocks .size {
         box-sizing: border-box;
@@ -536,7 +551,7 @@ form .error {
     .main .jewerly_section .style_id {
       border: 3px solid #eeeeee;
       margin-top: 10px;
-      width: 100%; }
+      width: 73%; }
     .main .jewerly_section .ring_engraving input {
       width: 80%; }
     .main .jewerly_section .ring_engraving button {
@@ -642,10 +657,31 @@ form .error {
   #close:before {
     transform: translate(-50%, -50%) rotate(-45deg); } }
 @media (width: 414px) {
+  .main .jewerly_section .style_id {
+    width: 60%; }
+
+  .main .blocks.cut_shape {
+    grid-gap: 18px 20px; }
+
   #popup {
     height: 46%; } }
+@media (width: 411px) {
+  .cut_shape {
+    grid-gap: 6px 12px !important; } }
+@media (max-width: 390px) {
+  .main .jewerly_section .style_id {
+    width: 75%; }
+
+  .main .jewerly_section .metals div {
+    width: 90px; } }
+@media (max-width: 375px) {
+  .main .jewerly_section .metals div {
+    width: 22%; } }
 @media (max-width: 360px) {
-  .container-hover {
+  .cut_shape .container-hover {
+    width: 15% !important; }
+
+  #diamond_box .container-hover {
     width: 20%; }
 
   .main .blocks .size {
@@ -655,17 +691,42 @@ form .error {
     width: 16%; }
 
   .main .jewerly_section .metals img {
-    width: 20%; } }
+    width: 100%; } }
 @media (max-width: 320px) {
   .main .blocks .size {
     width: 20%; }
 
+  #diamond_box .container-hover {
+    width: 19%; }
+
   .main .blocks.cut_shape {
-    grid-gap: 0px; }
+    grid-gap: 16px 6px; }
     .main .blocks.cut_shape .container-hover {
-      width: 17% img;
-        width-width: 54px;
-        width-height: auto; } }
+      width: 17% !important; }
+      .main .blocks.cut_shape .container-hover img {
+        width: 54px;
+        height: auto; } }
+@media (max-width: 280px) {
+  .main .personal_text input {
+    width: 78%; }
+
+  .main .jewerly_section .ring-container .slider input {
+    width: 80%; }
+
+  .main .jewerly_section .style_id {
+    width: 85%; }
+
+  .main .jewerly_section .ring_engraving input {
+    width: 78%; }
+
+  .contact_section .contact_form .contacts .f-row h2 {
+    font-size: 10px !important; }
+
+  .contact_section .contact_form .message-text {
+    font-size: 15px !important; }
+
+  .main .blocks img {
+    height: 3em; } }
 .headline {
   position: relative;
   left: 0;
@@ -1037,11 +1098,11 @@ form .error {
     width: 100%; }
     .contact_section .send_req {
       width: 100%;
-      font-size: 25px;
+      font-size: 1.4em;
       margin-top: 15px; }
     .contact_section .order-summary {
       width: 100% !important;
-      font-size: 19px !important; }
+      font-size: 1.5em; }
       .contact_section .order-summary img {
         position: absolute;
         left: 5px; }
@@ -1056,7 +1117,7 @@ form .error {
         .contact_section .contact_form .all-info .all-info-list .all-info-right {
           margin-left: 0px; }
       .contact_section .contact_form .all-info p {
-        font: 300 12px/29px "Fahkwang"; }
+        font: 300 12px/15px "Fahkwang"; }
     .contact_section .contact_form h1 {
       font-size: 25px;
       margin: 0; }
@@ -1081,6 +1142,92 @@ form .error {
 
   #summary_section {
     margin-top: -155px; } }
+@media (max-width: 360px) {
+  .contact_section .order-summary {
+    font-size: 1.2em !important; } }
+@media (max-width: 320px) {
+  .contact_section .order-summary {
+    font-size: 1.2em !important; } }
+@media (max-width: 280px) {
+  .contact_section .order-summary {
+    font-size: 1em !important; } }
+.clear {
+  clear: both; }
+
+.slide-toggle {
+  display: none; }
+
+.slidemenu {
+  font-family: 'Fahkwang';
+  max-width: 25em;
+  margin: -5em auto 0px auto;
+  overflow: hidden;
+  padding-bottom: 200px; }
+
+.slidemenu label {
+  width: 25%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #01282d;
+  opacity: 0.2; }
+
+.slidemenu label:hover {
+  cursor: pointer;
+  color: #666; }
+
+.slidemenu label span {
+  display: block;
+  padding: 10px; }
+
+.slidemenu label .icon {
+  font-size: 20px;
+  border: solid 2px #01282d;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  line-height: 50px;
+  border-radius: 50%; }
+
+/*Bar Style*/
+.slider-bar {
+  width: 100%;
+  height: 5px;
+  display: block;
+  background: #ccc;
+  margin-top: 10px;
+  border-radius: 5px; }
+
+.slider-bar .bar {
+  width: 25%;
+  height: 5px;
+  background: #333;
+  border-radius: 5px; }
+
+/*Animations*/
+.slidemenu label, .slider-bar .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out; }
+
+/*Toggle*/
+.slidemenu .slide-toggle:checked + label {
+  opacity: 1; }
+
+.slidemenu #slide-item-1:checked ~ .slider-bar .bar {
+  margin-left: 0; }
+
+.slidemenu #slide-item-2:checked ~ .slider-bar .bar {
+  margin-left: 25%; }
+
+.slidemenu #slide-item-3:checked ~ .slider-bar .bar {
+  margin-left: 50%; }
+
+.slidemenu #slide-item-4:checked ~ .slider-bar .bar {
+  margin-left: 75%; }
+
 .footer_space {
   bottom: 0;
   left: 0;
