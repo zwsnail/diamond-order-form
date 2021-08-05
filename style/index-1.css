@@ -20,7 +20,8 @@ body {
 
 .borderBox {
   transition: 0.2s;
-  border: 2px solid #01282d !important; }
+  border: 2px solid #01282d !important;
+  border-radius: 5px; }
 
 .navBorderBox {
   transition: 0.2s;
@@ -87,7 +88,7 @@ input {
   box-sizing: border-box;
   color: #01282d;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 2.0em;
   font-family: "Larken";
   background: #fff880;
   opacity: 0.9;
@@ -118,7 +119,10 @@ input {
 @media (max-width: 767px) {
   .notifications-container.notify-is-y-center {
     top: 33%;
-    transform: translateY(-50%); } }
+    transform: translateY(-50%); }
+
+  .alertFeedback {
+    font-size: 1.6em; } }
 .group {
   position: relative;
   margin: 0px auto; }
@@ -223,6 +227,7 @@ input {
       text-align: center;
       padding: 9px 0 9px 0;
       border: 2px solid #d1cdcd;
+      border-radius: 5px;
       font: 400 16px "Fahkwang";
       color: #01282d;
       opacity: 0.7; }
@@ -268,7 +273,7 @@ input {
     max-width: 1000px; }
     .main .jewerly_section .style_id {
       margin-top: 15px;
-      width: 25%;
+      width: 30%;
       border-radius: 5px;
       border: 3px solid #bbbbbb;
       color: #525252;
@@ -286,7 +291,7 @@ input {
       margin-left: 1%;
       margin-bottom: 4%; }
       .main .jewerly_section .ring-container .ring-size-value {
-        font-size: 1.3em;
+        font-size: 1.8em;
         text-align: center; }
       .main .jewerly_section .ring-container .slider input {
         width: 100%;
@@ -509,17 +514,18 @@ form .error {
       padding-top: 20px;
       margin-left: 0px; }
       .main .diamond_section .certificates img {
-        height: 80%; }
+        height: 3.8em; }
     .main .jewerly_section {
       padding-top: 20px;
       margin-left: 0px;
       padding-top: 50px; }
+    .main #diamond_box .container-hover {
+      width: 5em; }
     .main .blocks {
       margin-top: 10px; }
       .main .blocks img {
         box-sizing: border-box;
         width: auto;
-        height: 4.8em;
         padding: 0px; }
       .main .blocks .size {
         box-sizing: border-box;
@@ -682,7 +688,7 @@ form .error {
     width: 15% !important; }
 
   #diamond_box .container-hover {
-    width: 20%; }
+    width: 20% !important; }
 
   .main .blocks .size {
     width: 64px; }
@@ -965,6 +971,7 @@ form .error {
       font: 300 21px/28px "Fahkwang";
       color: #01282d;
       margin-bottom: 0px;
+      border-radius: 10px;
       border: 1px solid #01282d;
       background-color: #01282d;
       color: #fff9ea; }
@@ -1007,7 +1014,7 @@ form .error {
     color: #01282d;
     color: #01282d;
     background: #fff880;
-    border-radius: 0px;
+    border-radius: 10px;
     border: 1px solid #fff880; }
     .contact_section .send_req:focus {
       outline: none; }
@@ -1159,7 +1166,7 @@ form .error {
 
 .slidemenu {
   font-family: 'Fahkwang';
-  max-width: 25em;
+  max-width: 32em;
   margin: -5em auto 0px auto;
   overflow: hidden;
   padding-bottom: 200px; }
@@ -1182,12 +1189,11 @@ form .error {
 
 .slidemenu label .icon {
   font-size: 20px;
-  border: solid 2px #01282d;
   text-align: center;
-  height: 50px;
+  height: 25px;
   width: 50px;
   display: block;
-  margin: 0 auto;
+  margin: 0.3em auto;
   line-height: 50px;
   border-radius: 50%; }
 
@@ -1235,7 +1241,7 @@ form .error {
   position: fixed;
   background: #01282d;
   max-width: 100%;
-  min-height: 130px;
+  min-height: 120px;
   z-index: 99;
   padding: 0 180px;
   display: flex;

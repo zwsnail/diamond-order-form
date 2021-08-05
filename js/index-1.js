@@ -74,6 +74,11 @@ $(document).ready(function () {
     $(".a-co").removeClass("navBorderBox");
     $(".a-su").addClass("navBorderBox");
   }
+  function goTop() {
+    $("html, body").animate({
+      scrollTop: 0
+    }, 1000)
+  }
 
   if (window.matchMedia("(min-width: 768px)").matches) {
     $(".jewerly_section").hide();
@@ -87,6 +92,7 @@ $(document).ready(function () {
     });
     $("#slide-item-1").click(function () {
       diamondClick();
+      goTop();
     })
 
 
@@ -96,6 +102,7 @@ $(document).ready(function () {
     });
     $("#slide-item-2").click(function () {
       jewelryClick();
+      goTop();
     })
 
 
@@ -105,6 +112,7 @@ $(document).ready(function () {
     });
     $("#slide-item-3").click(function () {
       contactClick();
+      goTop();
     })
 
     $(".a-su").click(function () {
@@ -113,6 +121,7 @@ $(document).ready(function () {
     });
     $("#slide-item-4").click(function () {
       summaryClick();
+      goTop();
     })
 
 

@@ -211,7 +211,7 @@
       margin-top: 34px;
       @include con-button();
       margin-bottom: 0px;
-
+      border-radius: 10px;
       border: 1px solid $green;
       background-color:$green;
       color:$grey;
@@ -275,7 +275,7 @@
     @include con-button();
     color: $green;
     background: $yellow;
-    border-radius: 0px;
+    border-radius: 10px;
     border: 1px solid $yellow;
     &:hover {
       transform: scale(1.03);

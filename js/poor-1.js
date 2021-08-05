@@ -397,7 +397,8 @@ $(document).ready(function () {
     $(".all-info #drop_6").text(`${obj.ringSize}`);
   });
 
-  const ringSizes = ['4', '4.25', '4.5', '4.75', '5', '5.25', '5.5', '5.75', '6', '6.25', '6.5', '6.75', '7', '7.25', '7.5', '7.75', '8', '8.25', '8.5', '8.75', '9', '9.25', '9.5', '9.75', '10', '10.25', '10.5', '10.75'];
+  const ringSizes = ['3', '3.25', '3.5', '3.75', '4', '4.25', '4.5', '4.75', '5', '5.25', '5.5', '5.75', '6', '6.25', '6.5', '6.75', '7', '7.25', '7.5', '7.75', '8',
+    '8.25', '8.5', '8.75', '9', '9.25', '9.5', '9.75', '10', '10.25', '10.5', '10.75', '11', '11.25', '11.5', '11.75', '12', '12.25', '12.5', '12.75', '13', '13.25', '13.5'];
   $('.ring-container .slider input').on('input', (e) => {
     let rangeNumber = e.target.value;
 
@@ -416,6 +417,7 @@ $(document).ready(function () {
   // $(".send_req").on("submit", function (e) {
   $(".send_req").click(function (e) {
     e.preventDefault();
+
 
     // let username = (if(username == ""))?"":"";
     // let userlname = "";
@@ -497,6 +499,8 @@ $(document).ready(function () {
     if (form.valid()) {
       // console.log('valid! going to send email');
       //"service_jt9l9dt", "template_yevxgca"
+      $(this).attr("disabled", true);
+      $(this).val("Sending...");
       emailjs.send("service_zli7li4", "template_lxvedrh", templateParams).then(
         // emailjs.send("s", "template_lxvedrh", templateParams).then(
         // emailjs.sendForm("service_zli7li4", "template_lxvedrh", templateParams, "contact-form-emailjs", "user_F1infr4XnoJN5o3sHvo0J").then(
@@ -578,7 +582,8 @@ $(document).ready(function () {
           label: "Stay",
           className: 'btn-danger',
           callback: function () {
-            // console.log('');
+            $(".send_req").val("Request has been sent");
+            $(".send_req").css("cursor", "default");
           }
         },
         // noclose: {
